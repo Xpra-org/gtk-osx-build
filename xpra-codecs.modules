@@ -187,9 +187,9 @@
 					--enable-filter=format --enable-filter=null --enable-filter=copy
 					--disable-programs --disable-doc"
 		autogen-sh="configure">
-        <branch module="releases/ffmpeg-6.1.1.tar.xz"
-            version="6.1.1"
-            hash="sha256:8684f4b00f94b85461884c3719382f1261f0d9eb3d59640a1f4ac0873616f968"
+        <branch module="releases/ffmpeg-7.0.tar.xz"
+            version="7.0"
+            hash="sha256:4426a94dd2c814945456600c8adfc402bee65ec14a70e8c531ec9a2cd651da7b"
 			repo="ffmpeg.org"/>
 		<dependencies>
 			<dep package="x264"/>
