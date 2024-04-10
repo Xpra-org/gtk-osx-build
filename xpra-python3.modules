@@ -849,6 +849,7 @@
 		  <dep package="python3-pyobjc-framework-coremedia"/>
 		  <dep package="python3-pyobjc-framework-libdispatch"/>
 		  <dep package="python3-pyobjc-framework-SystemConfiguration"/>
+		  <dep package="gst-python"/>
 		</dependencies>
 	</metamodule>
 
