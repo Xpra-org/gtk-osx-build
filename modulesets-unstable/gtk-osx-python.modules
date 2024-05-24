@@ -15,6 +15,7 @@
   <metamodule id="meta-gtk-osx-python3-gtk3">
     <dependencies>
       <dep package="meta-gtk-osx-gtk3"/>
+      <dep package='pygments'/>
       <dep package="pycairo"/>
       <dep package="pygobject3"/>
       <dep package="gtk-mac-integration-python"/>
@@ -22,14 +23,17 @@
   </metamodule>
 
   <autotools id="python3" autogenargs="--enable-shared" autogen-sh="autoreconf">
-    <branch module="3.10.12/Python-3.10.12.tar.xz"
-            version="3.10.12"
-            hash="sha256:afb74bf19130e7a47d10312c8f5e784f24e0527981eab68e20546cfb865830b8"
+    <branch module="3.11.4/Python-3.11.4.tar.xz"
+            version="3.11.4"
+            hash="sha256:2f0e409df2ab57aa9fc4cbddfb976af44e4e55bf6f619eee6bc5c2297264a7f6"
             repo="python" />
     <dependencies>
       <dep package='readline'/>
       <dep package="openssl" /> <!-- For hashlib -->
     </dependencies>
+    <after>
+      <dep package='sqlite'/>
+    </after>
   </autotools>
 
  <meson id="pycairo" >
@@ -58,14 +62,17 @@
       <dep package="pygobject3"/>
     </dependencies>
   </autotools>
-
+  <!---->
   <distutils id="pygments">
-    <branch repo="pymodules" version="2.9.0"
-            module="ba/6e/7a7c13c21d8a4a7f82ccbfe257a045890d4dbf18c023f985f565f97393e3/Pygments-2.9.0.tar.gz">
+    <branch module="89/6b/2114e54b290824197006e41be3f9bbe1a26e9c39d1f5fa20a6d62945a0b3/Pygments-2.15.1.tar.gz"
+            version="2.15.1"
+            repo="pymodules" >
+      <patch file="Pygments-setup-py.patch"
+             strip="1"/>
     </branch>
     <dependencies>
-      <dep package="python3"/>
+      <dep package="python3" />
     </dependencies>
   </distutils>
- 
+  <!---->
 </moduleset>

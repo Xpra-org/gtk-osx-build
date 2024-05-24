@@ -87,7 +87,6 @@
       <dep package="gstreamer" />
       <dep package="liborc" />
     </dependencies>
-    <after></after>
   </meson>
   <!---->
   <meson id="gst-plugins-good">

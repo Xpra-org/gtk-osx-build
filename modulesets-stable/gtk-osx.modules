@@ -111,13 +111,13 @@
     <branch module="glib/2.78/glib-2.78.1.tar.xz"
             version="2.78.1"
             hash="sha256:915bc3d0f8507d650ead3832e2f8fb670fce59aac4d7754a7dab6f1e6fed78b2">
+
       <patch file="glib-2.78.1-libintl.patch"
              strip="1"/>
     </branch>
     <dependencies>
       <dep package="libffi" />
       <dep package="libpcre2" />
-      <dep package="libxml2" />
     </dependencies>
   </meson>
   <!--
@@ -151,12 +151,12 @@
   </autotools>
   <!---->
   <meson id="harfbuzz-no-cairo"
-         mesonargs="-Dcoretext=enabled -Dfreetype=enabled -Ddocs=disabled -Dbenchmark=disabled -Dintrospection=disabled">
+         mesonargs="-Dcoretext=enabled -Dfreetype=enabled -Ddocs=disabled -Dbenchmark=disabled -Dintrospection=disabled -Dtests=disabled">
 
     <branch module="harfbuzz/harfbuzz/releases/download/7.3.0/harfbuzz-7.3.0.tar.xz"
             version="7.3.0"
             hash="sha256:20770789749ac9ba846df33983dbda22db836c70d9f5d050cb9aa5347094a8fb"
-            repo="github-tarball"></branch>
+            repo="github-tarball" />
     <dependencies>
       <dep package="glib" />
       <dep package="freetype-no-harfbuzz" />
@@ -200,7 +200,7 @@
     <branch module="releases/pixman-0.42.2.tar.gz"
             version="0.42.2"
             hash="sha512:0a4e327aef89c25f8cb474fbd01de834fd2a1b13fdf7db11ab72072082e45881cd16060673b59d02054b1711ae69c6e2395f6ae9214225ee7153939efcd2fa5d"
-            repo="cairographics"></branch>
+            repo="cairographics" />
     <after>
       <dep package="meta-gtk-osx-bootstrap" />
     </after>
@@ -214,8 +214,7 @@
     <branch module="releases/cairo-1.18.0.tar.xz"
             version="1.18.0"
             hash="sha256:243a0736b978a33dee29f9cca7521733b78a65b5418206fef7bd1c3d4cf10b64"
-            repo="cairographics">
-    </branch>
+            repo="cairographics" />
     <dependencies>
       <dep package="pixman" />
       <dep package="meta-gtk-osx-bootstrap" />
@@ -287,7 +286,6 @@
     <branch module="atk/2.38/atk-2.38.0.tar.xz"
             version="2.38.0"
             hash="sha256:ac4de2a4ef4bd5665052952fe169657e65e895c5057dffb3c2a810f6191a0c36" />
-    <dependencies></dependencies>
     <after>
       <dep package="glib" />
       <dep package="meta-gtk-osx-bootstrap" />
@@ -326,8 +324,8 @@
   <meson id="libepoxy">
     <branch module="anholt/libepoxy/archive/refs/tags/1.5.10.tar.gz"
             version="1.5.10"
-            checkoutdir="libexpoxy-1.5.10"
             hash="sha256:a7ced37f4102b745ac86d6a70a9da399cc139ff168ba6b8002b4d8d43c900c15"
+            checkoutdir="libexpoxy-1.5.10"
             repo="github-tarball" />
     <!--dependencies>
       <dep package="xorg-util-macros" />
@@ -417,7 +415,7 @@
             version="2.57.0"
             hash="sha256:335fe2e0c2cbf1b7bf0668651224a23e135451f0b1793cd813649be2bffa74e8" />
     <dependencies>
-      <dep package="libxml2"/>
+      <dep package="libxml2" />
       <dep package="cairo" />
       <dep package="pango" />
       <dep package="harfbuzz" />

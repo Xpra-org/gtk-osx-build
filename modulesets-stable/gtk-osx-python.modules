@@ -30,7 +30,7 @@
   <metamodule id="meta-gtk-osx-python3-gtk3">
     <dependencies>
       <dep package="meta-gtk-osx-gtk3" />
-      <dep package='pygments'/>
+      <dep package='pygments' />
       <dep package="pycairo" />
       <dep package="pygobject3" />
       <dep package="gtk-mac-integration-python" />
@@ -54,6 +54,9 @@
       -->
       <dep package="openssl" />
     </dependencies>
+    <after>
+      <dep package="sqlite"/>
+    </after>
   </autotools>
   <!---->
   <meson id="pycairo">
@@ -101,7 +104,7 @@
             hash="1daff0494820c69bc8941e407aa20f577374ee88364ee10a98fdbe0aece96e29"
             repo="pymodules" >
       <patch file="Pygments-setup-py.patch"
-             strip="1"/>
+             strip="1" />
     </branch>
     <dependencies>
       <dep package="python3" />

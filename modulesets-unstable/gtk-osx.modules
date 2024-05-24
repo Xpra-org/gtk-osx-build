@@ -13,6 +13,9 @@
               href="https://icon-theme.freedesktop.org/releases/"/>
   <repository type="tarball" name="sourceforge"
               href="http://downloads.sourceforge.net/sourceforge/"/>
+  <repository name="github-tarball"
+              href="https://github.com/"
+              type="tarball" />
   <repository type="system" name="system"/>
 
   <!-- This module set works a bit differently than for example the
@@ -59,7 +62,7 @@
     </after>
   </metamodule>
 
-  <autotools id="libffi" autogenargs="--disable-multi-os-directory"
+  <autotools id="libffi" autogenargs="--disable-multi-os-directory --disable-docs"
              autogen-sh="autoreconf" >
     <branch module="atgreen/libffi" repo="github"/>
   </autotools>
@@ -70,11 +73,18 @@
             module="PCRE2Project/pcre2"/>
   </autotools>
 
-  <meson id="glib" mesonargs="-Dlibmount=disabled">
-    <branch revision='main'/>
+  <meson id="glib-no-introspection" mesonargs="-Dlibmount=disabled -Dintrospection=disabled">
+    <branch revision='main' module="glib"/>
     <dependencies>
       <dep package="libpcre2"/>
       <dep package="libffi"/>
+    </dependencies>
+  </meson>
+
+  <meson id="glib" mesonargs="-Dlibmount=disabled -Dintrospection=enabled">
+    <branch revision='main'/>
+    <dependencies>
+      <dep package="gobject-introspection"/>
     </dependencies>
   </meson>
 
@@ -88,11 +98,25 @@
       <dep package="zlib"/>
     </dependencies>
   </cmake>
+  <!---->
+  <autotools id="icu"
+             autogen-sh="source/configure"
+             autogenargs="--enable-rpath"
+             makeargs='CFLAGS="$CFLAGS -DU_CHARSET_IS_UTF8=1 -DU_USING_ICU_NAMESPACE=0"'>
 
-  <meson id="harfbuzz-no-cairo" mesonargs="-Dcoretext=enabled -Dfreetype=enabled -Ddocs=disabled -Dbenchmark=disabled -Dtests=disabled">
+    <branch module="unicode-org/icu/releases/download/release-73-2/icu4c-73_2-src.tgz"
+            version="73.2"
+            hash="sha256:818a80712ed3caacd9b652305e01afc7fa167e6f2e94996da44b90c2ab604ce1"
+            checkoutdir="icu"
+            repo="github-tarball" />
+  </autotools>
+  <!---->
+
+  <meson id="harfbuzz-no-cairo"
+         mesonargs="-Dcoretext=enabled -Dfreetype=enabled -Ddocs=disabled -Dbenchmark=disabled -Dintrospection=disabled -Dtests=disabled">
     <branch revision="main" repo="github" module="harfbuzz/harfbuzz"/>
     <dependencies>
-      <dep package="glib"/>
+      <dep package="glib-no-introspection"/>
       <dep package="freetype-no-harfbuzz"/>
       <dep package="icu"/>
     </dependencies>
@@ -114,17 +138,30 @@
     </dependencies>
   </autotools>
 
-  <autotools id="pixman" autogenargs="--disable-gtk --disable-mmx --disable-arm-a64-neon">
-    <branch repo="freedesktop" module="pixman/pixman" />
-    <after>
-      <dep package="meta-gtk-osx-bootstrap"/>
-    </after>
-  </autotools>
+  <if condition-set="arm64">
+    <meson id="pixman"
+           mesonargs="-Dgtk=disabled -Dmmx=disabled -Da64-neon=enabled">
+      <branch repo="freedesktop" module="pixman/pixman" />
+      <after>
+        <dep package="meta-gtk-osx-bootstrap"/>
+      </after>
+    </meson>
+  </if>
+  <if condition-unset="arm64">
+      <meson id="pixman"
+           mesonargs="-Dgtk=disabled -Dmmx=disabled">
+      <branch repo="freedesktop" module="pixman/pixman" />
+      <after>
+        <dep package="meta-gtk-osx-bootstrap"/>
+      </after>
+    </meson>
+  </if>
 
   <!-- cairo doesn't really need fontconfig, but if Pango finds
        freetype it insists that it has to have fontconfig too and that
        they are both built into cairo. -->
-  <meson id="cairo">
+  <meson id="cairo"
+         mesonargs="-Dfontconfig=enabled -Dfreetype=enabled" >
     <branch repo="freedesktop" module="cairo/cairo" />
     <dependencies>
       <dep package="pixman"/>
@@ -138,7 +175,7 @@
   <meson id="gobject-introspection">
     <branch/>
     <dependencies>
-      <dep package="glib"/>
+      <dep package="glib-no-introspection"/>
       <dep package="cairo"/>
     </dependencies>
     <after>
@@ -152,6 +189,7 @@
   <meson id="harfbuzz" mesonargs="-Dcoretext=enabled -Dfreetype=enabled -Ddocs=disabled -Dbenchmark=disabled -Dtests=disabled">
     <branch revision="main" repo="github" module="harfbuzz/harfbuzz"/>
     <dependencies>
+      <dep package="glib"/>
       <dep package="gobject-introspection"/>
       <dep package="cairo"/>
       <dep package="fontconfig"/>
@@ -165,10 +203,10 @@
     </dependencies>
   </meson>
 
-  <meson id="pango">
+  <meson id="pango" mesonargs="-Dfontconfig=enabled">
     <branch revision="main" />
     <dependencies>
-      <dep package="glib"/>
+      <dep package="glib-no-introspection"/>
       <dep package="cairo"/>
       <dep package="harfbuzz"/>
       <dep package="fribidi"/>
@@ -184,7 +222,6 @@
     <dependencies>
     </dependencies>
     <after>
-      <dep package="glib"/>
       <dep package="gobject-introspection"/>
       <dep package="meta-gtk-osx-bootstrap"/>
     </after>
@@ -209,14 +246,6 @@
     </dependencies>
   </meson>
 
-  <meson id="graphene">
-    <branch module="ebassi/graphene" repo="github" checkoutdir="graphene"/>
-    <dependencies>
-      <dep package="glib"/>
-      <dep package="gobject-introspection"/>
-    </dependencies>
-  </meson>
-
   <autotools id="hicolor-icon-theme">
     <branch module="hicolor-icon-theme-0.17.tar.xz" version="0.17"
             repo="hicolor"/>
@@ -238,8 +267,8 @@
     </after>
   </meson>
 
-  <meson id="graphene" mesonargs="-Dtests=false">
-    <branch repo="github" revision="1.10.4" module="ebassi/graphene"/>
+  <meson id="graphene">
+    <branch module="ebassi/graphene" repo="github" checkoutdir="graphene"/>
     <dependencies>
       <dep package="glib"/>
       <dep package="gobject-introspection"/>
@@ -248,7 +277,14 @@
 
   <autotools id="libsass" autogen-sh="autoreconf"
              autogenargs="--disable-tests --disable-static">
-    <branch repo="github" revision="3.6.4" module="sass/libsass"/>
+    <branch repo="github" revision="3.6.5" module="sass/libsass"/>
+  </autotools>
+
+  <autotools id="sassc" autogen-sh="autoreconf">
+    <branch repo="github" revision="3.6.2" module="sass/sassc"/>
+    <dependencies>
+      <dep package="libsass"/>
+    </dependencies>
   </autotools>
 
   <meson id="gtk-4" mesonargs="-Dx11-backend=false -Dmedia-gstreamer=disabled">
@@ -259,7 +295,7 @@
       <dep package="atk"/>
       <dep package="gdk-pixbuf"/>
       <dep package="graphene"/>
-      <dep package="libsass"/>
+      <dep package="sassc"/>
       <dep package="libepoxy"/>
     </dependencies>
     <after>
@@ -281,6 +317,10 @@
   <autotools id="librsvg" autogenargs="--disable-Bsymbolic">
     <branch module="librsvg" revision="main"/>
     <dependencies>
+      <dep package="libxml2"/>
+      <dep package="cairo" />
+      <dep package="pango" />
+      <dep package="harfbuzz" />
       <dep package="libcroco"/>
       <dep package="freetype"/>
     </dependencies>
@@ -290,12 +330,12 @@
     </after>
   </autotools>
 
-  <autotools id="adwaita-icon-theme">
+  <meson id="adwaita-icon-theme">
     <branch />
     <dependencies>
       <dep package="librsvg"/>
     </dependencies>
-  </autotools>
+  </meson>
 
   <!-- Null metamodule, provided so as not to break modules that use it. -->
   <metamodule id="meta-gtk-osx-freetype" />
