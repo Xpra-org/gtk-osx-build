@@ -492,7 +492,7 @@ alwaysautogen = True
 # path so none of the libraries that depend on it can link. Require
 # the install name to be an absolute path.
 
-module_cmakeargs["freetype"] = '-DCMAKE_INSTALL_NAME_DIR="' + os.path.join(prefix, 'lib') + '"'
+module_cmakeargs["freetype"] = '-DCMAKE_INSTALL_NAME_DIR="' + os.path.join(prefix, 'lib') + '"' + "-DFT_DISABLE_BROTLI=ON"
 module_cmakeargs["freetype-no-harfbuzz"] = '-DCMAKE_INSTALL_NAME_DIR="' + os.path.join(prefix, 'lib') + '"'
 module_cmakeargs["webkit2gtk3"] = '-DCMAKE_INSTALL_NAME_DIR="' + os.path.join(prefix, 'lib') + '"'
 module_cmakeargs["zlib"] = '-DCMAKE_INSTALL_NAME_DIR="' + os.path.join(prefix, 'lib') + '"'
