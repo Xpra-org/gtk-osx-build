@@ -17,13 +17,9 @@
   <repository name="ffmpeg"
               href="https://ffmpeg.org/releases/"
               type="tarball" />
-  <repository name="nasm"
-              href="https://www.nasm.us/pub/nasm/releasebuilds/"
-              type="tarball" />
   <repository name="github.com"
               href="https://github.com/"
               type="tarball" />
-
   <!---->
   <meson id="liborc"
          mesonargs="-Dgtk_doc=disabled -Dbenchmarks=disabled -Dexamples=disabled -Dtests=disabled">
@@ -42,18 +38,6 @@
             hash="sha256:720c1dc404439e0a9117aa144dc7ead56f1658adf4badbb39f959d6ad8eed489"
             repo="github.com" />
   </autotools>
-  <!---->
-  <autotools id="nasm"
-             autogen-sh="configure">
-    <branch module="2.16.01/nasm-2.16.01.tar.xz"
-            version="2.16.01"
-            hash="sha256:c77745f4802375efeee2ec5c0ad6b7f037ea9c87c92b149a9637ff099f162558"
-            repo="nasm" >
-      <patch file="nasm-2.16.01-warnings.c-needs-srcdir.patch"
-             strip="1"/>
-    </branch>
-  </autotools>
-  <!---->
   <autotools id="ffmpeg"
              autogen-sh="configure"
              autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s %(autogenargs)s"
