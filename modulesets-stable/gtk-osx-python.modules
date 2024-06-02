@@ -60,9 +60,9 @@
   </autotools>
   <!---->
   <meson id="pycairo">
-    <branch module="/pygobject/pycairo/releases/download/v1.25.1/pycairo-1.25.1.tar.gz"
-            version="1.25.1"
-            hash="sha256:7e2be4fbc3b4536f16db7a11982cbf713e75069a4d73d44fe5a49b68423f5c0c"
+    <branch module="pygobject/pycairo/releases/download/v1.26.0/pycairo-1.26.0.tar.gz"
+            version="1.26.0"
+            hash="sha256:2dddd0a874fbddb21e14acd9b955881ee1dc6e63b9c549a192d613a907f9cbeb"
             repo="github-tarball" />
     <dependencies>
       <dep package="cairo" />
@@ -72,9 +72,9 @@
   </meson>
   <!---->
   <meson id="pygobject3">
-    <branch module="pygobject/3.46/pygobject-3.46.0.tar.xz"
-            version="3.46.0"
-            hash="sha256:426008b2dad548c9af1c7b03b59df0440fde5c33f38fb5406b103a43d653cafc" />
+    <branch module="pygobject/3.48/pygobject-3.48.2.tar.xz"
+            version="3.48.2"
+            hash="sha256:0794aeb4a9be31a092ac20621b5f54ec280f9185943d328b105cdae6298ad1a7" />
     <dependencies>
       <dep package="pycairo" />
     </dependencies>
