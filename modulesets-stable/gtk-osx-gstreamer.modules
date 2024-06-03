@@ -125,6 +125,7 @@
     </branch>
     <dependencies>
       <dep package="gstreamer" />
+      <dep package="gst-plugins-base" />
     </dependencies>
   </meson>
   <!---->
