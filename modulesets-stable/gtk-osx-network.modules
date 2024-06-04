@@ -11,9 +11,6 @@
               default="yes"
               href="https:////download.gnome.org/sources/"
               type="tarball" />
-  <repository name="openssl"
-              href="https://www.openssl.org/source/"
-              type="tarball" />
   <repository name="ftp.gnu.org"
               href="https://ftp.gnu.org/gnu/"
               type="tarball" />
@@ -54,8 +51,8 @@
              autogenargs="shared"
              makeinstallargs="install_sw"
              supports-non-srcdir-builds="no">
-    <branch module="openssl-3.1.1.tar.gz" version="3.1.1" repo="openssl"
-            hash="sha256:b3aa61334233b852b63ddb048df181177c2c659eb9d4376008118f9c08d07674"/>
+    <branch module="openssl/openssl/releases/download/openssl-3.3.1/openssl-3.3.1.tar.gz" version="3.3.1" repo="github-tarball"
+            hash="sha256:777cd596284c883375a2a7a11bf5d2786fc5413255efab20c50d6ffe6d020b7e"/>
   </autotools>
   <!---->
   <if condition-set="arm64">
