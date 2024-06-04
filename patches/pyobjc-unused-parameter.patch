@@ -1,0 +1,11 @@
+--- a/setup.py	2024-06-03 16:42:28.635530437 +0700
++++ b/setup.py	2024-06-03 16:42:32.097509294 +0700
+@@ -91,6 +91,8 @@
+     # "-fsanitize=address", "-fsanitize=undefined", "-fno-sanitize=vptr",
+     # "--analyze",
+     "-Werror",
++    "-Wno-error=unused-parameter",
++    "-Wno-error=unused-const-variable",
+     "-I/usr/include/ffi",
+     "-fvisibility=hidden",
+     # "-O0",

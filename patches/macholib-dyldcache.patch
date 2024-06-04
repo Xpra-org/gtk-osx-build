@@ -1,0 +1,15 @@
+--- a/macholib/MachOGraph.py	2023-03-01 04:29:46.000000000 -0800
++++ b/macholib/MachOGraph.py	2023-03-01 04:30:54.000000000 -0800
+@@ -86,7 +86,11 @@
+         m = self.findNode(pathname, loader=caller)
+         if m is None:
+             if not os.path.exists(pathname):
+-                raise ValueError("%r does not exist" % (pathname,))
++                from ctypes import cdll
++                try:
++                    lib = cdll.LoadLibrary(pathname)
++                except Exception:
++                    raise ValueError("%r does not exist" % (pathname,)) from None
+             m = self.createNode(MachO, pathname)
+             self.createReference(caller, m, edge_data="run_file")
+             self.scan_node(m)
