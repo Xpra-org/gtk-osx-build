@@ -164,6 +164,7 @@ cat  <<EOF > "$DEVPREFIX/etc/Pipfile"
 [[source]]
 url = "https://pypi.python.org/simple"
 verify_ssl = true
+name = "pypi"
 
 [packages]
 pygments = "*"
