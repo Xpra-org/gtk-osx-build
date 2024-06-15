@@ -189,9 +189,9 @@
 
 	<distutils id="python3-cryptography" python3="1">
 		<branch
-                        module="c/cryptography/cryptography-42.0.7.tar.gz"
-                        hash="sha256:ecbfbc00bf55888edda9868a4cf927205de8499e7fabe6c050322298382953f2"
-                        version="42.0.7">
+                        module="c/cryptography/cryptography-42.0.8.tar.gz"
+                        hash="sha256:8d09d05439ce7baa8e9e95b07ec5b6c886f548deb7e0f69ef25f64b3bce842f2"
+                        version="42.0.8">
 			<patch file="cryptography-setup-py.patch" strip="1"/>
 		</branch>
 		<dependencies>
