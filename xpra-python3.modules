@@ -648,7 +648,7 @@
 
 	<distutils id="python3-pyobjc-framework-cocoa" python3="1">
 		<branch
-			module="p/pyobjc-framework-Cocoa/pyobjc_framework_Cocoa-10.3.1.tar.gz"
+			module="p/pyobjc-framework-cocoa/pyobjc_framework_cocoa-10.3.1.tar.gz"
 			hash="sha256:1cf20714daaa986b488fb62d69713049f635c9d41a60c8da97d835710445281a"
 			version="10.3.1">
 			<patch file="pyobjc-framework-Cocoa-xcode-version-check.patch" strip="2"/>
@@ -663,7 +663,7 @@
 
 	<distutils id="python3-pyobjc-framework-quartz" python3="1">
 		<branch
-			module="p/pyobjc-framework-Quartz/pyobjc_framework_Quartz-10.3.1.tar.gz"
+			module="p/pyobjc-framework-quartz/pyobjc_framework_quartz-10.3.1.tar.gz"
 			hash="sha256:b6d7e346d735c9a7f147cd78e6da79eeae416a0b7d3874644c83a23786c6f886"
 			version="10.3.1">
 			<patch file="pyobjc-framework-Quartz-xcode-version-check.patch" strip="2"/>
@@ -678,7 +678,7 @@
 
 	<distutils id="python3-pyobjc-framework-avfoundation" python3="1">
 		<branch
-			module="p/pyobjc-framework-AVFoundation/pyobjc_framework_AVFoundation-10.3.1.tar.gz"
+			module="p/pyobjc-framework-avfoundation/pyobjc_framework_avfoundation-10.3.1.tar.gz"
 			hash="sha256:2f94bee3a4217b46d9416cad066e4f357bf0f344079c328736114451ae19ae94"
 			version="10.3.1">
 			<patch file="pyobjc-framework-AVFoundation-xcode-version-check.patch" strip="2"/>
@@ -693,7 +693,7 @@
 
 	<distutils id="python3-pyobjc-framework-coremedia" python3="1">
 		<branch
-			module="p/pyobjc-framework-CoreMedia/pyobjc_framework_CoreMedia-10.3.1.tar.gz"
+			module="p/pyobjc-framework-coremedia/pyobjc_framework_coremedia-10.3.1.tar.gz"
 			hash="sha256:bc3e0cddf5f546b5d8407d8f46b203f1bd4396ad5dbfdc0d064a560b3fe31221"
 			version="10.3.1">
 			<patch file="pyobjc-framework-CoreMedia-xcode-version-check.patch" strip="2"/>
@@ -723,7 +723,7 @@
 
 	<distutils id="python3-pyobjc-framework-SystemConfiguration" python3="1">
 		<branch
-			module="p/pyobjc-framework-SystemConfiguration/pyobjc_framework_SystemConfiguration-10.3.1.tar.gz"
+			module="p/pyobjc-framework-systemconfiguration/pyobjc_framework_systemconfiguration-10.3.1.tar.gz"
 			hash="sha256:1bf6ffe98faa4e208bf594c857ba23cd56fe404bc579188ff53b704844d9c402"
 			version="10.3.1">
 			<patch file="pyobjc-framework-SystemConfiguration-xcode-version-check.patch" strip="2"/>
