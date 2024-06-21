@@ -631,9 +631,9 @@
 		</after>
 	</distutils>
 
-	<distutils id="python3-pyobjc_core" python3="1">
+	<distutils id="python3-pyobjc-core" python3="1">
 		<branch
-			module="p/pyobjc_core/pyobjc_core-10.3.1.tar.gz"
+			module="p/pyobjc-core/pyobjc_core-10.3.1.tar.gz"
 			hash="sha256:b204a80ccc070f9ab3f8af423a3a25a6fd787e228508d00c4c30f8ac538ba720"
 			version="10.3.1">
 			<patch file="pyobjc-unused-parameter.patch" strip="1"/>
