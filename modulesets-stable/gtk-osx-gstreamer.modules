@@ -53,9 +53,9 @@
   </autotools>
   <!---->
   <meson id="gstreamer">
-    <branch module="gstreamer/gstreamer-1.24.5.tar.xz"
-            version="1.24.5"
-            hash="sha256:2bdef209252bf146351843134b797db6b6e7adb4c00d82e83bd5abe608253a7b">
+    <branch module="gstreamer/gstreamer-1.24.6.tar.xz"
+            version="1.24.6"
+            hash="sha256:64342060d7c6f9e36a35e3be38a4f5ac3b41ed93b0853619be45141ef3cc1b9d">
     </branch>
     <after>
       <dep package="glib" />
@@ -64,9 +64,9 @@
   <!---->
   <meson id="gst-plugins-base"
          mesonargs="-Dexamples=disabled -Ddoc=disabled">
-    <branch module="gst-plugins-base/gst-plugins-base-1.24.5.tar.xz"
-            version="1.24.5"
-            hash="sha256:0e33ec9b59eef5ef3a6a53bbd55c44340e681d0000910caca12541a73db38a7d" />
+    <branch module="gst-plugins-base/gst-plugins-base-1.24.6.tar.xz"
+            version="1.24.6"
+            hash="sha256:cf52b535a0ce7ec974756891818f34f06317c2e136abb24149e18c23ecc229b5" />
     <dependencies>
       <dep package="gstreamer" />
       <dep package="liborc" />
@@ -74,9 +74,9 @@
   </meson>
   <!---->
   <meson id="gst-plugins-good">
-    <branch module="gst-plugins-good/gst-plugins-good-1.24.5.tar.xz"
-            version="1.24.5"
-            hash="sha256:badcfc5292b035bde99a77327d468b2f0b116b40420bc9f25fb8e3970824ba75">
+    <branch module="gst-plugins-good/gst-plugins-good-1.24.6.tar.xz"
+            version="1.24.6"
+            hash="sha256:996b9c8d1d246ed43be304718b6086e5a17d4ae8114d1920aed9ea75b920ba2d">
     </branch>
     <dependencies>
       <dep package="gstreamer" />
@@ -85,9 +85,9 @@
   </meson>
   <!---->
   <meson id="gst-plugins-ugly" mesonargs="-Dgpl=enabled">
-    <branch module="gst-plugins-ugly/gst-plugins-ugly-1.24.5.tar.xz"
-            version="1.24.5"
-            hash="sha256:333267b6e00770440a4a00402910dd59ed8fd619eaebf402815fbe111da7776d" />
+    <branch module="gst-plugins-ugly/gst-plugins-ugly-1.24.6.tar.xz"
+            version="1.24.6"
+            hash="sha256:5dfdbb2978ab282e637255cd875cf5b7b93fc83db62f8a0b1af02c85c84a75c4" />
     <dependencies>
       <dep package="gstreamer" />
       <dep package="gst-plugins-base" />
@@ -95,9 +95,9 @@
   </meson>
   <!---->
   <meson id="gst-plugins-bad">
-    <branch module="gst-plugins-bad/gst-plugins-bad-1.24.5.tar.xz"
-            version="1.24.5"
-            hash="sha256:3029bfd7265314d609dc8eab503675a344ea46e8274fd73ab34566c8442dc847" />
+    <branch module="gst-plugins-bad/gst-plugins-bad-1.24.6.tar.xz"
+            version="1.24.6"
+            hash="sha256:8f4d965513e7827c1f547c1e749e4ef2812b371974fe64857fe5029a19c5b64c" />
     <dependencies>
       <dep package="gstreamer" />
       <dep package="gst-plugins-base" />
@@ -107,9 +107,9 @@
   </meson>
   <!---->
   <meson id="gst-libav">
-    <branch module="gst-libav/gst-libav-1.24.5.tar.xz"
-            version="1.24.5"
-            hash="sha256:7fd16bdfa56ed51c40b474648fc35c4edde3e8ac934b12b82b49727b5d703521">
+    <branch module="gst-libav/gst-libav-1.24.6.tar.xz"
+            version="1.24.6"
+            hash="sha256:4bbd08481a390f907e342aa3f25ab885c80ec0a53f3b14244cf733cc8622f2bf">
     </branch>
     <dependencies>
       <dep package="gstreamer" />
@@ -119,9 +119,9 @@
   </meson>
   <!---->
   <meson id="gst-python">
-    <branch module="gst-python/gst-python-1.24.5.tar.xz"
-            version="1.24.5"
-            hash="sha256:c23570c144e6276efd9e82de2ac0cea46b168a57fb2e436bed96cb285d641bf6">
+    <branch module="gst-python/gst-python-1.24.6.tar.xz"
+            version="1.24.6"
+            hash="sha256:692e88820e097b30e5f92d37d0955c709a0a17b27f874a1907405244825bd700">
     </branch>
     <dependencies>
       <dep package="gstreamer" />
