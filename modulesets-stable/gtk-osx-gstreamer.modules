@@ -2,11 +2,9 @@
 <!DOCTYPE moduleset SYSTEM "moduleset.dtd">
 <?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
 <moduleset>
-  <!--
-    Please format this file using https://github.com/htacg/tidy-html5
-
-        tidy -config ../tidy.conf -m gtk-osx-gstreamer.modules
-  -->
+  <!-- Please format this file using the following command:
+       tidy -config ../tidy.conf -m gtk-osx-gstreamer.modules; sed -i "" '/^ *$/d' gtk-osx-gstreamer.modules
+       You can get 'tidy' here: https://github.com/htacg/tidy-html5 -->
   <repository name="gstreamer"
               default="yes"
               href="http://gstreamer.freedesktop.org/src/"
@@ -28,11 +26,9 @@
             version="0.4.39"
             hash="sha256:33ed2387f49b825fa1b9c3b0072e05f259141b895474ad085ae51143d3040cc0" />
   </meson>
-  <!---->
   <autotools id="faad2"
              autogen-sh="autoreconf"
              autogenargs="-without-bmp --without-xmms --without-drm --without-mpeg4ip">
-
     <branch module="knik0/faad2/archive/refs/tags/2.11.0.tar.gz"
             version="2.11.0"
             hash="sha256:720c1dc404439e0a9117aa144dc7ead56f1658adf4badbb39f959d6ad8eed489"
@@ -42,7 +38,6 @@
              autogen-sh="configure"
              autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s %(autogenargs)s"
              autogenargs="--enable-gpl --enable-version3 --enable-shared --disable-static --disable-runtime-cpudetect --disable-programs --disable-ffplay --disable-ffprobe --disable-doc">
-
     <branch module="ffmpeg-7.0.tar.xz"
             version="7.0"
             hash="sha256:4426a94dd2c814945456600c8adfc402bee65ec14a70e8c531ec9a2cd651da7b"
@@ -51,7 +46,6 @@
       <dep package="nasm" />
     </dependencies>
   </autotools>
-  <!---->
   <meson id="gstreamer">
     <branch module="gstreamer/gstreamer-1.24.7.tar.xz"
             version="1.24.7"
@@ -61,7 +55,6 @@
       <dep package="glib" />
     </after>
   </meson>
-  <!---->
   <meson id="gst-plugins-base"
          mesonargs="-Dexamples=disabled -Ddoc=disabled">
     <branch module="gst-plugins-base/gst-plugins-base-1.24.7.tar.xz"
@@ -72,7 +65,6 @@
       <dep package="liborc" />
     </dependencies>
   </meson>
-  <!---->
   <meson id="gst-plugins-good">
     <branch module="gst-plugins-good/gst-plugins-good-1.24.7.tar.xz"
             version="1.24.7"
@@ -93,7 +85,6 @@
       <dep package="gst-plugins-base" />
     </dependencies>
   </meson>
-  <!---->
   <meson id="gst-plugins-bad">
     <branch module="gst-plugins-bad/gst-plugins-bad-1.24.7.tar.xz"
             version="1.24.7"
@@ -102,10 +93,9 @@
       <dep package="gstreamer" />
       <dep package="gst-plugins-base" />
       <dep package="faad2" />
-      <dep package='openssl' />
+      <dep package="openssl" />
     </dependencies>
   </meson>
-  <!---->
   <meson id="gst-libav">
     <branch module="gst-libav/gst-libav-1.24.7.tar.xz"
             version="1.24.7"
@@ -117,7 +107,6 @@
       <dep package="ffmpeg" />
     </dependencies>
   </meson>
-  <!---->
   <meson id="gst-python">
     <branch module="gst-python/gst-python-1.24.7.tar.xz"
             version="1.24.7"
@@ -128,7 +117,6 @@
       <dep package="gst-plugins-base" />
     </dependencies>
   </meson>
-  <!---->
   <metamodule id="meta-gtk-osx-gstreamer">
     <dependencies>
       <dep package="gstreamer" />
@@ -139,5 +127,4 @@
       <dep package="gst-libav" />
     </dependencies>
   </metamodule>
-  <!---->
 </moduleset>
