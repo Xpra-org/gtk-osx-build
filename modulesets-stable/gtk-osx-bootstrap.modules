@@ -48,9 +48,10 @@
             hash="sha256:1412a1c760bbd05db026b6c0d1657affd6631cd0a63cddb6f73cc6d4aa616148"
             repo="nasm" />
   </autotools>
-  <!---->
-  <cmake id="libjpeg" cmakeargs="-DCMAKE_MACOSX_RPATH=true -DCMAKE_INSTALL_NAME_DIR=&quot;${JHBUILD_PREFIX}/lib&quot; -DCMAKE_INSTALL_LIBDIR:PATH=lib">
-    <branch module="libjpeg-turbo/libjpeg-turbo/releases/download/3.0.3/libjpeg-turbo-3.0.3.tar.gz" version="3.0.3"
+  <cmake id="libjpeg"
+         cmakeargs="-DCMAKE_MACOSX_RPATH=true -DCMAKE_INSTALL_NAME_DIR=&quot;${JHBUILD_PREFIX}/lib&quot; -DCMAKE_INSTALL_LIBDIR:PATH=lib">
+    <branch module="libjpeg-turbo/libjpeg-turbo/releases/download/3.0.3/libjpeg-turbo-3.0.3.tar.gz"
+            version="3.0.3"
             hash="sha256:343e789069fc7afbcdfe44dbba7dbbf45afa98a15150e079a38e60e44578865d"
             checkoutdir="libjpeg-turbo-3.0.3"
             repo="github-tarball" />

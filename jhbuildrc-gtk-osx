@@ -75,7 +75,8 @@ class _cmd_bootstrap_gtk_osx(jhbuild.commands.base.cmd_build):
     def run(self, config, options, args, help=None):
         global use_local_modulesets
         moduleset="bootstrap"
-        modulesets_dir = os.path.dirname(config.moduleset)
+        modulesets_dir = os.path.join(os.path.dirname(os.path.dirname(config.moduleset)), 'modulesets-stable')
+        print(f"Modulests Dir: ${modulesets_dir}")
         if (use_local_modulesets and
             os.path.exists(os.path.join(modulesets_dir,
                                         moduleset + '.modules'))):
@@ -126,6 +127,9 @@ def osx_ver():
     exp = re.compile(r'(\d+\.\d+)\.\d+')
     vernum = exp.match(vstring)
     _osx_version = float(vernum.group(1)) - 4.0
+    if _osx_version < 14.0:
+        print("Error: Mac OS X 10.14 or newer is required, exiting.")
+        raise SystemExit
     if _osx_version < 16:
         _target = '10.%d' % int(_osx_version)
     else:
@@ -209,7 +213,7 @@ def setup_debug():
 #    autogenargs = autogenargs + " --enable-debug=yes"
 
 # Gtk+ crashes in gdk_window_quartz_raise() -- in a call to [NSWindow
-# orderFront:] if gcc is passed -O0 for 64-bit compilation. The old
+# orderFront:] if clang is passed -O0 for 64-bit compilation. The old
 # stabs+ debug format also doesn't work. See Snow Leopard in the Wiki
 # for more information about debugging.
     environ_prepend('CFLAGS', "-O0 -g")
@@ -291,12 +295,12 @@ def setup_sdk(target=_target, sdk_version=None, architectures=[_default_arch]):
         print("WARNING: Universal builds are neither prohibited nor supported. It might work, but if it doesn't you're on your own.")
     # For unknown reasons, iconv is not picked up correctly without this
     #
-    gcc = _popen("xcrun -f gcc")
-    gpp = _popen("xcrun -f g++")
+    cc = _popen("xcrun -f clang")
+    cxx = _popen("xcrun -f clang++")
     ld = _popen("xcrun -f ld")
-    os.environ["CC"] = gcc
-    os.environ["OBJC"] = gcc
-    os.environ["CXX"] = gpp
+    os.environ["CC"] = cc
+    os.environ["OBJC"] = cc
+    os.environ["CXX"] = cxx
     os.environ['LD'] = ld
 
     # Set the -arch flags for everything we're building.
@@ -326,24 +330,12 @@ def setup_sdk(target=_target, sdk_version=None, architectures=[_default_arch]):
         append_autogenargs("liboil", "--host=aarch64-apple-darwin")
         append_autogenargs("libffi", "--host=aarch64-apple-darwin")
 
-    # El Capitan needs bash to work around SIP. If you're using a
-    # common bootstrap directory (e.g. $HOME/.local) then override
-    # CONFIG_SHELL in .jhbuildrc-custom after calling setup_sdk().
-    config_shell = os.path.join(prefix, 'bin', 'bash')
-    if _osx_version < 11.0:
-        skip.append('bash')
-    elif os.path.exists(config_shell):
-        os.environ['CONFIG_SHELL'] = config_shell
-
     if not sdkdir:
         sdkdir = '/'
-    if os.path.exists(os.path.join(sdkdir, "usr", "include", "openssl")):
-        skip.append('openssl')  # openssl removed in El Capitan
-
     # gettext-fw rebuilds gettext with an in-tree libiconv to get
     # around the Apple-provided one not defining _libiconv_init for
     # x86_64
-    append_autogenargs("gettext-fw", "--with-libiconv-prefix=" + prefix)
+    append_autogenargs("gettext", "--with-libiconv-prefix=" + prefix)
 
     environ_append("CFLAGS", "-mmacosx-version-min=" + target)
     environ_append("CXXFLAGS", "-mmacosx-version-min=" + target)
@@ -353,10 +345,9 @@ def setup_sdk(target=_target, sdk_version=None, architectures=[_default_arch]):
     #Overcome Python's obnoxious misconfiguration of portable builds
     if len(architectures) == 1:
         os.environ["BUILDCFLAGS"] = os.environ["CFLAGS"]
-    append_autogenargs("gnutls", "--disable-guile")
+    append_autogenargs("gnutls", '--disable-guile CXXFLAGS="$CXXFLAGS -std=c++11"')
     append_autogenargs("guile", 'CFLAGS="$CFLAGS -O1"')
     #Some packages require special arguments or flags to compile with Clang:
-    module_extra_env["pkg-config"] = {'CFLAGS': os.environ['CFLAGS'] + ' -std=gnu89'}
     append_autogenargs('libgcrypt', 'CFLAGS="$CFLAGS -fheinous-gnu-extensions"')
     module_makeargs['liboil'] = 'CFLAGS="$CFLAGS -DHAVE_SYMBOL_UNDERSCORE -fheinous-gnu-extensions"'
 
@@ -433,10 +424,6 @@ _gtk_osx_default_build = ""
 
 #print "Default Architecture %s\n" % _default_arch
 
-if _osx_version < 11.0:
-    print("Error: Mac OS X 10.11 or newer is required, exiting.")
-    raise SystemExit
-
 ###### Import Customizations ######
 
 # Import optional user RC for further customization. You can override
@@ -492,7 +479,7 @@ alwaysautogen = True
 # path so none of the libraries that depend on it can link. Require
 # the install name to be an absolute path.
 
-module_cmakeargs["freetype"] = '-DCMAKE_INSTALL_NAME_DIR="' + os.path.join(prefix, 'lib') + '"' + "-DFT_DISABLE_BROTLI=ON"
+module_cmakeargs["freetype"] = '-DCMAKE_INSTALL_NAME_DIR="' + os.path.join(prefix, 'lib') + '"'
 module_cmakeargs["freetype-no-harfbuzz"] = '-DCMAKE_INSTALL_NAME_DIR="' + os.path.join(prefix, 'lib') + '"'
 module_cmakeargs["webkit2gtk3"] = '-DCMAKE_INSTALL_NAME_DIR="' + os.path.join(prefix, 'lib') + '"'
 module_cmakeargs["zlib"] = '-DCMAKE_INSTALL_NAME_DIR="' + os.path.join(prefix, 'lib') + '"'
@@ -619,14 +606,6 @@ _python3_path = os.path.join(prefix, 'bin', 'python3')
 if ('python3' in modules or 'pygments' in modules or
     'meta-gtk-osx-python3' in modules or os.path.exists(_python3_path)):
     os.environ['PYTHON'] = _python3_path
-    module_extra_env['pkg-config'] = {'PYTHON':sys.executable}
-    _found_modules = '';
-    if ('python3' in modules):
-        _found_modules += 'python3;'
-    if ('meta-gtk-osx-python' in modules):
-        _found_modules += 'meta;';
-    print("Setting $PYTHON to module-built python3 because %s." % _found_modules)
-    print("Modules %s" % ';'.join(modules))
 else:
     _python_ver = str(sys.version_info.major) + '.' + str(sys.version_info.minor)
     _python_install_path = os.path.join(prefix, 'lib', 'python' + _python_ver,
@@ -638,7 +617,7 @@ else:
                                        os.environ['PYENV_VERSION'], 'lib')
     environ_append('LDFLAGS', '-L' + _python_library_path)
     os.environ['PYTHON'] = sys.executable
-    environ_append('PKG_CONFIG_PATH', os.path.join(_python_library_path, 'pkgconfig'))
+    environ_append('PKG_CONFIG_PATH', os.path.join(_python_library_path, 'pkgconfig'), ":")
 
 module_extra_env["python3"] = {'LIBS':'-lintl'}
 module_extra_env["spidermonkey"] = {'AUTOCONF':'autoconf'}

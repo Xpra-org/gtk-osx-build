@@ -125,6 +125,7 @@
       <dep package="gst-plugins-ugly" />
       <dep package="gst-plugins-bad" />
       <dep package="gst-libav" />
+      <dep package="gst-python" />
     </dependencies>
   </metamodule>
 </moduleset>

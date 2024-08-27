@@ -73,6 +73,12 @@ if test ! -x "$DEVPREFIX/bin/bash"; then
     ln -s /bin/bash "$DEVPREFIX/bin"
 fi
 
+# Since macOS 13, groff isn't present on the system. By symlinking 'true', we get
+# a dummy groff that's succesfully executed in affected makefiles.
+if test ! -x /usr/bin/groff -a ! -x "$DEVPREFIX/bin/groff"; then
+    ln -s /usr/bin/true "$DEVPREFIX/bin/groff"
+fi
+
 # Setup pyenv
 if test ! -x "$PYENV_INSTALL_ROOT/libexec/pyenv"; then
   if test -d "$PYENV_INSTALL_ROOT"; then
@@ -252,7 +258,7 @@ fi
 
 $PIPENV install
 
-BASEURL="https://raw.githubusercontent.com/Xpra-org/gtk-osx-build/master"
+BASEURL="https://gitlab.gnome.org/GNOME/gtk-osx/raw/master"
 
 config_dir=""
 if test -n "$XDG_CONFIG_HOME"; then
