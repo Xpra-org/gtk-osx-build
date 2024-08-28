@@ -270,6 +270,7 @@
 		</after>
 	</distutils>
 
+	<!--
 	<distutils id="python3-bcrypt" python3="1">
 		<branch
 			module="b/bcrypt/bcrypt-4.2.0.tar.gz"
@@ -284,6 +285,7 @@
 			<dep package="python3"/>
 		</after>
 	</distutils>
+	-->
 
 	<distutils id="python3-nacl" python3="1">
 		<branch
@@ -307,7 +309,9 @@
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
+			<!--
 			<dep package="python3-bcrypt"/>
+			-->
 			<dep package="python3-nacl"/>
 		</dependencies>
 		<after>
@@ -816,7 +820,9 @@
 		  <dep package="python3-py2app"/>
 		  <dep package="python3-cython"/>
 		  <dep package="python3-pycups"/>
+		  <!--
 		  <dep package="python3-bcrypt"/>
+		  -->
 		  <dep package="python3-paramiko"/>
 		  <dep package="python3-uvloop"/>
 		  <dep package="python3-pyopenssl"/>
