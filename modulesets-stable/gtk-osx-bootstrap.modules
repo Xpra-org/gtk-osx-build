@@ -50,10 +50,10 @@
   </autotools>
   <cmake id="libjpeg"
          cmakeargs="-DCMAKE_MACOSX_RPATH=true -DCMAKE_INSTALL_NAME_DIR=&quot;${JHBUILD_PREFIX}/lib&quot; -DCMAKE_INSTALL_LIBDIR:PATH=lib">
-    <branch module="libjpeg-turbo/libjpeg-turbo/releases/download/3.0.3/libjpeg-turbo-3.0.3.tar.gz"
-            version="3.0.3"
-            hash="sha256:343e789069fc7afbcdfe44dbba7dbbf45afa98a15150e079a38e60e44578865d"
-            checkoutdir="libjpeg-turbo-3.0.3"
+    <branch module="libjpeg-turbo/libjpeg-turbo/releases/download/3.0.4/libjpeg-turbo-3.0.4.tar.gz"
+            version="3.0.4"
+            hash="sha256:0270f9496ad6d69e743f1e7b9e3e9398f5b4d606b6a47744df4b73df50f62e38"
+            checkoutdir="libjpeg-turbo-3.0.4"
             repo="github-tarball" />
     <dependencies>
       <dep package="nasm" />
