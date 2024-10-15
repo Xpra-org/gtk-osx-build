@@ -224,9 +224,9 @@
 
 	<distutils id="python3-pillow" python3="1">
 		<branch
-			module="p/pillow/pillow-10.4.0.tar.gz"
-			hash="sha256:166c1cd4d24309b30d61f79f4a9114b7b2313d7450912277855ff5dfd7cd4a06"
-			version="10.4.0"/>
+			module="p/pillow/pillow-11.0.0.tar.gz"
+			hash="sha256:72bacbaf24ac003fea9bff9837d1eedb6088758d41e100c1552930151f677739"
+			version="11.0.0"/>
 		<dependencies>
 			<dep package="python3"/>
 			<dep package="libwebp"/>
