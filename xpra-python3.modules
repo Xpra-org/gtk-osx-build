@@ -189,9 +189,9 @@
 
 	<distutils id="python3-cryptography" python3="1">
 		<branch
-                        module="c/cryptography/cryptography-43.0.1.tar.gz"
-                        hash="sha256:203e92a75716d8cfb491dc47c79e17d0d9207ccffcbcb35f598fbe463ae3444d"
-                        version="43.0.1">
+                        module="c/cryptography/cryptography-43.0.3.tar.gz"
+                        hash="sha256:315b9001266a492a6ff443b61238f956b214dbec9910a081ba5b6646a055a805"
+                        version="43.0.3">
 			<patch file="cryptography-setup-py.patch" strip="1"/>
 		</branch>
 		<dependencies>
