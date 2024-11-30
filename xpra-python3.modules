@@ -335,9 +335,9 @@
 
 	<distutils id="python3-pyopenssl" python3="1">
 		<branch
-			module="p/pyopenssl/pyopenssl-24.2.1.tar.gz"
-			hash="sha256:4247f0dbe3748d560dcbb2ff3ea01af0f9a1a001ef5f7c4c647956ed8cbf0e95"
-			version="24.2.1">
+			module="p/pyopenssl/pyopenssl-24.3.0.tar.gz"
+			hash="sha256:49f7a019577d834746bc55c5fce6ecbcec0f2b4ec5ce1cf43a9a173b8138bb36"
+			version="24.3.0">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
