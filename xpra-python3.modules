@@ -59,9 +59,9 @@
 
 	<distutils id="python3-zeroconf" python3="1">
 		<branch
-			module="z/zeroconf/zeroconf-0.136.0.tar.gz"
-			hash="sha256:7a82c7bd0327266ef9f04a5272b0bb79812ddcefccf944320b5f3519586bbc82"
-			version="0.136.0"/>
+			module="z/zeroconf/zeroconf-0.136.2.tar.gz"
+			hash="sha256:37d223febad4569f0d14563eb8e80a9742be35d0419847b45d84c37fc4224bb4"
+			version="0.136.2"/>
 		<dependencies>
 			<dep package="python3-ifaddr"/>
 			<dep package="python3-async-timeout"/>
