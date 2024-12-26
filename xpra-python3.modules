@@ -116,9 +116,9 @@
 
 	<distutils id="python3-six" python3="1">
 		<branch
-			module="s/six/six-1.16.0.tar.gz"
-			hash="sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
-			version="1.16.0"/>
+			module="s/six/six-1.17.0.tar.gz"
+			hash="sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"
+			version="1.17.0"/>
 		<dependencies>
 			<dep package="python3"/>
 		</dependencies>
