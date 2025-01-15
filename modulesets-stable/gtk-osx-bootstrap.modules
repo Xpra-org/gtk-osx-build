@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+
 <!DOCTYPE moduleset SYSTEM "moduleset.dtd">
 <?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
 <moduleset>
@@ -33,9 +34,9 @@
   <autotools id="libpng"
              autogen-sh="configure"
              autogenargs="--enable-shared">
-    <branch module="libpng/libpng-1.6.43.tar.xz"
-            version="1.6.43"
-            hash="sha256:6a5ca0652392a2d7c9db2ae5b40210843c0bbc081cbd410825ab00cc59f14a6c"
+    <branch module="libpng/libpng-1.6.45.tar.xz"
+            version="1.6.45"
+            hash="sha256:926485350139ffb51ef69760db35f78846c805fef3d59bfdcb2fba704663f370"
             repo="sourceforge" />
     <dependencies>
       <dep package="zlib" />
