@@ -637,9 +637,9 @@
 
 	<distutils id="python3-pyobjc-core" python3="1">
 		<branch
-			module="p/pyobjc-core/pyobjc_core-10.3.2.tar.gz"
-			hash="sha256:dbf1475d864ce594288ce03e94e3a98dc7f0e4639971eb1e312bdf6661c21e0e"
-			version="10.3.2">
+			module="p/pyobjc-core/pyobjc_core-11.0.tar.gz"
+			hash="sha256:63bced211cb8a8fb5c8ff46473603da30e51112861bd02c438fbbbc8578d9a70"
+			version="11.0">
 			<patch file="pyobjc-unused-parameter.patch" strip="1"/>
 		</branch>
 		<dependencies>
@@ -652,9 +652,9 @@
 
 	<distutils id="python3-pyobjc-framework-cocoa" python3="1">
 		<branch
-			module="p/pyobjc-framework-cocoa/pyobjc_framework_cocoa-10.3.2.tar.gz"
-			hash="sha256:673968e5435845bef969bfe374f31a1a6dc660c98608d2b84d5cae6eafa5c39d"
-			version="10.3.2">
+			module="p/pyobjc-framework-cocoa/pyobjc_framework_cocoa-11.0.tar.gz"
+			hash="sha256:00346a8cb81ad7b017b32ff7bf596000f9faa905807b1bd234644ebd47f692c5"
+			version="11.0">
 			<patch file="pyobjc-framework-Cocoa-xcode-version-check.patch" strip="2"/>
 		</branch>
 		<dependencies>
@@ -667,9 +667,9 @@
 
 	<distutils id="python3-pyobjc-framework-quartz" python3="1">
 		<branch
-			module="p/pyobjc-framework-quartz/pyobjc_framework_quartz-10.3.2.tar.gz"
-			hash="sha256:193e7752c93e2d1304f914e3a8c069f4b66de237376c5285ba7c72e9ee0e3b15"
-			version="10.3.2">
+			module="p/pyobjc-framework-quartz/pyobjc_framework_quartz-11.0.tar.gz"
+			hash="sha256:i3205bf7795fb9ae34747f701486b3db6dfac71924894d1f372977c4d70c3c619"
+			version="11.0">
 			<patch file="pyobjc-framework-Quartz-xcode-version-check.patch" strip="2"/>
 		</branch>
 		<dependencies>
@@ -682,9 +682,9 @@
 
 	<distutils id="python3-pyobjc-framework-avfoundation" python3="1">
 		<branch
-			module="p/pyobjc-framework-avfoundation/pyobjc_framework_avfoundation-10.3.2.tar.gz"
-			hash="sha256:e4baa1cb8d63c2b366f90341dee54a646004ad02d4b01119c79904cb869e7a6a"
-			version="10.3.2">
+			module="p/pyobjc-framework-avfoundation/pyobjc_framework_avfoundation-11.0.tar.gz"
+			hash="sha256:269a592bdaf8a16948d8935f0cf7c8cb9a53e7ea609a963ada0e55f749ddb530"
+			version="11.0">
 			<patch file="pyobjc-framework-AVFoundation-xcode-version-check.patch" strip="2"/>
 		</branch>
 		<dependencies>
@@ -697,9 +697,9 @@
 
 	<distutils id="python3-pyobjc-framework-coremedia" python3="1">
 		<branch
-			module="p/pyobjc-framework-coremedia/pyobjc_framework_coremedia-10.3.2.tar.gz"
-			hash="sha256:cf69753c12cd193df5ff25eb8f6da857c9aa93e73b8e497ddd77a3f48d1b171c"
-			version="10.3.2">
+			module="p/pyobjc-framework-coremedia/pyobjc_framework_coremedia-11.0.tar.gz"
+			hash="sha256:a414db97ba30b43c9dd96213459d6efb169f9e92ce1ad7a75516a679b181ddfb"
+			version="11.0">
 			<patch file="pyobjc-framework-CoreMedia-xcode-version-check.patch" strip="2"/>
 		</branch>
 		<dependencies>
@@ -712,9 +712,9 @@
 
 	<distutils id="python3-pyobjc-framework-libdispatch" python3="1">
 		<branch
-			module="p/pyobjc-framework-libdispatch/pyobjc_framework_libdispatch-10.3.2.tar.gz"
-			hash="sha256:e9f4311fbf8df602852557a98d2a64f37a9d363acf4d75634120251bbc7b7304"
-			version="10.3.2">
+			module="p/pyobjc-framework-libdispatch/pyobjc_framework_libdispatch-11.0.tar.gz"
+			hash="sha256:d22df11b07b1c3c8e7cfc4ba9e876a95c19f44acd36cf13d40c5cccc1ffda04b"
+			version="11.0">
 			<patch file="pyobjc-framework-libdispatch-xcode-version-check.patch" strip="2"/>
 		</branch>
 		<dependencies>
@@ -727,9 +727,9 @@
 
 	<distutils id="python3-pyobjc-framework-SystemConfiguration" python3="1">
 		<branch
-			module="p/pyobjc-framework-systemconfiguration/pyobjc_framework_systemconfiguration-10.3.2.tar.gz"
-			hash="sha256:6d98d26da42501abceb9b374ba8e31b01a96af87a77cd578ea1b691f8152bc86"
-			version="10.3.2">
+			module="p/pyobjc-framework-systemconfiguration/pyobjc_framework_systemconfiguration-11.0.tar.gz"
+			hash="sha256:06487f0fdd43c6447b5fd3d7f3f59826178d32bcf74f848c5b3ea597191d471d"
+			version="11.0">
 			<patch file="pyobjc-framework-SystemConfiguration-xcode-version-check.patch" strip="2"/>
 		</branch>
 		<dependencies>
