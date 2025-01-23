@@ -680,7 +680,7 @@
 	<distutils id="python3-pyobjc-framework-quartz" python3="1">
 		<branch
 			module="p/pyobjc-framework-quartz/pyobjc_framework_quartz-11.0.tar.gz"
-			hash="sha256:i3205bf7795fb9ae34747f701486b3db6dfac71924894d1f372977c4d70c3c619"
+			hash="sha256:3205bf7795fb9ae34747f701486b3db6dfac71924894d1f372977c4d70c3c619"
 			version="11.0">
 		</branch>
 		<dependencies>
