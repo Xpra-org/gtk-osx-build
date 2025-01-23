@@ -668,7 +668,6 @@
 			module="p/pyobjc-framework-cocoa/pyobjc_framework_cocoa-11.0.tar.gz"
 			hash="sha256:00346a8cb81ad7b017b32ff7bf596000f9faa905807b1bd234644ebd47f692c5"
 			version="11.0">
-			<patch file="pyobjc-framework-Cocoa-xcode-version-check.patch" strip="2"/>
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
@@ -683,7 +682,6 @@
 			module="p/pyobjc-framework-quartz/pyobjc_framework_quartz-11.0.tar.gz"
 			hash="sha256:i3205bf7795fb9ae34747f701486b3db6dfac71924894d1f372977c4d70c3c619"
 			version="11.0">
-			<patch file="pyobjc-framework-Quartz-xcode-version-check.patch" strip="2"/>
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
@@ -698,7 +696,6 @@
 			module="p/pyobjc-framework-avfoundation/pyobjc_framework_avfoundation-11.0.tar.gz"
 			hash="sha256:269a592bdaf8a16948d8935f0cf7c8cb9a53e7ea609a963ada0e55f749ddb530"
 			version="11.0">
-			<patch file="pyobjc-framework-AVFoundation-xcode-version-check.patch" strip="2"/>
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
@@ -713,7 +710,6 @@
 			module="p/pyobjc-framework-coremedia/pyobjc_framework_coremedia-11.0.tar.gz"
 			hash="sha256:a414db97ba30b43c9dd96213459d6efb169f9e92ce1ad7a75516a679b181ddfb"
 			version="11.0">
-			<patch file="pyobjc-framework-CoreMedia-xcode-version-check.patch" strip="2"/>
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
@@ -728,7 +724,6 @@
 			module="p/pyobjc-framework-libdispatch/pyobjc_framework_libdispatch-11.0.tar.gz"
 			hash="sha256:d22df11b07b1c3c8e7cfc4ba9e876a95c19f44acd36cf13d40c5cccc1ffda04b"
 			version="11.0">
-			<patch file="pyobjc-framework-libdispatch-xcode-version-check.patch" strip="2"/>
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
@@ -743,7 +738,6 @@
 			module="p/pyobjc-framework-systemconfiguration/pyobjc_framework_systemconfiguration-11.0.tar.gz"
 			hash="sha256:06487f0fdd43c6447b5fd3d7f3f59826178d32bcf74f848c5b3ea597191d471d"
 			version="11.0">
-			<patch file="pyobjc-framework-SystemConfiguration-xcode-version-check.patch" strip="2"/>
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
