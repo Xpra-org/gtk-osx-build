@@ -33,9 +33,9 @@
   <autotools id="python3"
              autogen-sh="configure"
              autogenargs="--enable-shared">
-    <branch module="3.11.9/Python-3.11.9.tar.xz"
-            version="3.11.9"
-            hash="sha256:9b1e896523fc510691126c864406d9360a3d1e986acbda59cda57b5abda45b87"
+    <branch module="3.11.11/Python-3.11.11.tar.xz"
+            version="3.11.11"
+            hash="sha256:2a9920c7a0cd236de33644ed980a13cbbc21058bfdc528febb6081575ed73be3"
             repo="python" />
     <dependencies>
       <dep package="readline" />
