@@ -202,9 +202,9 @@
 	</autotools>
 
 	<cmake id="libyuv">
-		<branch module="src/libyuv-331c361581896292fb46c8c6905e41262b7ca95f.tar.xz"
-			version="0.1878.20231004" checkoutdir="libyuv-331c361581896292fb46c8c6905e41262b7ca95f"
-			hash="sha256:9444dc22674dbdfaec7266df826cb5f66fd2ece1f935c0eb1f6d27417986237e"
+		<branch module="src/libyuv-0.1899.r2785.tar.xz"
+			version="0.1899.r2785" checkoutdir="libyuv-0.1899.r2785"
+			hash="sha256:9c357dd2fa7ab21ad9dfd0e430d47941964dda4a2b6c766991380e6d4b7c3630"
 			repo="xpra.org">
 			<patch file="https://raw.githubusercontent.com/Xpra-org/gtk-osx-build/master/patches/libyuv-nojpeg.patch" strip="1" />
 			<patch file="https://raw.githubusercontent.com/Xpra-org/gtk-osx-build/master/patches/libyuv-add-pkgconfig.patch" strip="1" />
