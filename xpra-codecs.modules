@@ -90,9 +90,9 @@
 	</autotools>
 
 	<autotools id="faac" autogenargs="" autogen-sh="autoreconf" supports-non-srcdir-builds="no">
-		<branch module="knik0/faac/archive/1_30.tar.gz"
-			version="1.30" checkoutdir="faac-1_30"
-			hash="sha256:adc387ce588cca16d98c03b6ec1e58f0ffd9fc6eadb00e254157d6b16203b2d2"
+		<branch module="knik0/faac/archive/1_31.tar.gz"
+			version="1.31" checkoutdir="faac-1_31"
+			hash="sha256:3191bf1b131f1213221ed86f65c2dfabf22d41f6b3771e7e65b6d29478433527"
 			repo="github.com"/>
 	</autotools>
 
