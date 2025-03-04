@@ -29,9 +29,9 @@
   <autotools id="faad2"
              autogen-sh="autoreconf"
              autogenargs="-without-bmp --without-xmms --without-drm --without-mpeg4ip">
-    <branch module="knik0/faad2/archive/refs/tags/2.11.0.tar.gz"
-            version="2.11.0"
-            hash="sha256:720c1dc404439e0a9117aa144dc7ead56f1658adf4badbb39f959d6ad8eed489"
+    <branch module="knik0/faad2/archive/refs/tags/2.11.2.tar.gz"
+            version="2.11.2"
+            hash="sha256:3fcbd305e4abd34768c62050e18ca0986f7d9c5eca343fb98275418013065c0e"
             repo="github.com" />
   </autotools>
   <autotools id="ffmpeg"
