@@ -62,7 +62,7 @@
   </cmake>
   <autotools id="libtiff"
              autogen-sh="configure"
-             autogenargs="--without-x">
+             autogenargs="--without-x --without-webp">
     <branch module="libtiff/tiff-4.7.0.tar.xz"
             version="4.7.0"
             hash="sha256:273a0a73b1f0bed640afee4a5df0337357ced5b53d3d5d1c405b936501f71017"
