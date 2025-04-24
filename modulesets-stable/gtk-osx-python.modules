@@ -34,8 +34,8 @@
              autogen-sh="configure"
              autogenargs="--enable-shared">
     <branch module="3.12.10/Python-3.12.10.tar.xz"
-            version="3.12.1007ab697474595e06f06647417d3c7fa97ded07afc1a7e4454c5639919b46eaea"
-            hash="sha256:2a9920c7a0cd236de33644ed980a13cbbc21058bfdc528febb6081575ed73be3"
+            version="3.12.10"
+            hash="sha256:07ab697474595e06f06647417d3c7fa97ded07afc1a7e4454c5639919b46eaea"
             repo="python" />
     <dependencies>
       <dep package="readline" />
