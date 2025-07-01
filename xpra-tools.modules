@@ -20,9 +20,9 @@
 	<autotools id="openssl" autogen-sh="Configure" autogenargs="shared "
 			autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s --openssldir=%(prefix)s/etc/ssl %(autogenargs)s"
 			makeinstallargs="install_sw" supports-non-srcdir-builds="no">
-		<branch module="openssl/openssl/releases/download/openssl-3.3.3/openssl-3.3.3.tar.gz"
-			version="3.3.3"
-			hash="sha256:712590fd20aaa60ec75d778fe5b810d6b829ca7fb1e530577917a131f9105539"
+		<branch module="openssl/openssl/releases/download/openssl-3.3.4/openssl-3.3.4.tar.gz"
+			version="3.3.4"
+			hash="sha256:8d1a5fc323d3fd351dc05458457fd48f78652d2a498e1d70ffea07b4d0eb3fa8"
 			repo="github.com" />
 	</autotools>
 
