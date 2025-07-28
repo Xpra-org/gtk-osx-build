@@ -1,23 +1,21 @@
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index ed4948f0..228ac830 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
-@@ -35,12 +35,12 @@ ADD_EXECUTABLE			( yuvconvert ${ly_base_dir}/util/yuvconvert.cc )
- TARGET_LINK_LIBRARIES	( yuvconvert ${ly_lib_static} )
+--- a/CMakeLists.txt	2025-07-28 18:57:28
++++ b/CMakeLists.txt	2025-07-28 18:58:05
+@@ -196,12 +196,12 @@
+ add_executable      ( yuvconstants ${ly_base_dir}/util/yuvconstants.c )
+ target_link_libraries  ( yuvconstants ${ly_lib_static} )
  
- 
--INCLUDE ( FindJPEG )
+-find_package ( JPEG )
 -if (JPEG_FOUND)
 -  include_directories( ${JPEG_INCLUDE_DIR} )
--  target_link_libraries( yuvconvert ${JPEG_LIBRARY} )
+-  target_link_libraries( ${ly_lib_shared} ${JPEG_LIBRARY} )
 -  add_definitions( -DHAVE_JPEG )
 -endif()
-+#INCLUDE ( FindJPEG )
-+#if (JPEG_FOUND)
-+#  include_directories( ${JPEG_INCLUDE_DIR} )
-+#  target_link_libraries( yuvconvert ${JPEG_LIBRARY} )
-+#  add_definitions( -DHAVE_JPEG )
-+#endif()
++# find_package ( JPEG )
++# if (JPEG_FOUND)
++#   include_directories( ${JPEG_INCLUDE_DIR} )
++#   target_link_libraries( ${ly_lib_shared} ${JPEG_LIBRARY} )
++#   add_definitions( -DHAVE_JPEG )
++# endif()
  
- if(TEST)
+ if(UNIT_TEST)
    find_library(GTEST_LIBRARY gtest)
