@@ -57,12 +57,20 @@ envvar DEV_SRC_ROOT "$DEVROOT/Source"
 envvar PYENV_INSTALL_ROOT "$DEV_SRC_ROOT/pyenv"
 envvar PYENV_ROOT "$DEVPREFIX/share/pyenv"
 envvar PIP_CONFIG_DIR "$HOME/.config/pip"
-envvar PYTHON_VERSION 3.12.10
+envvar PYTHON_VERSION 3.13.2
 
 export PYTHONWARNINGS=ignore:DEPRECATION::pip._internal.cli.base_command
 
 if test ! -d "$DEVPREFIX/bin" ; then
     mkdir -p "$DEVPREFIX/bin"
+fi
+
+ARCH=arm64
+if test "$(arch)x" = "i386x"; then
+    ARCH=x86_64
+elif test "$(arch)x" != "arm64x"; then
+    echo "Unknown architecture $(arch), aborting!"
+    exit 1
 fi
 
 GITLAB="https://gitlab.gnome.org/GNOME"
@@ -107,16 +115,17 @@ export PYTHON_CONFIGURE_OPTS="--enable-shared"
 #it's defined by pyenv so it can't be changed.
 export PYENV_VERSION=$PYTHON_VERSION
 $PYENV install -v $PYENV_VERSION
+$PYENV global $PYENV_VERSION
 PIP="$PYENV_ROOT/shims/pip3"
 
 $PIP install --upgrade --user pip
 
 # Install pipenv
-$PIP install --upgrade --user pipenv==2024.0.0
+$PIP install --upgrade --user pipenv==2024.4.1
 PIPENV="$PYTHONUSERBASE/bin/pipenv"
 export WORKON_HOME=$DEVPREFIX/share/virtualenvs
 
-JHBUILD_RELEASE_VERSION=3.38.0
+JHBUILD_RELEASE_VERSION="master"
 # Install jhbuild
 if test ! -d "$DEV_SRC_ROOT/jhbuild/.git" ; then
     git clone -b $JHBUILD_RELEASE_VERSION $GITLAB/jhbuild.git "$DEV_SRC_ROOT/jhbuild"
@@ -135,7 +144,10 @@ if test ! -x "$NINJA" -a ! -x "$DEVPREFIX/bin/ninja"; then
     rm "$DEVPREFIX/ninja-mac.zip"
 fi
 
-#Install Rust (required for librsvg, which gtk needs to render its icons.)
+# Install Rust (required for librsvg, which gtk needs to render its icons.)
+# Cross compilation note: To enable x86_64 rust builds on an Apple Silicon mac, run
+# rustup toolchain install stable-x86_64-apple-darwin
+# and edit the default toolchain in $DEVPREFIX/settings.toml to match.
 RUSTUP=`which rustup`
 if test -x "$RUSTUP"; then
     case `dirname "$RUSTUP"` in
@@ -158,8 +170,10 @@ if test -x "$RUSTUP"; then
 else
     envvar CARGO_HOME "$DEVPREFIX"
     envvar RUSTUP_HOME "$DEVPREFIX"
-    curl https://sh.rustup.rs -sSf | sh -s -- -y --profile minimal --no-modify-path
+    curl https://sh.rustup.rs -sSf | sh -s -- -y --profile minimal --no-modify-path > /dev/null
 fi
+# Install the Build C package, C integration required to build librsvg
+$DEVPREFIX/bin/cargo install cargo-c --features=vendored-openssl
 
 if test ! -d "$DEVPREFIX/etc" ; then
     mkdir -p "$DEVPREFIX/etc"
@@ -195,7 +209,7 @@ export LANG=C
 EOF
 
 cat <<EOF > "$DEVPREFIX/bin/jhbuild"
-#!$DEVPREFIX/bin/bash
+#!/usr/bin/arch -$ARCH $DEVPREFIX/bin/bash
 export DEVROOT="$DEVROOT"
 export DEVPREFIX="$DEVPREFIX"
 export PYTHONUSERBASE="$PYTHONUSERBASE"
@@ -215,7 +229,7 @@ if test ! -d "$DEVPREFIX/libexec" ; then
     mkdir -p "$DEVPREFIX/libexec"
 fi
 cat <<EOF > "$DEVPREFIX/libexec/run_jhbuild.py"
-#!/usr/bin/env python3
+#!/usr/bin/env /usr/bin/arch -$ARCH python3
 # -*- coding: utf-8 -*-
 
 import sys
@@ -242,7 +256,9 @@ if test ! -x "$DEVPREFIX/libexec/run_jhbuild.py" ; then
     chmod +x "$DEVPREFIX/libexec/run_jhbuild.py"
 fi
 if test "x`echo $PATH | grep "$DEVPREFIX/bin"`" == x ; then
-    echo "PATH does not contain $DEVPREFIX/bin. You probably want to fix that."
+    echo "***********"
+    echo "PATH does not contain $DEVPREFIX/bin. You probably want to fix that.\n*"
+    echo "***********"
     export PATH="$DEVPREFIX/bin:$PATH"
 fi
 
