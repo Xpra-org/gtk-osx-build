@@ -1,10 +1,10 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
 index ed4948f0..8be3402a 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
-@@ -89,3 +89,6 @@ INSTALL ( DIRECTORY ${PROJECT_SOURCE_DIR}/include/		DESTINATION include )
+--- a/CMakeLists.txt	2025-08-27 22:57:53
++++ b/CMakeLists.txt	2025-08-27 22:59:04
+@@ -254,3 +254,6 @@
  # create the .deb and .rpm packages using cpack
- INCLUDE ( CM_linux_packages.cmake )
+ include ( CM_linux_packages.cmake )
  
 +# generate pkgconfig file:
 +install ( CODE "execute_process(COMMAND sh ${PROJECT_SOURCE_DIR}/gen_pc.sh)")
