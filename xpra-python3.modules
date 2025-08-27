@@ -273,9 +273,9 @@
 	<!--
 	<distutils id="python3-bcrypt" python3="1">
 		<branch
-			module="b/bcrypt/bcrypt-4.2.1.tar.gz"
-			hash="sha256:6765386e3ab87f569b276988742039baab087b2cdb01e809d74e74503c2faafe"
-			version="4.2.1"/>
+			module="b/bcrypt/bcrypt-4.3.0.tar.gz"
+			hash="sha256:3a3fd2204178b6d2adcf09cb4f6426ffef54762577a7c9b54c159008cb288c18"
+			version="4.3.0"/>
 		<dependencies>
 			<dep package="python3"/>
 			<dep package="python3-semantic-version"/>
