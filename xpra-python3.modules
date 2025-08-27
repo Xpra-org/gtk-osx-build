@@ -583,7 +583,7 @@
 	<distutils id="python3-pyopengl" python3="1">
 		<branch
 			module="p/pyopengl/pyopengl-3.1.10.tar.gz"
-			hash="sha256:82751c83f0a6f732b8b5923990edc2441d38176a98756b1718e8d6c4379f5a71"
+			hash="sha256:c4a02d6866b54eb119c8e9b3fb04fa835a95ab802dd96607ab4cdb0012df8335"
 			version="3.1.10"/>
 		<dependencies>
 			<dep package="python3"/>
@@ -596,7 +596,7 @@
 	<distutils id="python3-pyopengl-accelerate" python3="1">
 		<branch
 			module="p/pyopengl-accelerate/pyopengl_accelerate-3.1.10.tar.gz"
-			hash="sha256:c4a02d6866b54eb119c8e9b3fb04fa835a95ab802dd96607ab4cdb0012df8335"
+			hash="sha256:82751c83f0a6f732b8b5923990edc2441d38176a98756b1718e8d6c4379f5a71"
 			version="3.1.10"/>
 		<dependencies>
 			<dep package="python3"/>
