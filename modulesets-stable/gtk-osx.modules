@@ -354,7 +354,6 @@
             version="2.61.0"
             hash="sha256:dbd0db40a1179a382fbb8cc930837671b973d722ba106a3dee2aad0fd858e2c4" >
       <patch file="librsvg-libpixbufloader-install-names.patch" strip="1" />
-      <patch file="librsvg-fix-symbol-link-argument.patch" strip="1" />
     </branch>
     <dependencies>
       <dep package="openssl"/> <!-- Required for rust package cargo-c -->
