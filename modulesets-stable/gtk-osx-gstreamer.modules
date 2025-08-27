@@ -41,9 +41,9 @@
     </dependencies>
   </autotools>
   <meson id="gstreamer">
-    <branch module="gstreamer/gstreamer-1.24.12.tar.xz"
-            version="1.24.12"
-            hash="sha256:b3522d1b4fe174fff3b3c7f0603493e2367bd1c43f5804df15b634bd22b1036f">
+    <branch module="gstreamer/gstreamer-1.26.5.tar.xz"
+            version="1.26.5"
+            hash="sha256:0a7edb0e7b42dbe6b575fce61a4808a3f6b20e085a1eaecbc025d0ec21f1e774">
     </branch>
     <after>
       <dep package="glib" />
