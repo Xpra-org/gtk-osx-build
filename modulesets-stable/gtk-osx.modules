@@ -125,9 +125,9 @@
              autogen-sh="source/configure"
              autogenargs="--enable-rpath"
              makeargs='CFLAGS="$CFLAGS -DU_CHARSET_IS_UTF8=1 -DU_USING_ICU_NAMESPACE=0"'>
-    <branch module="unicode-org/icu/releases/download/release-76-1/icu4c-76_1-src.tgz"
-            version="76.1"
-
+    <branch module="unicode-org/icu/releases/download/release-77-1/icu4c-77_1-src.tgz"
+            version="77.1"
+            hash="sha256:588e431f77327c39031ffbb8843c0e3bc122c211374485fa87dc5f3faff24061"
             checkoutdir="icu"
             repo="github-tarball" />
   </autotools>
