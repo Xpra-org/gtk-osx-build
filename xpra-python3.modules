@@ -8,9 +8,9 @@
 
 	<distutils id="python3-setuptools" python3="1">
 		<branch
-			module="s/setuptools/setuptools-68.0.0.tar.gz"
-			hash="sha256:baf1fdb41c6da4cd2eae722e135500da913332ab3f2f5c7d33af9b492acb5235"
-			version="68.0.0">
+			module="s/setuptools/setuptools-80.9.0.tar.gz"
+			hash="sha256:f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c"
+			version="80.9.0">
 			<patch file="setuptools_make_manageable.patch" strip="1"/>
 		</branch>
 		<dependencies>
