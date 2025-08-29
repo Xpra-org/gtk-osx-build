@@ -66,6 +66,8 @@
 			repo="github.com"/>
 	</autotools>
 
+	<!--
+	does not build on arm64, and not needed any more
 	<autotools id="lame" autogenargs="" autogen-sh="configure">
 		<branch module="lame/lame-3.100.tar.gz"
 			version="3.100"
@@ -79,6 +81,7 @@
 			<dep package="nasm"/>
 		</dependencies>
 	</autotools>
+	-->
 
 	<autotools id="twolame" autogenargs="" autogen-sh="autogen.sh --disable-maintainer-mode" supports-non-srcdir-builds="no">
 		<branch module="njh/twolame/archive/0.4.0.tar.gz"
