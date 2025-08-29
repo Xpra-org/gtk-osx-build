@@ -69,9 +69,9 @@
   <autotools id="libffi"
              autogen-sh="configure"
              autogenargs="--disable-multi-os-directory --disable-docs">
-    <branch module="libffi/libffi/releases/download/v3.4.7/libffi-3.4.7.tar.gz"
-            version="3.4.7"
-            hash="sha256:138607dee268bdecf374adf9144c00e839e38541f75f24a1fcf18b78fda48b2d"
+    <branch module="libffi/libffi/releases/download/v3.5.2/libffi-3.5.2.tar.gz"
+            version="3.5.2"
+            hash="sha256:f3a3082a23b37c293a4fcd1053147b371f2ff91fa7ea1b2a52e335676bac82dc"
             repo="github-tarball" />
   </autotools>
   <autotools id="libpcre2"
