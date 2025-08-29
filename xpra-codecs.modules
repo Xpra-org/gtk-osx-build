@@ -238,7 +238,6 @@
 			<dep package="libogg"/>
 			<dep package="libvorbis"/>
 			<dep package="speex"/>
-			<dep package="lame"/>
 			<dep package="twolame"/>
 			<dep package="faac"/>
 			<dep package="faad2"/>
