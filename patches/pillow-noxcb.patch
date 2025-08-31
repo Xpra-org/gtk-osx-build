@@ -1,0 +1,11 @@
+--- a/setup.py	2025-08-31 13:39:07
++++ b/setup.py	2025-08-31 13:39:49
+@@ -865,7 +865,7 @@
+                         feature.set("webp", prefix + "webp")
+                         break
+ 
+-        if feature.want("xcb"):
++        if feature.want("xcb") and False:
+             _dbg("Looking for xcb")
+             if _find_include_file(self, "xcb/xcb.h"):
+                 if _find_library_file(self, "xcb"):

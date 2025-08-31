@@ -225,7 +225,9 @@
 		<branch
 			module="p/pillow/pillow-11.3.0.tar.gz"
 			hash="sha256:3828ee7586cd0b2091b6209e5ad53e20d0649bbe87164a459d0676e035e8f523"
-			version="11.3.0"/>
+			version="11.3.0">
+			<patch file="pillow-noxcb.patch" strip="1"/>
+		</branch>
 		<dependencies>
 			<dep package="python3"/>
 			<dep package="libwebp"/>
