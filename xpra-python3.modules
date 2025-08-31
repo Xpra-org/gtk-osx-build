@@ -242,7 +242,7 @@
 		</after>
 	</distutils>
 
-	<pip id="python3-py2app" python3="1">
+	<distutils id="python3-py2app" python3="1">
 		<branch
 			module="p/py2app/py2app-0.28.8.tar.gz"
 			hash="sha256:cab7aec752a8b83e7c6cef7c15271dc720155275e44cbf610e3162e0807313ec"
@@ -256,7 +256,7 @@
 		<after>
 			<dep package="python3"/>
 		</after>
-	</pip>
+	</distutils>
 
 	<distutils id="python3-cython" python3="1">
 		<branch
