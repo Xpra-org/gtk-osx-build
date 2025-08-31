@@ -654,6 +654,7 @@
 			module="p/pyobjc-core/pyobjc_core-11.1.tar.gz"
 			hash="sha256:b63d4d90c5df7e762f34739b39cc55bc63dbcf9fb2fb3f2671e528488c7a87fe"
 			version="11.1">
+			<patch file="pyobjc-core-test-cflags.patch" strip="1"/>
 		</branch>
 		<dependencies>
 			<dep package="python3"/>

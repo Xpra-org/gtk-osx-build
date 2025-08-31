@@ -1,0 +1,8 @@
+--- a/Modules/objc/test/block2.m	2025-08-31 20:04:13
++++ b/Modules/objc/test/block2.m	2025-08-31 20:04:18
+@@ -1,5 +1,4 @@
+ /*
+- * CFLAGS: -fdisable-block-signature-string
+  */
+ #include "Python.h"
+ #include "pyobjc-api.h"
