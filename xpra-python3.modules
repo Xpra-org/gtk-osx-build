@@ -271,8 +271,7 @@
 		</after>
 	</distutils>
 
-	<!--
-	<distutils id="python3-bcrypt" python3="1">
+	<pip id="python3-bcrypt" python3="1">
 		<branch
 			module="b/bcrypt/bcrypt-4.3.0.tar.gz"
 			hash="sha256:3a3fd2204178b6d2adcf09cb4f6426ffef54762577a7c9b54c159008cb288c18"
@@ -285,8 +284,7 @@
 		<after>
 			<dep package="python3"/>
 		</after>
-	</distutils>
-	-->
+	</pip>
 
 	<distutils id="python3-nacl" python3="1">
 		<branch
@@ -310,9 +308,7 @@
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
-			<!--
 			<dep package="python3-bcrypt"/>
-			-->
 			<dep package="python3-nacl"/>
 		</dependencies>
 		<after>
@@ -828,9 +824,7 @@
 		  <dep package="python3-py2app"/>
 		  <dep package="python3-cython"/>
 		  <dep package="python3-pycups"/>
-		  <!--
 		  <dep package="python3-bcrypt"/>
-		  -->
 		  <dep package="python3-paramiko"/>
 		  <dep package="python3-uvloop"/>
 		  <dep package="python3-pyopenssl"/>
