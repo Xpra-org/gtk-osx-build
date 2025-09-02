@@ -529,9 +529,9 @@
 
 	<distutils id="python3-gssapi" python3="1">
 		<branch
-			module="g/gssapi/gssapi-1.9.0.tar.gz"
-				hash="sha256:f468fac8f3f5fca8f4d1ca19e3cd4d2e10bd91074e7285464b22715d13548afe"
-			version="1.9.0">
+			module="g/gssapi/gssapi-1.10.0.tar.gz"
+			hash="sha256:f1495e0dc20bee3ad2839724d98ae723c7dae78c1ddea37a7c861c3c4bd77763"
+			version="1.10.0">
 		</branch>
 		<dependencies>
 			<dep package="python3-decorator"/>
