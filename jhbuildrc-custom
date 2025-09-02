@@ -12,3 +12,6 @@ modulesets_dir = "."
 #os.environ["SSL_CERT_FILE"] = "/Users/osx/gtk/inst/etc/ssl/cacert.pem"
 
 module_cmakeargs["freetype"] = "-DFT_DISABLE_BROTLI=ON"
+
+# maturin needs this:
+os.environ["MACOSX_DEPLOYMENT_TARGET"] = "12.0"

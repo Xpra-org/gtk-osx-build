@@ -186,7 +186,7 @@
 		</after>
 	</distutils>
 
-	<distutils id="python3-cryptography" python3="1">
+	<pip id="python3-cryptography" python3="1">
 		<branch
                         module="c/cryptography/cryptography-45.0.7.tar.gz"
                         hash="sha256:4b1654dfc64ea479c242508eb8c724044f1e964a47d1d1cacc5132292d851971"
@@ -205,7 +205,7 @@
 		<after>
 			<dep package="python3"/>
 		</after>
-	</distutils>
+	</pip>
 
 	<distutils id="python3-pyasn1" python3="1">
 		<branch
