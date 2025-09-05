@@ -139,9 +139,9 @@
 	</autotools>
 
 	<cmake id="libaom">
-		<branch module="aom-releases/libaom-3.12.1.tar.gz"
-			version="3.12.1"
-			hash="sha256:9e9775180dec7dfd61a79e00bda3809d43891aee6b2e331ff7f26986207ea22e"
+		<branch module="aom-releases/libaom-3.13.0.tar.gz"
+			version="3.13.0"
+			hash="sha256:5fe4453a8ffba138a6705a2f6d07666146a706342ef835ee82bf9e70bf9a77d6"
 			repo="googleapis"/>
 	</cmake>
 
