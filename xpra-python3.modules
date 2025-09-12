@@ -102,12 +102,10 @@
 			hash="sha256:1c39c6016c32bc48dd54561950ebd6836e1670f2ae46128f67cf49e789c52824"
 			version="1.17.1"/>
 		<dependencies>
-	        <dep package="libffi"/>
 			<dep package="python3"/>
 			<dep package="python3-cparser"/>
 		</dependencies>
 		<after>
-	        <dep package="libffi"/>
 			<dep package="python3"/>
 			<dep package="python3-cparser"/>
 		</after>
