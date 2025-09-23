@@ -259,7 +259,7 @@
 	<distutils id="python3-cython" python3="1">
 		<branch
 			module="C/Cython/cython-3.1.4.tar.gz"
-			hash="sha256:0e522e0e535ae45c89fa6848d4fea1e43dd318fc865b7ae2b83972ac663269c1"
+			hash="sha256:9aefefe831331e2d66ab31799814eae4d0f8a2d246cbaaaa14d1be29ef777683"
 			version="3.1.4"/>
 		<dependencies>
 			<dep package="python3"/>
