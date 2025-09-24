@@ -98,9 +98,9 @@
 
 	<distutils id="python3-cffi" python3="1">
 		<branch
-			module="c/cffi/cffi-1.17.1.tar.gz"
-			hash="sha256:1c39c6016c32bc48dd54561950ebd6836e1670f2ae46128f67cf49e789c52824"
-			version="1.17.1"/>
+			module="c/cffi/cffi-2.0.0.tar.gz"
+			hash="sha256:44d1b5909021139fe36001ae048dbdde8214afa20200eda0f64c068cac5d5529"
+			version="2.0.0"/>
 		<dependencies>
 			<dep package="python3"/>
 			<dep package="python3-cparser"/>
