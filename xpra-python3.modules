@@ -632,9 +632,9 @@
 
 	<distutils id="python3-yaml" python3="1">
 		<branch
-			module="p/pyyaml/pyyaml-6.0.2.tar.gz"
-			hash="sha256:d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
-			version="6.0.2"/>
+			module="p/pyyaml/pyyaml-6.0.3.tar.gz"
+			hash="sha256:d76623373421df22fb4cf8817020cbb7ef15c725b9d5e45f17e189bfc384190f"
+			version="6.0.3"/>
 		<dependencies>
 			<dep package="python3"/>
 		</dependencies>
