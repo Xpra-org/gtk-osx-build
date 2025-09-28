@@ -286,9 +286,9 @@
 
 	<distutils id="python3-nacl" python3="1">
 		<branch
-			module="P/PyNaCl/PyNaCl-1.5.0.tar.gz"
-			hash="sha256:8ac7448f09ab85811607bdd21ec2464495ac8b7c66d146bf545b0f08fb9220ba"
-			version="1.5.0"/>
+			module="P/PyNaCl/PyNaCl-1.6.0.tar.gz"
+			hash="sha256:cb36deafe6e2bce3b286e5d1f3e1c246e0ccdb8808ddb4550bb2792f2df298f2"
+			version="1.6.0"/>
 		<dependencies>
 			<dep package="python3"/>
 			<dep package="python3-cffi"/>
