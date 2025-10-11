@@ -286,7 +286,7 @@
 
 	<distutils id="python3-nacl" python3="1">
 		<branch
-			module="-/pynacl/pynacl-1.6.0.tar.gz"
+			module="p/pynacl/pynacl-1.6.0.tar.gz"
 			hash="sha256:cb36deafe6e2bce3b286e5d1f3e1c246e0ccdb8808ddb4550bb2792f2df298f2"
 			version="1.6.0"/>
 		<dependencies>
