@@ -205,7 +205,7 @@
 		</after>
 	</pip>
 
-	<distutils id="python3-pyasn1" python3="1">
+	<pip id="python3-pyasn1" python3="1">
 		<branch
 			module="p/pyasn1/pyasn1-0.6.1.tar.gz"
 			hash="sha256:6f580d2bdd84365380830acf45550f2511469f673cb4a5ae3857a3170128b034"
@@ -217,7 +217,7 @@
 		<after>
 			<dep package="python3"/>
 		</after>
-	</distutils>
+	</pip>
 
 	<distutils id="python3-pillow" python3="1">
 		<branch
@@ -422,8 +422,7 @@
 		</after>
 	</distutils>
 
-
-	<distutils id="python3-pyasn1-modules" python3="1">
+	<pip id="python3-pyasn1-modules" python3="1">
 		<branch
 			module="p/pyasn1_modules/pyasn1_modules-0.3.0.tar.gz"
 			hash="sha256:5bd01446b736eb9d31512a30d46c1ac3395d676c6f3cafa4c03eb54b9925631c"
@@ -435,7 +434,7 @@
 		<after>
 			<dep package="python3-pyasn1"/>
 		</after>
-	</distutils>
+	</pip>
 
 	<distutils id="python3-ldap3" python3="1">
 		<branch
