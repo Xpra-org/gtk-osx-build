@@ -389,9 +389,9 @@
 
 	<distutils id="python3-aioquic" python3="1">
 		<branch
-			module="a/aioquic/aioquic-1.2.0.tar.gz"
-			hash="sha256:f91263bb3f71948c5c8915b4d50ee370004f20a416f67fab3dcc90556c7e7199"
-			version="1.2.0">
+			module="a/aioquic/aioquic-1.3.0.tar.gz"
+			hash="sha256:28d070b2183e3e79afa9d4e7bd558960d0d53aeb98bc0cf0a358b279ba797c92"
+			version="1.3.0">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
