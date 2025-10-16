@@ -221,9 +221,9 @@
 
 	<distutils id="python3-pillow" python3="1">
 		<branch
-			module="p/pillow/pillow-11.3.0.tar.gz"
-			hash="sha256:3828ee7586cd0b2091b6209e5ad53e20d0649bbe87164a459d0676e035e8f523"
-			version="11.3.0">
+			module="p/pillow/pillow-12.0.0.tar.gz"
+			hash="sha256:87d4f8125c9988bfbed67af47dd7a953e2fc7b0cc1e7800ec6d2080d490bb353"
+			version="12.0.0">
 			<patch file="pillow-noxcb.patch" strip="1"/>
 		</branch>
 		<dependencies>
