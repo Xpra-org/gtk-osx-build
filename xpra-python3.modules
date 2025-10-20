@@ -219,7 +219,23 @@
 		</after>
 	</pip>
 
-	<distutils id="python3-pillow" python3="1">
+	<pip id="python3-pybind11" python3="1">
+		<branch
+			module="p/pybind11/pybind11-3.0.1.tar.gz"
+			hash="sha256:9c0f40056a016da59bab516efb523089139fcc6f2ba7e4930854c61efb932051"
+			version="3.0.1">
+		</branch>
+		<dependencies>
+			<dep package="python3"/>
+			<dep package="python3-pybind11"/>
+		</dependencies>
+		<after>
+			<dep package="python3"/>
+			<dep package="python3-pybind11"/>
+		</after>
+	</pip>
+
+	<pip id="python3-pillow" python3="1">
 		<branch
 			module="p/pillow/pillow-12.0.0.tar.gz"
 			hash="sha256:87d4f8125c9988bfbed67af47dd7a953e2fc7b0cc1e7800ec6d2080d490bb353"
@@ -228,17 +244,19 @@
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
+			<dep package="python3-pybind11"/>
 			<dep package="libwebp"/>
 			<dep package="libpng"/>
 			<dep package="libjpeg"/>
 		</dependencies>
 		<after>
 			<dep package="python3"/>
+			<dep package="python3-pybind11"/>
 			<dep package="libwebp"/>
 			<dep package="libpng"/>
 			<dep package="libjpeg"/>
 		</after>
-	</distutils>
+	</pip>
 
 	<distutils id="python3-py2app" python3="1">
 		<branch
@@ -817,6 +835,7 @@
 		  <dep package="python3-netifaces"/>
 		  <dep package="python3-pyasn1"/>
 		  <dep package="python3-pyasn1-modules"/>
+		  <dep package="python3-pybind11"/>
 		  <dep package="python3-pillow"/>
 		  <dep package="python3-py2app"/>
 		  <dep package="python3-cython"/>
