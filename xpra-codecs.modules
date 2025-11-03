@@ -25,12 +25,10 @@
 	</autotools>
 
 	<autotools id="nasm" autogenargs="" autogen-sh="configure">
-		<branch module="pub/nasm/releasebuilds/2.16.01/nasm-2.16.01.tar.xz"
-			version="2.16.01"
-			hash="sha256:c77745f4802375efeee2ec5c0ad6b7f037ea9c87c92b149a9637ff099f162558"
+		<branch module="/pub/nasm/releasebuilds/3.01/nasm-3.01.tar.xz"
+			version="3.1"
+			hash="sha256:b7324cbe86e767b65f26f467ed8b12ad80e124e3ccb89076855c98e43a9eddd4"
 			repo="www.nasm.us">
-			<patch file="nasm-2.16.01-warnings.c-needs-srcdir.patch"
-				strip="1"/>
 		</branch>
 	</autotools>
 
