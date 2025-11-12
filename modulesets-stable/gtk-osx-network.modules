@@ -106,9 +106,9 @@
   <autotools id="gnutls"
              autogen-sh="autoreconf"
              autogenargs="--disable-doc --with-included-unistring">
-    <branch module="gcrypt/gnutls/v3.8/gnutls-3.8.9.tar.xz"
-            version="3.8.9"
-            has="sha256:69e113d802d1670c4d5ac1b99040b1f2d5c7c05daec5003813c049b5184820ed"
+    <branch module="gcrypt/gnutls/v3.8/gnutls-3.8.10.tar.xz"
+            version="3.8.10"
+            hash="sha256:db7fab7cce791e7727ebbef2334301c821d79a550ec55c9ef096b610b03eb6b7"
             repo="gnupg.org">
       <patch file="gnutls-gnulib.patch"
              strip="1" />
