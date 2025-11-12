@@ -124,9 +124,9 @@
   </autotools>
   <meson id="harfbuzz-no-cairo"
          mesonargs="-Dcoretext=enabled -Dfreetype=enabled -Ddocs=disabled -Dbenchmark=disabled -Dintrospection=disabled -Dtests=disabled">
-    <branch module="harfbuzz/harfbuzz/releases/download/11.4.4/harfbuzz-11.4.4.tar.xz"
-            version="11.4.4"
-            hash="sha256:1053f17146ea587fafa9f56c9e4e0f4b3fefae4ba2569155d8bc9a35208f58c5"
+    <branch module="harfbuzz/harfbuzz/releases/download/12.2.0/harfbuzz-12.2.0.tar.xz"
+            version="12.2.0"
+            hash="sha256:ecb603aa426a8b24665718667bda64a84c1504db7454ee4cadbd362eea64e545"
             repo="github-tarball" />
     <dependencies>
       <dep package="glib-no-introspection" />
