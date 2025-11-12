@@ -50,13 +50,13 @@ pip_remove()
 
 # Environment variable defaults:
 #
-envvar DEVROOT "$HOME"
-envvar DEVPREFIX "$DEVROOT/.new_local"
-envvar PYTHONUSERBASE "$DEVROOT/.new_local"
-envvar DEV_SRC_ROOT "$DEVROOT/Source"
-envvar PYENV_INSTALL_ROOT "$DEV_SRC_ROOT/pyenv"
-envvar PYENV_ROOT "$DEVPREFIX/share/pyenv"
-envvar PIP_CONFIG_DIR "$HOME/.config/pip"
+envvardir DEVROOT "$HOME"
+envvardir DEVPREFIX "$DEVROOT/.new_local"
+envvardir PYTHONUSERBASE "$DEVROOT/.new_local"
+envvardir DEV_SRC_ROOT "$DEVROOT/Source"
+envvardir PYENV_INSTALL_ROOT "$DEV_SRC_ROOT/pyenv"
+envvardir PYENV_ROOT "$DEVPREFIX/share/pyenv"
+envvardir PIP_CONFIG_DIR "$HOME/.config/pip"
 if test -z $PYTHON_VERSION; then
     export PYTHON_VERSION=3.11.13
 fi
@@ -90,14 +90,16 @@ if test ! -x /usr/bin/groff -a ! -x "$DEVPREFIX/bin/groff"; then
 fi
 
 # Setup pyenv
+PYENV_RELEASE_VERSION=v2.6.6
 if test ! -x "$PYENV_INSTALL_ROOT/libexec/pyenv"; then
   if test -d "$PYENV_INSTALL_ROOT"; then
      rm -rf "$PYENV_INSTALL_ROOT";
   fi
-  git clone $GITHUB/pyenv/pyenv.git "$PYENV_INSTALL_ROOT"
+  git clone -b $PYENV_RELEASE_VERSION $GITHUB/pyenv/pyenv.git "$PYENV_INSTALL_ROOT"
 else
     pushd "$PYENV_INSTALL_ROOT"
     git pull --ff-only
+    git reset --hard $PYENV_RELEASE_VERSION
     popd
 fi
 
