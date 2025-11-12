@@ -336,9 +336,9 @@
   </autotools>
   <meson id="librsvg"
          mesonargs="--buildtype=release -Dintrospection=disabled -Ddocs=disabled">
-    <branch module="librsvg/2.61/librsvg-2.61.0.tar.xz"
-            version="2.61.0"
-            hash="sha256:dbd0db40a1179a382fbb8cc930837671b973d722ba106a3dee2aad0fd858e2c4" >
+    <branch module="librsvg/2.61/librsvg-2.61.3.tar.xz"
+            version="2.61.3"
+            hash="sha256:a56d2c80d744ad2f2718f85df466fe71d24ff1f9bc3e5ef588bde4d7e87815f2" >
       <patch file="librsvg-libpixbufloader-install-names.patch" strip="1" />
     </branch>
     <dependencies>
