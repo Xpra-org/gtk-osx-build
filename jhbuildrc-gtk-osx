@@ -305,7 +305,6 @@ def setup_sdk(target=_target, sdk_version=None, architectures=[_default_arch]):
         append_autogenargs("gnutls", "--host=x86_64-apple-darwin")
     elif architectures == ["arm64"]:
         append_autogenargs("gmp", "--host=aarch64-apple-darwin ABI=64")
-        append_autogenargs("libffi", "--host=aarch64-apple-darwin")
 
     if not sdkdir:
         sdkdir = '/'
