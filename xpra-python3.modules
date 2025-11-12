@@ -276,9 +276,9 @@
 
 	<distutils id="python3-cython" python3="1">
 		<branch
-			module="c/cython/cython-3.1.6.tar.gz"
-			hash="sha256:ff4ccffcf98f30ab5723fc45a39c0548a3f6ab14f01d73930c5bfaea455ff01c"
-			version="3.1.6"/>
+			module="c/cython/cython-3.2.0.tar.gz"
+			hash="sha256:41fdce8237baee2d961c292ed0386903dfe126f131e450a62de0fd7a5280d4b2"
+			version="3.2.0"/>
 		<dependencies>
 			<dep package="python3"/>
 		</dependencies>
