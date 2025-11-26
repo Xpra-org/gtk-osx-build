@@ -304,9 +304,9 @@
 
 	<distutils id="python3-nacl" python3="1">
 		<branch
-			module="p/pynacl/pynacl-1.6.0.tar.gz"
-			hash="sha256:cb36deafe6e2bce3b286e5d1f3e1c246e0ccdb8808ddb4550bb2792f2df298f2"
-			version="1.6.0"/>
+			module="p/pynacl/pynacl-1.6.1.tar.gz"
+			hash="sha256:8d361dac0309f2b6ad33b349a56cd163c98430d409fa503b10b70b3ad66eaa1d"
+			version="1.6.1"/>
 		<dependencies>
 			<dep package="python3"/>
 			<dep package="python3-cffi"/>
