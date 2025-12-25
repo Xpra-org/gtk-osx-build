@@ -117,9 +117,9 @@
 	</autotools>
 
 	<autotools id="opus" autogen-sh="autoreconf" supports-non-srcdir-builds="no">
-		<branch module="releases/opus/opus-1.5.2.tar.gz"
-			version="1.5.2"
-			hash="sha256:65c1d2f78b9f2fb20082c38cbe47c951ad5839345876e46941612ee87f9a7ce1"
+		<branch module="releases/opus/opus-1.6.tar.gz"
+			version="1.6"
+			hash="sha256:b7637334527201fdfd6dd6a02e67aceffb0e5e60155bbd89175647a80301c92c"
 			repo="downloads.xiph.org"/>
 	</autotools>
 
