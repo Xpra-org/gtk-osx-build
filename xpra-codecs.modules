@@ -137,10 +137,10 @@
 	</cmake>
 
 	<autotools id="x264" autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s %(autogenargs)s" autogenargs="--enable-pic --enable-shared --enable-static" autogen-sh="configure">
-		<branch module="mirror/x264/archive/baee400fa9ced6f5481a728138fed6e867b0ff7f.zip"
-			checkoutdir="x264-baee400fa9ced6f5481a728138fed6e867b0ff7f"
-			version="20220602-stable"
-			hash="sha256:0d2585d044102ad400cee540321a582a59598911dadbdb2b09a82837bfa09a1e"
+		<branch module="mirror/x264/archive/31e19f92f00c7003fa115047ce50978bc98c3a0d.zip"
+			checkoutdir="x264-31e19f92f00c7003fa115047ce50978bc98c3a0d"
+			version="20231001-stable"
+			hash="sha256:c6b0de578e440f040b9972e087d017f846e5dd86f60e087f2eb8b0b6ed8c0382"
 			repo="github.com"/>
 		<dependencies>
 			<dep package="nasm"/>
