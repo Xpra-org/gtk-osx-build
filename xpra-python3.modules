@@ -774,9 +774,9 @@
 
 	<distutils id="python3-psutil" python3="1">
 		<branch
-			module="p/psutil/psutil-5.9.6.tar.gz"
-			hash="sha256:e4b92ddcd7dd4cdd3f900180ea1e104932c7bce234fb88976e2a3b296441225a"
-			version="5.9.6"/>
+			module="p/psutil/psutil-7.2.1.tar.gz"
+			hash="sha256:f7583aec590485b43ca601dd9cea0dcd65bd7bb21d30ef4ddbf4ea6b5ed1bdd3"
+			version="7.2.1"/>
 		<dependencies>
 			<dep package="python3"/>
 		</dependencies>
