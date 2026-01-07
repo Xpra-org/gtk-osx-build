@@ -70,11 +70,11 @@
 		</after>
 	</distutils>
 
-	<distutils id="python3-netifaces" python3="1">
+	<distutils id="python3-netifaces-plus" python3="1">
 		<branch
-			module="n/netifaces/netifaces-0.11.0.tar.gz"
-			hash="sha256:043a79146eb2907edf439899f262b3dfe41717d34124298ed281139a8b93ca32"
-			version="0.11.0"/>
+			module="n/netifaces_plus/netifaces_plus-0.12.5.tar.gz"
+			hash="sha256:6428bd7d4323556efd4b0ec6b315221875812f8cf2b69501c6fda7a09eb79528"
+			version="0.12.5"/>
 		<dependencies>
 			<dep package="python3"/>
 		</dependencies>
@@ -832,7 +832,7 @@
 		  <dep package="python3-coverage"/>
 		  <dep package="python3-async-timeout"/>
 		  <dep package="python3-zeroconf"/>
-		  <dep package="python3-netifaces"/>
+		  <dep package="python3-netifaces-plus"/>
 		  <dep package="python3-pyasn1"/>
 		  <dep package="python3-pyasn1-modules"/>
 		  <dep package="python3-pybind11"/>
