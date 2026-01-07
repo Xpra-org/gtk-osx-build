@@ -17,13 +17,6 @@
 	<repository type="tarball" name="sourceforge" href="http://downloads.sourceforge.net/sourceforge/"/>
 	<repository type="tarball" name="googleapis" href="https://storage.googleapis.com/"/>
 
-	<autotools id="yasm" autogen-sh="configure">
-		<branch module="projects/yasm/releases/yasm-1.3.0.tar.gz"
-			version="1.3.0"
-			hash="sha256:3dce6601b495f5b3d45b59f7d2492a340ee7e84b5beca17e48f862502bd5603f"
-			repo="www.tortall.net"/>
-	</autotools>
-
 	<autotools id="nasm" autogenargs="" autogen-sh="configure">
 		<branch module="/pub/nasm/releasebuilds/3.01/nasm-3.01.tar.xz"
 			version="3.01"
@@ -132,7 +125,7 @@
 			hash="sha256:26fcd3db88045dee380e581862a6ef106f49b74b6396ee95c2993a260b4636aa"
 			repo="github.com"/>
 		<dependencies>
-			<dep package="yasm"/>
+			<dep package="nasm"/>
 		</dependencies>
 	</autotools>
 
@@ -150,10 +143,10 @@
 			hash="sha256:0d2585d044102ad400cee540321a582a59598911dadbdb2b09a82837bfa09a1e"
 			repo="github.com"/>
 		<dependencies>
-			<dep package="yasm"/>
+			<dep package="nasm"/>
 		</dependencies>
 		<after>
-			<dep package="yasm"/>
+			<dep package="nasm"/>
 		</after>
 	</autotools>
 
@@ -238,7 +231,6 @@
 
 	<metamodule id="meta-osx-xpra-codec-deps">
 		<dependencies>
-			<dep package="yasm"/>
 			<dep package="nasm"/>
 			<dep package="liborc"/>
 			<dep package="libogg"/>
