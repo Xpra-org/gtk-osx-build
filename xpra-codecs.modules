@@ -26,7 +26,7 @@
 
 	<autotools id="nasm" autogenargs="" autogen-sh="configure">
 		<branch module="/pub/nasm/releasebuilds/3.01/nasm-3.01.tar.xz"
-			version="3.1"
+			version="3.01"
 			hash="sha256:b7324cbe86e767b65f26f467ed8b12ad80e124e3ccb89076855c98e43a9eddd4"
 			repo="www.nasm.us">
 		</branch>
