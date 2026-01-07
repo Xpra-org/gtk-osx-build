@@ -120,10 +120,10 @@
 		<branch repo="github" module="jralls/gtk-mac-bundler"/>
 	</autotools>
 
-	<autotools id="curl" autogen-sh="configure">
-		<branch module="/download/curl-8.4.0.tar.xz"
-			version="8.4.0"
-			hash="sha256:16c62a9c4af0f703d28bda6d7bbf37ba47055ad3414d70dec63e2e6336f2a82d"
+	<autotools id="curl" autogen-sh="configure --with-openssl --without-libpsl">
+		<branch module="/download/curl-8.17.0.tar.xz"
+			version="8.17.0"
+			hash="sha256:955f6e729ad6b3566260e8fef68620e76ba3c31acf0a18524416a185acf77992"
 			repo="curl.haxx.se"/>
 		<dependencies>
 			<dep package="openssl"/>
