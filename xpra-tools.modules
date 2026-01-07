@@ -77,7 +77,7 @@
 		<branch repo="github" module="typeling1578/xar" subdir="xar"/>
 	</autotools>
 
-	<cmake id="brotli" cmakeargs="-DCMAKE_MACOSX_RPATH=true" autogen-sh="configure">
+	<cmake id="brotli" cmakeargs="-DCMAKE_INSTALL_NAME_DIR=${JHBUILD_PREFIX}/lib" autogen-sh="configure">
 		<branch module="/google/brotli/archive/refs/tags/v1.2.0.tar.gz"
 			version="1.2.0" checkoutdir="brotli-1.2.0"
 			hash="sha256:816c96e8e8f193b40151dad7e8ff37b1221d019dbcb9c35cd3fadbfe6477dfec"
