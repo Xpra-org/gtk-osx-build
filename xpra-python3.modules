@@ -8,9 +8,9 @@
 
 	<distutils id="python3-setuptools" python3="1">
 		<branch
-			module="s/setuptools/setuptools-80.9.0.tar.gz"
-			hash="sha256:f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c"
-			version="80.9.0">
+			module="s/setuptools/setuptools-80.10.2.tar.gz"
+			hash="sha256:8b0e9d10c784bf7d262c4e5ec5d4ec94127ce206e8738f29a437945fbc219b70"
+			version="80.10.2">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
