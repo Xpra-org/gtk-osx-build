@@ -582,9 +582,9 @@
 
 	<distutils id="python3-altgraph" python3="1">
 		<branch
-			module="a/altgraph/altgraph-0.17.4.tar.gz"
-			hash="sha256:1b5afbb98f6c4dcadb2e2ae6ab9fa994bbb8c1d75f4fa96d340f9437ae454406"
-			version="0.17.4"/>
+			module="a/altgraph/altgraph-0.17.5.tar.gz"
+			hash="sha256:c87b395dd12fabde9c99573a9749d67da8d29ef9de0125c7f536699b4a9bc9e7"
+			version="0.17.5"/>
 		<dependencies>
 			<dep package="python3"/>
 		</dependencies>
