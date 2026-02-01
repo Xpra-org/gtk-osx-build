@@ -113,7 +113,7 @@
     </dependencies>
   </cmake>
   <autotools id="icu"
-             autogen-sh="source/configure"
+             autogen-sh="icu4c/source/configure"
              autogenargs="--enable-rpath"
              makeargs='CFLAGS="$CFLAGS -DU_CHARSET_IS_UTF8=1 -DU_USING_ICU_NAMESPACE=0"'>
     <branch module="https://github.com/unicode-org/icu/archive/refs/tags/release-78.2.tar.gz"
