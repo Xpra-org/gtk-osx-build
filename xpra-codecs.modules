@@ -133,7 +133,9 @@
 		<branch module="aom-releases/libaom-3.13.1.tar.gz"
 			version="3.13.1"
 			hash="sha256:19e45a5a7192d690565229983dad900e76b513a02306c12053fb9a262cbeca7d"
-			repo="googleapis"/>
+			repo="googleapis">
+			<patch file="https://raw.githubusercontent.com/Xpra-org/gtk-osx-build/master/patches/aom-nasm-multipass.patch" strip="1" />
+		</branch>
 	</cmake>
 
 	<autotools id="x264" autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s %(autogenargs)s" autogenargs="--enable-pic --enable-shared --enable-static" autogen-sh="configure">
