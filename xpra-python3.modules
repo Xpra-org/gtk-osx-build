@@ -45,7 +45,7 @@
 
 	<distutils id="python3-async-timeout" python3="1">
 		<branch
-			module="a/async-timeout/async-timeout-5.0.1.tar.gz"
+			module="a/async_timeout/async_timeout-5.0.1.tar.gz"
 			hash="sha256:d9321a7a3d5a6a5e187e824d2fa0793ce379a202935782d555d6e9d2735677d3"
 			version="5.0.1"/>
 		<dependencies>
