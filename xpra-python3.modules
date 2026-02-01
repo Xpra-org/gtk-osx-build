@@ -569,9 +569,9 @@
 
 	<distutils id="python3-modulegraph" python3="1">
 		<branch
-			module="m/modulegraph/modulegraph-0.19.6.tar.gz"
-			hash="sha256:c914c8c95a0e10fe88505d4e9c2284b4e3dbc70943e306cc6567e36cc541bf4b"
-			version="0.19.6"/>
+			module="m/modulegraph/modulegraph-0.19.7.tar.gz"
+			hash="sha256:9ad8a81148ba1d90ade66617a153786f7d7cf6a88de83ee28e251183122c2a57"
+			version="0.19.7"/>
 		<dependencies>
 			<dep package="python3"/>
 		</dependencies>
