@@ -554,9 +554,9 @@
 
 	<distutils id="python3-macholib" python3="1">
 		<branch
-			module="m/macholib/macholib-1.16.3.tar.gz"
-			hash="sha256:07ae9e15e8e4cd9a788013d81f5908b3609aa76f9b1421bae9c4d7606ec86a30"
-			version="1.16.3">
+			module="m/macholib/macholib-1.16.4.tar.gz"
+			hash="sha256:f408c93ab2e995cd2c46e34fe328b130404be143469e41bc366c807448979362"
+			version="1.16.4">
 			<patch file="macholib-dyldcache.patch" strip="1"/>
 		</branch>
 		<dependencies>
