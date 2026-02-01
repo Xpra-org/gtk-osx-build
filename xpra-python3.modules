@@ -484,9 +484,9 @@
 
 	<distutils id="python3-future" python3="1">
 		<branch
-			module="f/future/future-0.18.3.tar.gz"
-			hash="sha256:34a17436ed1e96697a86f9de3d15a3b0be01d8bc8de9c1dffd59fb8234ed5307"
-			version="0.18.3">
+			module="f/future/future-1.0.0.tar.gz"
+			hash="sha256:bd2968309307861edae1458a4f8a4f3598c03be43b97521076aebf5d94c07b05"
+			version="1.0.0">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
