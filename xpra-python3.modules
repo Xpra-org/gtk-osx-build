@@ -662,9 +662,9 @@
 
 	<distutils id="python3-pyobjc-core" python3="1">
 		<branch
-			module="p/pyobjc-core/pyobjc_core-12.0.tar.gz"
-			hash="sha256:7e05c805a776149a937b61b892a0459895d32d9002bedc95ce2be31ef1e37a29"
-			version="12.0">
+			module="p/pyobjc-core/pyobjc_core-12.1.tar.gz"
+			hash="sha256:2bb3903f5387f72422145e1466b3ac3f7f0ef2e9960afa9bcd8961c5cbf8bd21"
+			version="12.1">
 			<patch file="pyobjc-core-test-cflags.patch" strip="1"/>
 		</branch>
 		<dependencies>
@@ -677,9 +677,9 @@
 
 	<distutils id="python3-pyobjc-framework-cocoa" python3="1">
 		<branch
-			module="p/pyobjc-framework-cocoa/pyobjc_framework_cocoa-12.0.tar.gz"
-			hash="sha256:02d69305b698015a20fcc8e1296e1528e413d8cf9fdcd590478d359386d76e8a"
-			version="12.0">
+			module="p/pyobjc-framework-cocoa/pyobjc_framework_cocoa-12.1.tar.gz"
+			hash="sha256:5556c87db95711b985d5efdaaf01c917ddd41d148b1e52a0c66b1a2e2c5c1640"
+			version="12.1">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
@@ -691,9 +691,9 @@
 
 	<distutils id="python3-pyobjc-framework-quartz" python3="1">
 		<branch
-			module="p/pyobjc-framework-quartz/pyobjc_framework_quartz-12.0.tar.gz"
-			hash="sha256:5bcb9e78d671447e04d89e2e3c39f3135157892243facc5f8468aa333e40d67f"
-			version="12.0">
+			module="p/pyobjc-framework-quartz/pyobjc_framework_quartz-12.1.tar.gz"
+			hash="sha256:27f782f3513ac88ec9b6c82d9767eef95a5cf4175ce88a1e5a65875fee799608"
+			version="12.1">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
@@ -705,9 +705,9 @@
 
 	<distutils id="python3-pyobjc-framework-avfoundation" python3="1">
 		<branch
-			module="p/pyobjc-framework-avfoundation/pyobjc_framework_avfoundation-12.0.tar.gz"
-			hash="sha256:e9e9a15edea43341b39de677a58ac98b2a6bd4d6c55176b4804c5f75b3d20ece"
-			version="12.0">
+			module="p/pyobjc-framework-avfoundation/pyobjc_framework_avfoundation-12.1.tar.gz"
+			hash="sha256:eda0bb60be380f9ba2344600c4231dd58a3efafa99fdc65d3673ecfbb83f6fcb"
+			version="12.1">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
@@ -719,9 +719,9 @@
 
 	<distutils id="python3-pyobjc-framework-coremedia" python3="1">
 		<branch
-			module="p/pyobjc-framework-coremedia/pyobjc_framework_coremedia-12.0.tar.gz"
-			hash="sha256:d7f76d2eb2890be9f8836b95682e83fa7f158c92043958daa71845fbc4a01ba9"
-			version="12.0">
+			module="p/pyobjc-framework-coremedia/pyobjc_framework_coremedia-12.1.tar.gz"
+			hash="sha256:166c66a9c01e7a70103f3ca44c571431d124b9070612ef63a1511a4e6d9d84a7"
+			version="12.1">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
@@ -733,9 +733,9 @@
 
 	<distutils id="python3-pyobjc-framework-libdispatch" python3="1">
 		<branch
-			module="p/pyobjc-framework-libdispatch/pyobjc_framework_libdispatch-12.0.tar.gz"
-			hash="sha256:2ef31c02670c377d9e2875e74053087b1d96b240d2fc8721cc4c665c05394b3a"
-			version="12.0">
+			module="p/pyobjc-framework-libdispatch/pyobjc_framework_libdispatch-12.1.tar.gz"
+			hash="sha256:4035535b4fae1b5e976f3e0e38b6e3442ffea1b8aa178d0ca89faa9b8ecdea41"
+			version="12.1">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
@@ -747,9 +747,9 @@
 
 	<distutils id="python3-pyobjc-framework-SystemConfiguration" python3="1">
 		<branch
-			module="p/pyobjc-framework-systemconfiguration/pyobjc_framework_systemconfiguration-12.0.tar.gz"
-			hash="sha256:441738af5663127e0bce23771ddaac25c891c0b09c22254b10a1de0933ed2ca2"
-			version="12.0">
+			module="p/pyobjc-framework-systemconfiguration/pyobjc_framework_systemconfiguration-12.1.tar.gz"
+			hash="sha256:90fe04aa059876a21626931c71eaff742a27c79798a46347fd053d7008ec496e"
+			version="12.1">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
