@@ -221,6 +221,13 @@
 			hash="sha256:0a545e953cc049bf5bcf4ee467306a2f113a75110edf59e61248873101cd26c1"
 			repo="github.com">
 		</branch>
+		<dependencies>
+			<dep package="libaom"/>
+		</dependencies>
+		<after>
+			<dep package="libaom"/>
+		</after>
+	</autotools>
 	</cmake>
 
 	<autotools id="libqrencode" autogen-sh="autoreconf" supports-non-srcdir-builds="no">
@@ -244,9 +251,9 @@
 			<dep package="flac"/>
 			<dep package="opus"/>
 			<dep package="libyuv"/>
-			<dep package="libavif"/>
 			<dep package="libvpx"/>
 			<dep package="libaom"/>
+			<dep package="libavif"/>
 			<dep package="x264"/>
 			<dep package="libwebp"/>
 			<dep package="openh264"/>
