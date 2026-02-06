@@ -227,7 +227,6 @@
 		<after>
 			<dep package="libaom"/>
 		</after>
-	</autotools>
 	</cmake>
 
 	<autotools id="libqrencode" autogen-sh="autoreconf" supports-non-srcdir-builds="no">
