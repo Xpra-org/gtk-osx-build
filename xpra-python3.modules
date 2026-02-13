@@ -703,10 +703,10 @@
 		</after>
 	</distutils>
 
-	<distutils id="python3-pyobjc-framework-avfoundation" python3="1">
+	<distutils id="python3-pyobjc-framework-coremedia" python3="1">
 		<branch
-			module="p/pyobjc-framework-avfoundation/pyobjc_framework_avfoundation-12.1.tar.gz"
-			hash="sha256:eda0bb60be380f9ba2344600c4231dd58a3efafa99fdc65d3673ecfbb83f6fcb"
+			module="p/pyobjc-framework-coremedia/pyobjc_framework_coremedia-12.1.tar.gz"
+			hash="sha256:166c66a9c01e7a70103f3ca44c571431d124b9070612ef63a1511a4e6d9d84a7"
 			version="12.1">
 		</branch>
 		<dependencies>
@@ -717,10 +717,24 @@
 		</after>
 	</distutils>
 
-	<distutils id="python3-pyobjc-framework-coremedia" python3="1">
+	<distutils id="python3-pyobjc-framework-coreaudio" python3="1">
 		<branch
-			module="p/pyobjc-framework-coremedia/pyobjc_framework_coremedia-12.1.tar.gz"
-			hash="sha256:166c66a9c01e7a70103f3ca44c571431d124b9070612ef63a1511a4e6d9d84a7"
+			module="p/pyobjc-framework-coreaudio/pyobjc_framework_coreaudio-12.1.tar.gz"
+			hash="sha256:a9e72925fcc1795430496ce0bffd4ddaa92c22460a10308a7283ade830089fe1"
+			version="12.1">
+		</branch>
+		<dependencies>
+			<dep package="python3"/>
+		</dependencies>
+		<after>
+			<dep package="python3"/>
+		</after>
+	</distutils>
+
+	<distutils id="python3-pyobjc-framework-avfoundation" python3="1">
+		<branch
+			module="p/pyobjc-framework-avfoundation/pyobjc_framework_avfoundation-12.1.tar.gz"
+			hash="sha256:eda0bb60be380f9ba2344600c4231dd58a3efafa99fdc65d3673ecfbb83f6fcb"
 			version="12.1">
 		</branch>
 		<dependencies>
@@ -869,8 +883,9 @@
 		  <dep package="python3-pyobjc-core"/>
 		  <dep package="python3-pyobjc-framework-cocoa"/>
 		  <dep package="python3-pyobjc-framework-quartz"/>
-		  <dep package="python3-pyobjc-framework-avfoundation"/>
 		  <dep package="python3-pyobjc-framework-coremedia"/>
+		  <dep package="python3-pyobjc-framework-coreaudio"/>
+		  <dep package="python3-pyobjc-framework-avfoundation"/>
 		  <dep package="python3-pyobjc-framework-libdispatch"/>
 		  <dep package="python3-pyobjc-framework-SystemConfiguration"/>
 		</dependencies>
