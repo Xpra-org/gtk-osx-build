@@ -15,6 +15,10 @@
   <repository name="ffmpeg"
               href="https://ffmpeg.org/releases/"
               type="tarball" />
+  <repository name="pypi"
+              href="https://files.pythonhosted.org/packages/source/"
+              type="tarball" />
+
   <meson id="liborc"
          mesonargs="-Dbenchmarks=disabled -Dexamples=disabled -Dtests=disabled">
     <branch module="orc/orc-0.4.42.tar.xz"
@@ -104,6 +108,20 @@
       <dep package="ffmpeg" />
     </dependencies>
   </meson>
+
+  <pip id="python3-typing-extensions" python3="1">
+    <branch module="t/typing-extensions/typing-extensions-4.15.0.tar.gz"
+            hash="sha256:0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"
+            version="4.15.0"
+            repo="pypi" />
+    <dependencies>
+      <dep package="python3" />
+    </dependencies>
+    <after>
+      <dep package="python3" />
+    </after>
+  </pip>
+
   <meson id="gst-python">
     <branch module="gst-python/gst-python-1.26.10.tar.xz"
             version="1.26.10"
@@ -113,6 +131,7 @@
       <dep package="gstreamer" />
       <dep package="gst-plugins-base" />
       <dep package="pygobject3" />
+      <dep package="python3-typing-extensions" />
     </dependencies>
   </meson>
   <metamodule id="meta-gtk-osx-gstreamer">
