@@ -22,5 +22,5 @@ Index: gen_pc.sh
 +Name: libyuv
 +Description: YUV conversion and scaling functionality library
 +Version: 0
-+Libs: -L${libdir} -lyuv
++Libs: -L${JHBUILD_PREFIX}/lib -lyuv
 +EOF
