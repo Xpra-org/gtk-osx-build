@@ -186,9 +186,9 @@
 
 	<pip id="python3-cryptography" python3="1">
 		<branch
-                        module="c/cryptography/cryptography-46.0.4.tar.gz"
-                        hash="sha256:bfd019f60f8abc2ed1b9be4ddc21cfef059c841d86d710bb69909a688cbb8f59"
-                        version="46.0.4">
+                        module="c/cryptography/cryptography-46.0.5.tar.gz"
+                        hash="sha256:abace499247268e3757271b2f1e244b36b06f8515cf27c4d49468fc9eb16e93d"
+                        version="46.0.5">
 			<patch file="cryptography-setup-py.patch" strip="1"/>
 		</branch>
 		<dependencies>
