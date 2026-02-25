@@ -243,9 +243,9 @@
   </meson>
   <meson id="gdk-pixbuf"
          mesonargs="-Drelocatable=true -Dman=false -Dbuiltin_loaders='all' -Dothers=enabled">
-    <branch module="gdk-pixbuf/2.42/gdk-pixbuf-2.42.12.tar.xz"
-            version="2.42.12"
-            hash="sha256:b9505b3445b9a7e48ced34760c3bcb73e966df3ac94c95a148cb669ab748e3c7">
+    <branch module="gdk-pixbuf/2.44/gdk-pixbuf-2.44.5.tar.xz"
+            version="2.44.5"
+            hash="sha256:69b93e09139b80c0ee661503d60deb5a5874a31772b5184b9cd5462a4100ab68">
       <patch file="gdk-pixbuf-loader-name.patch"
              strip="1" />
     </branch>
