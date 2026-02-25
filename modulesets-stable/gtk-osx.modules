@@ -76,9 +76,9 @@
   </autotools>
   <meson id="glib-no-introspection"
          mesonargs="-Dlibmount=disabled -Dintrospection=disabled">
-    <branch module="glib/2.83/glib-2.83.4.tar.xz"
-            version="2.83.4"
-            hash="sha256:4edc4dc184f46d1220694b7775c5d7c62265c83b0e9632d844da127c181fc391" >
+    <branch module="glib/2.86/glib-2.86.4.tar.xz"
+            version="2.86.4"
+            hash="sha256:d4e2b5d791d5015ffd8c6971ad8e975a0a55c1a14926cdb25cf843ff00682260" >
     </branch>
     <dependencies>
       <dep package="libpcre2" />
@@ -86,9 +86,9 @@
   </meson>
   <meson id="glib"
          mesonargs="-Dlibmount=disabled">
-    <branch module="glib/2.83/glib-2.83.4.tar.xz"
-            version="2.83.4"
-            hash="sha256:4edc4dc184f46d1220694b7775c5d7c62265c83b0e9632d844da127c181fc391" >
+    <branch module="glib/2.86/glib-2.86.4.tar.xz"
+            version="2.86.4"
+            hash="sha256:d4e2b5d791d5015ffd8c6971ad8e975a0a55c1a14926cdb25cf843ff00682260" >
     </branch>
     <dependencies>
       <dep package="gobject-introspection" />
