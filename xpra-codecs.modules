@@ -205,7 +205,7 @@
 		</after>
 	</autotools>
 
-	<cmake id="libyuv">
+	<cmake id="libyuv" cmakeargs="-DCMAKE_MACOSX_RPATH=ON -DCMAKE_INSTALL_NAME_DIR=@rpath">
 		<branch module="src/libyuv-0.1899.r2785.tar.xz"
 			version="0.1899.r2785" checkoutdir="libyuv-0.1899.r2785"
 			hash="sha256:9c357dd2fa7ab21ad9dfd0e430d47941964dda4a2b6c766991380e6d4b7c3630"
