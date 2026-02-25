@@ -16,11 +16,11 @@ Index: gen_pc.sh
 @@ -0,0 +1,10 @@
 +cat > ${JHBUILD_PREFIX}/lib/pkgconfig/libyuv.pc <<EOF
 +prefix=${JHBUILD_PREFIX}
-+libdir=${prefix}/lib
-+includedir=${prefix}/include
++libdir=${JHBUILD_PREFIX}/lib
++includedir=${JHBUILD_PREFIX}/include
 +
 +Name: libyuv
 +Description: YUV conversion and scaling functionality library
 +Version: 0
-+Libs: -lyuv
++Libs: -L${libdir} -lyuv
 +EOF
