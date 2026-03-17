@@ -58,7 +58,7 @@ envvardir PYENV_INSTALL_ROOT "$DEV_SRC_ROOT/pyenv"
 envvardir PYENV_ROOT "$DEVPREFIX/share/pyenv"
 envvardir PIP_CONFIG_DIR "$HOME/.config/pip"
 if test -z $PYTHON_VERSION; then
-    export PYTHON_VERSION=3.11.13
+    export PYTHON_VERSION=3.11.15
 fi
 
 export PYTHONWARNINGS=ignore:DEPRECATION::pip._internal.cli.base_command
