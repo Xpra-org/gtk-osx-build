@@ -90,7 +90,7 @@ if test ! -x /usr/bin/groff -a ! -x "$DEVPREFIX/bin/groff"; then
 fi
 
 # Setup pyenv
-PYENV_RELEASE_VERSION=v2.6.6
+PYENV_RELEASE_VERSION=v2.6.26
 if test ! -x "$PYENV_INSTALL_ROOT/libexec/pyenv"; then
   if test -d "$PYENV_INSTALL_ROOT"; then
      rm -rf "$PYENV_INSTALL_ROOT";
