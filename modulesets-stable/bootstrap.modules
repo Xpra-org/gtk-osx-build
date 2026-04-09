@@ -23,9 +23,9 @@
   <autotools id="xz"
              autogen-sh="configure"
              bootstrap="true">
-    <branch module="tukaani-project/xz/releases/download/v5.6.4/xz-5.6.4.tar.bz2"
-            version="5.6.4"
-            hash="sha256:176d510c30d80a23b8050bbc048f2ecaacb823ae48b6821727ed6591f0df9200"
+    <branch module="tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.xz"
+            version="5.8.3"
+            hash="sha256:fff1ffcf2b0da84d308a14de513a1aa23d4e9aa3464d17e64b9714bfdd0bbfb6"
             repo="github" />
   </autotools>
   <!-- gnu make 4.xx, needed to unbreak parallel builds for the webkit -->
