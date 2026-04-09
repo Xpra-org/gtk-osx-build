@@ -1,7 +1,7 @@
---- a/build/cmake/aom_optimization.cmake	2025-09-06 05:10:37
-+++ b/build/cmake/aom_optimization.cmake	2026-02-01 21:48:02
+--- a/build/cmake/aom_optimization.cmake	2026-04-09 23:19:50
++++ b/build/cmake/aom_optimization.cmake	2026-04-09 23:20:37
 @@ -215,11 +215,6 @@
-   execute_process(COMMAND ${CMAKE_ASM_NASM_COMPILER} -hf
+   execute_process(COMMAND ${CMAKE_ASM_NASM_COMPILER} -hO
                    OUTPUT_VARIABLE nasm_helptext)
  
 -  if(NOT "${nasm_helptext}" MATCHES "-Ox")
@@ -9,6 +9,6 @@
 -      FATAL_ERROR "Unsupported nasm: multipass optimization not supported.")
 -  endif()
 -
+   execute_process(COMMAND ${CMAKE_ASM_NASM_COMPILER} -hf
+                   OUTPUT_VARIABLE nasm_helptext)
    if("${AOM_TARGET_CPU}" STREQUAL "x86")
-     if("${AOM_TARGET_SYSTEM}" STREQUAL "Darwin")
-       if(NOT "${nasm_helptext}" MATCHES "macho32")
