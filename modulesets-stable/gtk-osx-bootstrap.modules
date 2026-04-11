@@ -30,10 +30,11 @@
   <autotools id="libpng"
              autogen-sh="configure"
              autogenargs="--enable-shared">
-    <branch module="libpng/libpng-1.6.53.tar.xz"
-            version="1.6.53"
-            hash="sha256:1d3fb8ccc2932d04aa3663e22ef5ef490244370f4e568d7850165068778d98d4"
-            repo="sourceforge" />
+    <branch module="pnggroup/libpng/archive/refs/tags/v1.6.57.tar.gz"
+	    checkoutdir="libpng-1.6.57"
+            version="1.6.57"
+            hash="sha256:4cbb7b0746edc1683c9581b373365e955133b7f1243f171b7d1535b4415dfedb"
+            repo="github-tarball" />
     <dependencies>
       <dep package="zlib" />
     </dependencies>
