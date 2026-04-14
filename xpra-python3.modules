@@ -774,6 +774,20 @@
 		</after>
 	</distutils>
 
+	<distutils id="python3-pyobjc-framework-usernotifications" python3="1">
+		<branch
+			module="p/pyobjc-framework-usernotifications/pyobjc_framework_usernotifications-12.1.tar.gz"
+			hash="sha256:019ccdf2d400f9a428769df7dba4ea97c02453372bc5f8b75ce7ae54dfe130f9"
+			version="12.1">
+		</branch>
+		<dependencies>
+			<dep package="python3"/>
+		</dependencies>
+		<after>
+			<dep package="python3"/>
+		</after>
+	</distutils>
+
 	<distutils id="python3-pyobjc-framework-SystemConfiguration" python3="1">
 		<branch
 			module="p/pyobjc-framework-systemconfiguration/pyobjc_framework_systemconfiguration-12.1.tar.gz"
@@ -903,6 +917,7 @@
 		  <dep package="python3-pyobjc-framework-coreaudio"/>
 		  <dep package="python3-pyobjc-framework-avfoundation"/>
 		  <dep package="python3-pyobjc-framework-libdispatch"/>
+		  <dep package="python3-pyobjc-framework-usernotifications"/>
 		  <dep package="python3-pyobjc-framework-SystemConfiguration"/>
 		</dependencies>
 	</metamodule>
