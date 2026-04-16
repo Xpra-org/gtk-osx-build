@@ -512,9 +512,9 @@
 
        <pip id="python3-fido2" python3="1">
                 <branch
-                        module="f/fido2/fido2-2.1.1.tar.gz"
-                        hash="sha256:f1379f845870cc7fc64c7f07323c3ce41e8c96c37054e79e0acd5630b3fec5ac"
-                        version="2.1.1">
+                        module="f/fido2/fido2-2.2.0.tar.gz"
+                        hash="sha256:0d8122e690096ad82afde42ac9d6433a4eeffda64084f36341ea02546b181dd1"
+                        version="2.2.0">
                 </branch>
                 <dependencies>
                         <dep package="python3-future"/>
