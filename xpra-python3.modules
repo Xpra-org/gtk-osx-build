@@ -856,9 +856,9 @@
 
 	<distutils id="python3-idna" python3="1">
 		<branch
-			module="i/idna/idna-3.11.tar.gz"
-			hash="sha256:795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902"
-			version="3.11">
+			module="i/idna/idna-3.12.tar.gz"
+			hash="sha256:724e9952cc9e2bd7550ea784adb098d837ab5267ef67a1ab9cf7846bdbdd8254"
+			version="3.12">
 			<patch file="idna-setup-py.patch" strip="1"/>
 		</branch>
 		<dependencies>
