@@ -121,9 +121,9 @@
 	</autotools>
 
 	<autotools id="curl" autogen-sh="configure --with-openssl --without-libpsl">
-		<branch module="/download/curl-8.18.0.tar.xz"
-			version="8.18.0"
-			hash="sha256:40df79166e74aa20149365e11ee4c798a46ad57c34e4f68fd13100e2c9a91946"
+		<branch module="/download/curl-8.20.0.tar.xz"
+			version="8.20.0"
+			hash="sha256:63fe2dc148ba0ceae89922ef838f7e5c946272c2e78b7c59fab4b79d3ce2b896"
 			repo="curl.haxx.se"/>
 		<dependencies>
 			<dep package="openssl"/>
