@@ -1,0 +1,4 @@
+interface:
+  display_name: "GTK-OSX Moduleset Updater"
+  short_description: "Update gtk-osx-build modulesets"
+  default_prompt: "Use $gtk-osx-moduleset-updater to compare gtk-osx-build modulesets with upstream and commit selected package updates."
