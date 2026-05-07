@@ -329,9 +329,9 @@
     </dependencies>
   </autotools>
   <autotools id="libxml2">
-    <branch module="libxml2/2.13/libxml2-2.13.5.tar.xz"
-            version="2.13.5"
-            hash="sha256:74fc163217a3964257d3be39af943e08861263c4231f9ef5b496b6f6d4c7b2b6"
+    <branch module="libxml2/2.15/libxml2-2.15.2.tar.xz"
+            version="2.15.2"
+            hash="sha256:c8b9bc81f8b590c33af8cc6c336dbff2f53409973588a351c95f1c621b13d09d"
             repo="download.gnome.org"/>
   </autotools>
   <meson id="librsvg"
