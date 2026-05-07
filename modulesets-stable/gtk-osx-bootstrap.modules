@@ -43,10 +43,9 @@
              autogen-sh="autogen.sh"
              autogen-template="./%(autogen-sh)s &amp;&amp; %(srcdir)s/configure --prefix=%(prefix)s %(autogenargs)s"
              supports-non-srcdir-builds="no" >
-    <branch module="netwide-assembler/nasm/archive/refs/tags/nasm-2.16.03.tar.gz"
-            checkoutdir="nasm-nasm-2.16.03"
-            version="2.16.03"
-            hash="sha256:e525fa6fdc3df33cec6b499111f44afa78ce50bf260158580dcf014015a21ba9"
+    <branch module="netwide-assembler/nasm/archive/refs/tags/nasm-3.01.tar.gz"
+            checkoutdir="nasm-nasm-3.01"
+            version="3.01"
             repo="github-tarball" >
       <patch file="nasm-dont-install-docs.patch" strip="1" />
     </branch>
