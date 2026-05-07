@@ -50,9 +50,9 @@
   </autotools>
   <autotools id="vala"
              autogen-sh="configure">
-    <branch module="vala/0.56/vala-0.56.17.tar.xz"
-            version="0.56.17"
-            hash="sha256:26100c4e4ef0049c619275f140d97cf565883d00c7543c82bcce5a426934ed6a" />
+    <branch module="vala/0.56/vala-0.56.19.tar.xz"
+            version="0.56.19"
+            hash="sha256:5ad7cbbfcc0de61b403d6797c9ef60455bfbebd8e162aec33b5b0b097adfb9d5" />
     <dependencies>
       <dep package="graphviz" />
       <dep package="meta-gtk-osx-bootstrap" />
