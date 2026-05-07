@@ -149,9 +149,9 @@
     </dependencies>
   </meson>
   <meson id="gcr">
-    <branch module="gcr/4.3/gcr-4.3.1.tar.xz"
-            version="4.3.1"
-            hash="sha256:b2f070fff1840eef70546a28be80235427c116aadc593b5b68ccc869be3aa09d" />
+    <branch module="gcr/4.4/gcr-4.4.0.1.tar.xz"
+            version="4.4.0.1"
+            hash="sha256:0c3c341e49f9f4f2532a4884509804190a0c2663e6120360bb298c5d174a8098" />
     <dependencies>
       <dep package="p11-kit" />
       <dep package="gpg" />
