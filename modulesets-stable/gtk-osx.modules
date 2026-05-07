@@ -116,9 +116,9 @@
              autogen-sh="icu4c/source/configure"
              autogenargs="--enable-rpath"
              makeargs='CFLAGS="$CFLAGS -DU_CHARSET_IS_UTF8=1 -DU_USING_ICU_NAMESPACE=0"'>
-    <branch module="https://github.com/unicode-org/icu/archive/refs/tags/release-78.2.tar.gz"
-            version="78.2"
-            hash="sha256:45cfa1a4abe98db9732d19fa3cdb87f4f0ffb17012fab6afbb38b5de3b8771f7"
+    <branch module="unicode-org/icu/releases/download/release-78.3/icu4c-78.3-sources.tgz"
+            version="78.3"
+            hash="sha256:3a2e7a47604ba702f345878308e6fefeca612ee895cf4a5f222e7955fabfe0c0"
             checkoutdir="icu"
             repo="github-tarball" />
   </autotools>
