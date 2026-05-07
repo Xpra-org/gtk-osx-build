@@ -17,7 +17,7 @@
               href="https://www.x.org/releases/"
               type="tarball" />
   <repository name="fontconfig"
-              href="http://www.freedesktop.org/software/fontconfig/release/"
+              href="https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/"
               type="tarball" />
   <repository name="hicolor"
               href="https://icon-theme.freedesktop.org/releases/"
