@@ -176,10 +176,10 @@
   </meson>
   <meson id="libproxy"
          mesonargs="-Ddocs=false -Dtests=false -Dpacrunner-duktape=false -Dvapi=false -Dcurl=false -Dintrospection=false">
-    <branch module="libproxy/libproxy/archive/refs/tags/0.5.9.tar.gz"
-            version="0.5.9"
-            hash="sha256:a1976c3ac4affedc17e6d40cf78c9d8eca6751520ea3cbbec1a8850f7ded1565"
-            checkoutdir="libproxy-0.5.9"
+    <branch module="libproxy/libproxy/archive/refs/tags/0.5.12.tar.gz"
+            version="0.5.12"
+            hash="sha256:a1fa55991998b80a567450a9e84382421a7176a84446c95caaa8b72cf09fa86f"
+            checkoutdir="libproxy-0.5.12"
             repo="github-tarball" />
     <dependencies>
       <dep package="gsettings-desktop-schemas" />
