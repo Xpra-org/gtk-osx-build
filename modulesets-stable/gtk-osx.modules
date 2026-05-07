@@ -351,9 +351,9 @@
     </dependencies>
   </meson>
   <meson id="adwaita-icon-theme">
-    <branch module="adwaita-icon-theme/47/adwaita-icon-theme-47.0.tar.xz"
-            version="47.0"
-            hash="sha256:ad088a22958cb8469e41d9f1bba0efb27e586a2102213cd89cc26db2e002bdfe" />
+    <branch module="adwaita-icon-theme/50/adwaita-icon-theme-50.0.tar.xz"
+            version="50.0"
+            hash="sha256:fac6e0401fca714780561a081b8f7e27c3bc1db34ebda4da175081f26b24d460" />
     <dependencies>
       <dep package="librsvg" />
     </dependencies>
