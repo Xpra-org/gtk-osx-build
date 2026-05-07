@@ -36,9 +36,9 @@
   <autotools id="graphviz"
              autogen-sh="autoreconf"
              autogenargs="--disable-sharp --disable-guile --disable-java --disable-lua --disable-ocaml --disable-perl --disable-php --disable-r --disable-ruby --disable-tcl --with-pangocairo">
-    <branch module="12.2.1/graphviz-12.2.1.tar.xz"
-            version="12.2.1"
-            hash="sha256:85e34b5c982777c30f01dfab9ea7c713b4335a2f584e62c0abb9868413eb915b"
+    <branch module="14.1.5/graphviz-14.1.5.tar.xz"
+            version="14.1.5"
+            hash="sha256:b017378835f7ca12f1a3f1db5c338d7e7af16b284b7007ad73ccec960c1b45b3"
             repo="graphviz">
       <patch file="graphviz-11-fix-python-config.patch"
              strip="1" />
