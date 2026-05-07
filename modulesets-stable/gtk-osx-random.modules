@@ -145,9 +145,9 @@
   <autotools id="sqlite"
              autogen-sh="configure"
              autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s">
-    <branch module="2025/sqlite-autoconf-3490100.tar.gz"
-            version="3.49.1"
-            hash="sha256:106642d8ccb36c5f7323b64e4152e9b719f7c0215acf5bfeac3d5e7f97b59254"
+    <branch module="2026/sqlite-autoconf-3530000.tar.gz"
+            version="3.53.0"
+            hash="sha256:851e9b38192fe2ceaa65e0baa665e7fa06230c3d9bd1a6a9662d02380d73365a"
             repo="sqlite" >
       <patch file="sqlite3-install-name.patch" strip="1" />
     </branch>
