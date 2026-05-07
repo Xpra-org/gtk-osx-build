@@ -157,8 +157,8 @@
   </meson>
   <meson id="pixman"
          mesonargs="-Dgtk=disabled -Dmmx=disabled -Da64-neon=disabled">
-    <branch module="releases/pixman-0.44.2.tar.gz"
-            version="0.44.2"
+    <branch module="releases/pixman-0.46.4.tar.gz"
+            version="0.46.4"
 
             repo="cairographics" />
     <after>
