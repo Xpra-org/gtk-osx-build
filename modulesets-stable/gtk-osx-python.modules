@@ -48,9 +48,9 @@
     </after>
   </autotools>
   <meson id="pycairo">
-    <branch module="pygobject/pycairo/releases/download/v1.27.0/pycairo-1.27.0.tar.gz"
-            version="1.27.0"
-            hash="sha256:5cb21e7a00a2afcafea7f14390235be33497a2cce53a98a19389492a60628430"
+    <branch module="pygobject/pycairo/releases/download/v1.29.0/pycairo-1.29.0.tar.gz"
+            version="1.29.0"
+            hash="sha256:f3f7fde97325cae80224c09f12564ef58d0d0f655da0e3b040f5807bd5bd3142"
             repo="github-tarball" />
     <dependencies>
       <dep package="cairo" />
