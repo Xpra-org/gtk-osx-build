@@ -51,9 +51,9 @@
     <autotools id="libnettle"
                autogen-sh="configure"
                autogenargs="--disable-documentation --disable-assembler">
-      <branch module="nettle/nettle-3.10.1.tar.gz"
-              version="3.10.1"
-              hash="sha256:b0fcdd7fc0cdea6e80dcf1dd85ba794af0d5b4a57e26397eee3bc193272d9132"
+      <branch module="nettle/nettle-4.0.tar.gz"
+              version="4.0"
+              hash="sha256:3addbc00da01846b232fb3bc453538ea5468da43033f21bb345cb1e9073f5094"
               repo="ftp.gnu.org" />
       <dependencies>
         <dep package="gmp" />
@@ -65,9 +65,9 @@
     <autotools id="libnettle"
                autogen-sh="configure"
                autogenargs="--disable-documentation">
-      <branch module="nettle/nettle-3.10.1.tar.gz"
-              version="3.10.1"
-              hash="sha256:b0fcdd7fc0cdea6e80dcf1dd85ba794af0d5b4a57e26397eee3bc193272d9132"
+      <branch module="nettle/nettle-4.0.tar.gz"
+              version="4.0"
+              hash="sha256:3addbc00da01846b232fb3bc453538ea5468da43033f21bb345cb1e9073f5094"
               repo="ftp.gnu.org" />
       <dependencies>
         <dep package="gmp" />
