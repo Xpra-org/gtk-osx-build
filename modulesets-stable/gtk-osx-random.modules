@@ -61,10 +61,10 @@
   </autotools>
   <autotools id="expat"
              autogen-sh="configure">
-    <branch module="expat/expat-2.6.4.tar.xz"
-            version="2.6.4"
-            hash="sha256:a695629dae047055b37d50a0ff4776d1d45d0a4c842cf4ccee158441f55ff7ee"
-            repo="sourceforge" />
+    <branch module="libexpat/libexpat/releases/download/R_2_7_5/expat-2.7.5.tar.xz"
+            version="2.7.5"
+            hash="sha256:1032dfef4ff17f70464827daa28369b20f6584d108bc36f17ab1676e1edd2f91"
+            repo="github-tarball" />
   </autotools>
   <autotools id="itstool"
              autogen-sh="configure">
