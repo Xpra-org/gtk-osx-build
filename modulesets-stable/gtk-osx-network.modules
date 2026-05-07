@@ -123,9 +123,9 @@
   <autotools id="libgpg-error"
              autogen-sh="autoreconf"
              autogenargs="--disable-doc">
-    <branch module="gcrypt/libgpg-error/libgpg-error-1.55.tar.bz2"
-            version="1.55"
-            hash="sha256:95b178148863f07d45df0cea67e880a79b9ef71f5d230baddc0071128516ef78"
+    <branch module="gcrypt/libgpg-error/libgpg-error-1.61.tar.bz2"
+            version="1.61"
+            hash="sha256:7a85413f2bc354f4f8aa832b718af122e48965e9e0eb9012ee659c13c6385c93"
             repo="gnupg.org" />
   </autotools>
   <autotools id="libgcrypt"
