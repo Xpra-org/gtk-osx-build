@@ -218,9 +218,9 @@
   </meson>
   <meson id="pango"
          mesonargs="-Dfontconfig=enabled -Dintrospection=enabled">
-    <branch module="pango/1.56/pango-1.56.1.tar.xz"
-            version="1.56.1"
-            hash="sha256:426be66460c98b8378573e7f6b0b2ab450f6bb6d2ec7cecc33ae81178f246480" />
+    <branch module="pango/1.57/pango-1.57.1.tar.xz"
+            version="1.57.1"
+            hash="sha256:e65d6d117080dc3aeeb7d8b4b3b518f7383aa2e6cfce23117c623cd624764c2f" />
     <dependencies>
       <dep package="glib" />
       <dep package="cairo" />
