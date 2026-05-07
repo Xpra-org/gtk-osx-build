@@ -239,9 +239,8 @@
   </autotools>
   <autotools id="readline"
              autogen-sh="configure">
-    <branch module="readline/readline-8.2.tar.gz"
-            version="8.2"
-            hash="sha256:3feb7171f16a84ee82ca18a36d7b9be109a52c04f492a053331d7d1095007c35"
+    <branch module="readline/readline-8.3.tar.gz"
+            version="8.3"
             repo="ftp.gnu.org" />
   </autotools>
   <!-- iso-codes last released a tarball for version 4.1 in 2019 -->
