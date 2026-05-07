@@ -161,9 +161,9 @@
   </meson>
   <autotools id="gnome-keyring"
              autogenargs="--disable-pam --without-root-certs">
-    <branch module="gnome-keyring/46/gnome-keyring-46.2.tar.xz"
-            version="46.2"
-            hash="sha256:bf26c966b8a8b7f3285ecc8bb3e467b9c20f9535b94dc451c9c559ddcff61925" />
+    <branch module="gnome-keyring/50/gnome-keyring-50.0.tar.xz"
+            version="50.0"
+            hash="sha256:cbd72062c53c9702bc2c4733991ad5f051ca682882b30905a2829bcf1a8ecc7c" />
     <dependencies>
       <dep package="libgcrypt" />
       <dep package="gcr" />
