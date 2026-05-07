@@ -119,9 +119,9 @@
   <autotools id="automake"
              autogen-sh="configure"
              bootstrap="true">
-    <branch module="automake/automake-1.17.tar.xz"
-            version="1.17"
-            hash="sha256:8920c1fc411e13b90bf704ef9db6f29d540e76d232cb3b2c9f4dc4cc599bd990"
+    <branch module="automake/automake-1.18.tar.xz"
+            version="1.18"
+            hash="sha256:5bdccca96b007a7e344c24204b9b9ac12ecd17f5971931a9063bdee4887f4aaf"
             repo="ftp.gnu.org" />
     <dependencies>
       <dep package="autoconf" />
