@@ -115,9 +115,9 @@
     </dependencies>
   </meson>
   <meson id="gtksourceview4" >
-    <branch module="gtksourceview/5.14/gtksourceview-5.14.2.tar.xz"
-            version="5.14.2"
-            hash="sha256:1a6d387a68075f8aefd4e752cf487177c4a6823b14ff8a434986858aeaef6264">
+    <branch module="gtksourceview/5.20/gtksourceview-5.20.0.tar.xz"
+            version="5.20.0"
+            hash="sha256:e38bcd23f52b86eadf0fe4d8bde698e3a8ca102322b8b4cf1a51ac294a448c1b">
     </branch>
     <dependencies>
       <dep package="gtk-4" />
