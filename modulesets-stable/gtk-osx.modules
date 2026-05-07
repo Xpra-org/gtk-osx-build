@@ -196,10 +196,10 @@
   </meson>
   <meson id="harfbuzz"
          mesonargs="-Dcoretext=enabled -Dfreetype=enabled -Ddocs=disabled -Dbenchmark=disabled -Dintrospection=enabled -Dtests=disabled">
-    <branch module="harfbuzz/harfbuzz/releases/download/10.2.0/harfbuzz-10.2.0.tar.xz"
-            version="10.2.0"
+    <branch module="harfbuzz/harfbuzz/releases/download/13.2.1/harfbuzz-13.2.1.tar.xz"
+            version="13.2.1"
 
-            repo="github-tarball" />
+            repo="github-tarball"  hash="sha256:6695da3eb7e1be0aa3092fe4d81433a33b47f4519259c759d729e3a9a55c1429"/>
     <dependencies>
       <dep package="gobject-introspection" />
       <dep package="cairo" />
