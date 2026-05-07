@@ -172,7 +172,7 @@
   <meson id="gsettings-desktop-schemas">
     <branch module="gsettings-desktop-schemas/46/gsettings-desktop-schemas-47.1.tar.xz"
             version="47.1"
-            hash="shas56:a60204d9c9c0a1b264d6d0d134a38340ba5fc6076a34b84da945d8bfcc7a2815" />
+            hash="sha256:a60204d9c9c0a1b264d6d0d134a38340ba5fc6076a34b84da945d8bfcc7a2815" />
   </meson>
   <meson id="libproxy"
          mesonargs="-Ddocs=false -Dtests=false -Dpacrunner-duktape=false -Dvapi=false -Dcurl=false -Dintrospection=false">
