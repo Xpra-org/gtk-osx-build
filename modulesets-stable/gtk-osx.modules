@@ -254,11 +254,11 @@
       <dep package="gobject-introspection" />
     </after>
   </meson>
-  <autotools id="hicolor-icon-theme">
+  <meson id="hicolor-icon-theme">
     <branch module="hicolor-icon-theme-0.18.tar.xz"
             version="0.18"
             repo="hicolor" />
-  </autotools>
+  </meson>
   <!---->
   <autotools id="xorg-util-macros">
     <branch module="individual/util/util-macros-1.19.3.tar.bz2"
