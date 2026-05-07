@@ -80,9 +80,9 @@
   <autotools id="m4"
              autogen-sh="configure"
              bootstrap="true">
-    <branch module="m4/m4-1.4.19.tar.xz"
-            version="1.4.19"
-            hash="sha256:63aede5c6d33b6d9b13511cd0be2cac046f2e70fd0a07aa9573a04a82783af96"
+    <branch module="m4/m4-1.4.21.tar.xz"
+            version="1.4.21"
+            hash="sha256:f25c6ab51548a73a75558742fb031e0625d6485fe5f9155949d6486a2408ab66"
             repo="ftp.gnu.org" />
   </autotools>
   <autotools id="autoconf"
