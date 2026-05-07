@@ -379,9 +379,9 @@
 
 	<distutils id="python3-certifi" python3="1">
 		<branch
-			module="c/certifi/certifi-2026.1.4.tar.gz"
-			hash="sha256:ac726dd470482006e014ad384921ed6438c457018f4b3d204aea4281258b2120"
-			version="2026.1.4">
+			module="c/certifi/certifi-2026.4.22.tar.gz"
+			hash="sha256:8d455352a37b71bf76a79caa83a3d6c25afee4a385d632127b6afb3963f1c580"
+			version="2026.4.22">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
