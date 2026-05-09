@@ -71,6 +71,7 @@
     <dependencies>
       <dep package="gstreamer" />
       <dep package="gst-plugins-base" />
+      <dep package="libxml2" />
     </dependencies>
   </meson>
   <meson id="gst-plugins-ugly"
