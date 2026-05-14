@@ -470,9 +470,9 @@
 
 	<distutils id="python3-ldap" python3="1">
 		<branch
-			module="p/python-ldap/python_ldap-3.4.5.tar.gz"
-			hash="sha256:b2f6ef1c37fe2c6a5a85212efe71311ee21847766a7d45fcb711f3b270a5f79a"
-			version="3.4.5">
+			module="p/python-ldap/python_ldap-3.4.6.tar.gz"
+			hash="sha256:83d6b65c7cbe627d81e556d0d03f3f450e3ac35ba9c1b6011f0097ac92effeb1"
+			version="3.4.6">
 		</branch>
 		<dependencies>
 			<dep package="python3-pyasn1"/>
