@@ -216,9 +216,9 @@
 	</cmake>
 
 	<cmake id="libavif" cmakeargs="-DAVIF_CODEC_AOM=SYSTEM">
-		<branch module="AOMediaCodec/libavif/archive/refs/tags/v1.4.0.tar.gz"
-			version="1.4.0" checkoutdir="libavif-1.4.0"
-			hash="sha256:713e2b998ca0bf5473fe4624afdbc7fa9f6e4799dd414020fe67d56f6997bf4e"
+		<branch module="AOMediaCodec/libavif/archive/refs/tags/v1.4.2.tar.gz"
+			version="1.4.2" checkoutdir="libavif-1.4.2"
+			hash="sha256:2b645287340ba5a631d268b551dc2d72bd73ac33335962dd36dcdb6d8366921d"
 			repo="github.com">
 		</branch>
 		<dependencies>
