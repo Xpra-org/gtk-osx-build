@@ -159,9 +159,9 @@
 	</meson>
 
 	<cmake id="libde265" cmakeargs="-DCMAKE_MACOSX_RPATH=ON -DCMAKE_INSTALL_NAME_DIR=@rpath -DENABLE_DECODER=OFF -DENABLE_ENCODER=OFF">
-		<branch module="strukturag/libde265/archive/refs/tags/v1.1.0.tar.gz" repo="github.com"
-			checkoutdir="libde265-1.1.0" version="1.1.0"
-			hash="sha256:46c1ddb660a7cceaf05e954180360d265dcb4ce7b5b682a7ab541cd8f55bb93e"/>
+		<branch module="strukturag/libde265/archive/refs/tags/v1.1.1.tar.gz" repo="github.com"
+			checkoutdir="libde265-1.1.1" version="1.1.1"
+			hash="sha256:5b4fac677018e6074196e8f9889f3e4a5310e46afbf22a893f620d4e24d3510e"/>
 	</cmake>
 
 	<meson id="libspng">
