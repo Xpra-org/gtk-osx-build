@@ -118,6 +118,28 @@ export PYTHON_CONFIGURE_OPTS="--enable-shared"
 #This really means pyenv's *python* version. It's poorly named but
 #it's defined by pyenv so it can't be changed.
 export PYENV_VERSION=$PYTHON_VERSION
+
+# CPython's optional _lzma extension needs liblzma. macOS doesn't ship it (no
+# lzma.h in the SDK) and we must never pull it from Homebrew/MacPorts. Without
+# it the jhbuild Python can't unpack .tar.xz, so 'jhbuild bootstrap-gtk-osx'
+# fails on its very first module (xz, distributed as xz-*.tar.xz). Build xz from
+# its .tar.gz release (macOS gzip handles that, avoiding the chicken-and-egg)
+# into $DEVPREFIX: this provides both liblzma for the Python build and an xzcat
+# binary on PATH for jhbuild.
+XZ_VERSION=5.8.3
+if test ! -f "$DEVPREFIX/include/lzma.h"; then
+    XZ_SRC="$DEV_SRC_ROOT/xz-$XZ_VERSION"
+    rm -rf "$XZ_SRC"
+    curl -kLs "$GITHUB/tukaani-project/xz/releases/download/v$XZ_VERSION/xz-$XZ_VERSION.tar.gz" | tar -xzf - -C "$DEV_SRC_ROOT"
+    pushd "$XZ_SRC"
+    ./configure --prefix="$DEVPREFIX" --disable-doc
+    make
+    make install
+    popd
+fi
+
+CPPFLAGS="-I$DEVPREFIX/include${CPPFLAGS:+ $CPPFLAGS}" \
+LDFLAGS="-L$DEVPREFIX/lib${LDFLAGS:+ $LDFLAGS}" \
 $PYENV install -v $PYENV_VERSION
 $PYENV global $PYENV_VERSION
 PIP="$PYENV_ROOT/shims/pip3"
