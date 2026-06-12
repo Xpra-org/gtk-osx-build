@@ -38,10 +38,9 @@
        to configure, openssl only understands prefix, and only with =. -->
   <autotools id="openssl"
              autogen-sh="Configure"
-             autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s --openssldir=%(prefix)s/etc/ssl %(autogenargs)s"
+             autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s %(autogenargs)s"
              autogenargs="shared"
-             makeinstallargs="install_sw"
-             supports-non-srcdir-builds="no">
+             makeinstallargs="install_sw">
     <branch module="openssl/openssl/releases/download/openssl-3.5.7/openssl-3.5.7.tar.gz"
             version="3.5.7"
             hash="sha256:a8c0d28a529ca480f9f36cf5792e2cd21984552a3c8e4aa11a24aa31aeac98e8"
