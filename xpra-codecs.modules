@@ -164,6 +164,12 @@
 			hash="sha256:5b4fac677018e6074196e8f9889f3e4a5310e46afbf22a893f620d4e24d3510e"/>
 	</cmake>
 
+	<cmake id="libopenjph">
+		<branch module="aous72/OpenJPH/archive/refs/tags/0.28.1.tar.gz" repo="github.com"
+			checkoutdir="OpenJPH-0.28.1" version="0.28.1"
+			hash="sha256:89629a3c0f61d474073076bb6195e9bb1d63fafb2e1c57ab46aee53a62f21819"/>
+	</cmake>
+
 	<meson id="libspng">
 		<branch module="randy408/libspng/archive/v0.7.4.tar.gz" repo="github.com"
 			checkoutdir="libspng-0.7.4" version="0.7.4"
@@ -263,6 +269,7 @@
 			<dep package="libwebp"/>
 			<dep package="openh264"/>
 			<dep package="libde265"/>
+			<dep package="libopenjph"/>
 			<dep package="libspng"/>
 			<dep package="ffmpeg"/>
 			<dep package="libqrencode"/>
