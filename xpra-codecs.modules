@@ -165,9 +165,9 @@
 	</cmake>
 
 	<cmake id="libopenjph">
-		<branch module="aous72/OpenJPH/archive/refs/tags/0.28.1.tar.gz" repo="github.com"
-			checkoutdir="OpenJPH-0.28.1" version="0.28.1"
-			hash="sha256:89629a3c0f61d474073076bb6195e9bb1d63fafb2e1c57ab46aee53a62f21819"/>
+		<branch module="aous72/OpenJPH/archive/refs/tags/0.29.0.tar.gz" repo="github.com"
+			checkoutdir="OpenJPH-0.29.0" version="0.29.0"
+			hash="sha256:1302a296308996af4c023b7f104133f0d48e89e18b86da999973c476b5e8b584"/>
 	</cmake>
 
 	<meson id="libspng">
@@ -271,6 +271,7 @@
 			<dep package="libde265"/>
 			<dep package="libopenjph"/>
 			<dep package="libspng"/>
+
 			<dep package="ffmpeg"/>
 			<dep package="libqrencode"/>
 			<dep package="lz4"/>
