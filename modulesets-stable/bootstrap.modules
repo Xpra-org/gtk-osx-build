@@ -40,20 +40,23 @@
             hash="sha256:581f4d4e872da74b3941c874215898a7d35802f03732bdccee1d4a7979105d18"
             repo="ftp.gnu.org" />
   </autotools>
-  <autotools id="libiconv"
-             autogen-sh="configure"
-             autogenargs="--disable-debug --disable-dependency-tracking --enable-extra-encodings">
-    <branch module="libiconv/libiconv-1.19.tar.gz"
-            version="1.19"
-            hash="sha256:88dd96a8c0464eca144fc791ae60cd31cd8ee78321e67397e25fc095c4a19aa6"
-            repo="ftp.gnu.org" />
-  </autotools>
   <autotools id="libunistring"
              autogen-sh="configure">
     <branch module="libunistring/libunistring-1.4.tar.gz"
             version="1.4"
             hash="sha256:f7e39ddeca18858ecdd02c60d1d5374fcdcbbcdb6b68a391f8497cb1cb2cf3f7"
             repo="ftp.gnu.org" />
+  </autotools>
+  <autotools id="libiconv-no-gettext"
+             autogen-sh="configure"
+             autogenargs="--disable-debug --disable-dependency-tracking --disable-nls">
+    <branch module="libiconv/libiconv-1.19.tar.gz"
+            version="1.19"
+            hash="sha256:88dd96a8c0464eca144fc791ae60cd31cd8ee78321e67397e25fc095c4a19aa6"
+            repo="ftp.gnu.org" />
+    <dependencies>
+      <dep package="libunistring"/>
+    </dependencies>
   </autotools>
   <autotools id="gettext"
              autogen-sh="configure"
@@ -63,14 +66,25 @@
             hash="sha256:71132a3fb71e68245b8f2ac4e9e97137d3e5c02f415636eb508ae607bc01add7"
             repo="ftp.gnu.org" />
     <dependencies>
-      <dep package="libiconv" />
+      <dep package="libiconv-no-gettext" />
       <dep package="libunistring" />
+    </dependencies>
+  </autotools>
+  <autotools id="libiconv"
+             autogen-sh="configure"
+             autogenargs="--disable-debug --disable-dependency-tracking --enable-extra-encodings">
+    <branch module="libiconv/libiconv-1.19.tar.gz"
+            version="1.19"
+            hash="sha256:88dd96a8c0464eca144fc791ae60cd31cd8ee78321e67397e25fc095c4a19aa6"
+            repo="ftp.gnu.org" />
+    <dependencies>
+      <dep package="gettext"/>
     </dependencies>
   </autotools>
   <!-- cmakes ./configure is picky about invalid flags so we manually set it -->
   <autotools id="cmake"
              autogen-sh="bootstrap"
-             autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s"
+             autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s --no-system-zlib"
              bootstrap="true">
     <branch module="v4.3/cmake-4.3.1.tar.gz"
             version="4.3.1"
