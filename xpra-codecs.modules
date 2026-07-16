@@ -165,9 +165,9 @@
 	</cmake>
 
 	<cmake id="libopenjph">
-		<branch module="aous72/OpenJPH/archive/refs/tags/0.29.0.tar.gz" repo="github.com"
-			checkoutdir="OpenJPH-0.29.0" version="0.29.0"
-			hash="sha256:1302a296308996af4c023b7f104133f0d48e89e18b86da999973c476b5e8b584"/>
+		<branch module="aous72/OpenJPH/archive/refs/tags/0.30.1.tar.gz" repo="github.com"
+			checkoutdir="OpenJPH-0.30.1" version="0.30.1"
+			hash="sha256:fb3ccf71af838ed2a42c6ea669308a2adaba115ae9d5862dfb1e2865b43eb5b8"/>
 	</cmake>
 
 	<meson id="libspng">
