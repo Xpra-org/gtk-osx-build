@@ -166,9 +166,9 @@
 
 	<distutils id="python3-setuptools_rust" python3="1">
 		<branch
-			module="s/setuptools_rust/setuptools_rust-1.12.1.tar.gz"
-			hash="sha256:85ae70989d96c9cfeb5ef79cf3bac2d5200bc5564f720a06edceedbdf6664640"
-			version="1.12.1">
+			module="s/setuptools_rust/setuptools_rust-1.13.0.tar.gz"
+			hash="sha256:f2afcf4baeee689910ce49cfa8aad4e08cce72f417449bcc32891b8664fdc726"
+			version="1.13.0">
 			<patch file="setuptools-rust-setup-py.patch" strip="1"/>
 		</branch>
 		<dependencies>
