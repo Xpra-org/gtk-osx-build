@@ -309,9 +309,9 @@
   </meson>
   <meson id="gtk-4"
          mesonargs="-Dx11-backend=false -Dmedia-gstreamer=disabled -Dintrospection=enabled">
-    <branch module="gtk/4.22/gtk-4.22.1.tar.xz"
-            version="4.22.1"
-            hash="sha256:cd7b5a9c41127da6fb321c5a842ad73c62e6996f9ce3f1960ca509f6559d55fc" />
+    <branch module="gtk/4.22/gtk-4.22.4.tar.xz"
+            version="4.22.4"
+            hash="sha256:51bd9f60c7d23a665a556c7364c21fb2e4e282566b3e7e092455e8f910330893" />
     <dependencies>
       <dep package="pango" />
       <dep package="atk" />
