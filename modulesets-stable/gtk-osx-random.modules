@@ -125,9 +125,9 @@
     </dependencies>
   </meson>
   <meson id="shared-mime-info">
-    <branch module="2.4/shared-mime-info-2.4.tar.bz2"
-            version="2.4"
-            hash="sha256:32dc32ae39ff1c1bf8434dd3b36770b48538a1772bc0298509d034f057005992"
+    <branch module="2.5.1/shared-mime-info-2.5.1.tar.bz2"
+            version="2.5.1"
+            hash="sha256:b75b420da9b0be9a3d99b1bee6ed87957b56ab54583ac1a97fbd0dc98ddddb25"
             repo="shared-mime-info" />
     <dependencies>
       <dep package="glib" />
