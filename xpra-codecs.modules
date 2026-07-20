@@ -85,9 +85,9 @@
 	</autotools>
 
 	<meson id="faac">
-		<branch module="/knik0/faac/archive/refs/tags/faac-1.50.tar.gz"
-			version="1.50" checkoutdir="faac-faac-1.50"
-			hash="sha256:e6876cba00cbd786a7f984d9aaada4d5bcb08d2582100366c70f6164d5c89214"
+		<branch module="/knik0/faac/archive/refs/tags/faac-2.0.tar.gz"
+			version="2.0" checkoutdir="faac-faac-2.0"
+			hash="sha256:70bf59db35b2d129c6fe204200427950405d0a63bea3ff8fa8804648dde2cbce"
 			repo="github.com"/>
 	</meson>
 
