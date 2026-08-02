@@ -130,9 +130,9 @@
 	</autotools>
 
 	<cmake id="libaom">
-		<branch module="aom-releases/libaom-3.13.3.tar.gz"
-			version="3.13.3"
-			hash="sha256:446a4ae9741cb8f3eeb98c949d25f91b48cb2b8569cae975c4b737392e9024fc"
+		<branch module="aom-releases/libaom-3.14.1.tar.gz"
+			version="3.14.1"
+			hash="sha256:44bf90dbd23e734d50e70a8c41c285193922938bd0d3bc2ee56764d181d55ef5"
 			repo="googleapis">
 			<patch file="https://raw.githubusercontent.com/Xpra-org/gtk-osx-build/master/patches/aom-nasm-multipass.patch" strip="1" />
 		</branch>

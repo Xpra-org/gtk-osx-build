@@ -1,5 +1,5 @@
---- a/build/cmake/aom_optimization.cmake	2026-04-09 23:19:50
-+++ b/build/cmake/aom_optimization.cmake	2026-04-09 23:20:37
+--- a/cmake/aom_optimization.cmake	2026-04-09 23:19:50
++++ b/cmake/aom_optimization.cmake	2026-04-09 23:20:37
 @@ -215,11 +215,6 @@
    execute_process(COMMAND ${CMAKE_ASM_NASM_COMPILER} -hO
                    OUTPUT_VARIABLE nasm_helptext)
