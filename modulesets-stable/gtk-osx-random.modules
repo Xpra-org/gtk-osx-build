@@ -246,7 +246,7 @@
              autogen-sh="configure">
     <branch module="iso-codes"
             repo="iso-codes"
-            revision="v4.17.0" />
+            revision="v4.20.1" />
   </autotools>
   <autotools id="libxslt"
              autogen-sh="autoreconf">
