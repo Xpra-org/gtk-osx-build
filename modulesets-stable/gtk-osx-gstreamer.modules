@@ -36,9 +36,9 @@
              autogen-sh="configure"
              autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s %(autogenargs)s"
              autogenargs="--enable-gpl --enable-version3 --enable-shared --disable-static --disable-runtime-cpudetect --disable-programs --disable-ffplay --disable-ffprobe --disable-doc">
-    <branch module="ffmpeg-7.1.2.tar.xz"
-            version="7.1.2"
-            hash="sha256:089bc60fb59d6aecc5d994ff530fd0dcb3ee39aa55867849a2bbc4e555f9c304"
+    <branch module="ffmpeg-7.1.5.tar.xz"
+            version="7.1.5"
+            hash="sha256:de668509caf9e35e3cd162473441fdb29538c6d96ed080292b3cf9e6fc5d558f"
             repo="ffmpeg" />
     <dependencies>
       <dep package="nasm" />
