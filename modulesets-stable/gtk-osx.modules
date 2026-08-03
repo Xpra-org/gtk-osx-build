@@ -124,9 +124,9 @@
   </autotools>
   <meson id="harfbuzz-no-cairo"
          mesonargs="-Dcoretext=enabled -Dfreetype=enabled -Ddocs=disabled -Dbenchmark=disabled -Dintrospection=disabled -Dtests=disabled">
-    <branch module="harfbuzz/harfbuzz/releases/download/13.2.1/harfbuzz-13.2.1.tar.xz"
-            version="13.2.1"
-            hash="sha256:6695da3eb7e1be0aa3092fe4d81433a33b47f4519259c759d729e3a9a55c1429"
+    <branch module="harfbuzz/harfbuzz/releases/download/14.3.0/harfbuzz-14.3.0.tar.xz"
+            version="14.3.0"
+            hash="sha256:16070d77cfc4ba1f1e7327e83bf9b3f55898081cabdb94e56a33e04fc8874eae"
             repo="github-tarball" />
     <dependencies>
       <dep package="glib-no-introspection" />
@@ -196,10 +196,10 @@
   </meson>
   <meson id="harfbuzz"
          mesonargs="-Dcoretext=enabled -Dfreetype=enabled -Ddocs=disabled -Dbenchmark=disabled -Dintrospection=enabled -Dtests=disabled">
-    <branch module="harfbuzz/harfbuzz/releases/download/13.2.1/harfbuzz-13.2.1.tar.xz"
-            version="13.2.1"
+    <branch module="harfbuzz/harfbuzz/releases/download/14.3.0/harfbuzz-14.3.0.tar.xz"
+            version="14.3.0"
 
-            repo="github-tarball"  hash="sha256:6695da3eb7e1be0aa3092fe4d81433a33b47f4519259c759d729e3a9a55c1429"/>
+            repo="github-tarball"  hash="sha256:16070d77cfc4ba1f1e7327e83bf9b3f55898081cabdb94e56a33e04fc8874eae"/>
     <dependencies>
       <dep package="gobject-introspection" />
       <dep package="cairo" />
