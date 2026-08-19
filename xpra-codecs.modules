@@ -93,9 +93,9 @@
 	</meson>
 
 	<cmake id="faad2">
-		<branch module="knik0/faad2/archive/refs/tags/2.11.2.tar.gz"
-			version="2.11.2" checkoutdir="faad2-2.11.2"
-			hash="sha256:3fcbd305e4abd34768c62050e18ca0986f7d9c5eca343fb98275418013065c0e"
+		<branch module="knik0/faad2/archive/refs/tags/2.11.3.tar.gz"
+			version="2.11.3" checkoutdir="faad2-2.11.3"
+			hash="sha256:860ab62087e336c1844a70e33196c1790b525fb9a9e7b6ac4fab1a1a4e4d5ce8"
 			repo="github.com"/>
 	</cmake>
 
