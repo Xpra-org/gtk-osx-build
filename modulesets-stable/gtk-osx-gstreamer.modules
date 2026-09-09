@@ -21,9 +21,9 @@
 
   <meson id="liborc"
          mesonargs="-Dbenchmarks=disabled -Dexamples=disabled -Dtests=disabled">
-    <branch module="orc/orc-0.4.43.tar.xz"
-            version="0.4.43"
-            hash="sha256:82394e20e5c4dffe8b45ea8525c62dd4e3e8be7f253ac11c19297ba7ea5473e0" />
+    <branch module="orc/orc-0.4.44.tar.xz"
+            version="0.4.44"
+            hash="sha256:4aeb97aea2b58224029dc2b23d7d064cfa990cb4fb8c4da440bcbe9c95bc5d2d" />
   </meson>
   <cmake id="faad2">
     <branch module="knik0/faad2/archive/refs/tags/2.11.2.tar.gz"
