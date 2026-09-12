@@ -86,9 +86,9 @@
              autogen-sh="bootstrap"
              autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s --no-system-zlib"
              bootstrap="true">
-    <branch module="v4.4/cmake-4.4.2.tar.gz"
-            version="4.4.2"
-            hash="sha256:1db9e61e60b6e0874c86386340b910382f3c5e75b9fbfb44d122063129a2789d"
+    <branch module="v4.4/cmake-4.4.3.tar.gz"
+            version="4.4.3"
+            hash="sha256:c46400618b4f1f2b43507f24fb22f3ae830c3416cf23b776e16e1d413aa892f0"
             repo="cmake" />
   </autotools>
   <!-- The version of m4 provided with Xcode is now too old, see
