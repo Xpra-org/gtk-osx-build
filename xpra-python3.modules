@@ -221,9 +221,9 @@
 
 	<pip id="python3-pybind11" python3="1">
 		<branch
-			module="p/pybind11/pybind11-3.0.4.tar.gz"
-			hash="sha256:3286b59c8a774b9ee650169302dd5a4eedc30a8617905a0560dd8ee44775130c"
-			version="3.0.4">
+			module="p/pybind11/pybind11-3.1.0.tar.gz"
+			hash="sha256:a1cc06b524ab3edca51f8ad3895f9c4fa20b8b19283173dff4ae781449dc9639"
+			version="3.1.0">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
