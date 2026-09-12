@@ -391,7 +391,7 @@
 		</after>
 	</distutils>
 
-	<distutils id="python3-wheel" python3="1">
+	<pip id="python3-wheel" python3="1">
 		<branch
 			module="w/wheel/wheel-0.48.0.tar.gz"
 			hash="sha256:94800765601e9171bf5d58d066e640662842bcedcbab982b2c90787a2c987322"
@@ -403,7 +403,7 @@
 		<after>
 			<dep package="python3"/>
 		</after>
-	</distutils>
+	</pip>
 
 	<distutils id="python3-aioquic" python3="1">
 		<branch
