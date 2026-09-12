@@ -197,9 +197,9 @@
   </meson>
   <autotools id="libpsl"
              autogen-sh="configure">
-    <branch module="rockdaboot/libpsl/releases/download/0.23.1/libpsl-0.23.1.tar.gz"
-            version="0.23.1"
-            hash="sha256:8fbb03054556498ba9c4cc48fcaa36a4483748c6504a65bdb9ba348f555b0e56"
+    <branch module="rockdaboot/libpsl/releases/download/0.23.3/libpsl-0.23.3.tar.gz"
+            version="0.23.3"
+            hash="sha256:93941f85a1e7bd593fa94f299233cb5dfc91cd144fd9a78a6ceb75001c5b03be"
             repo="github-tarball" />
   </autotools>
   <meson id="libsoup"
