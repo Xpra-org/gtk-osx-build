@@ -139,9 +139,9 @@
   </autotools>
   <meson id="libsecret"
          mesonargs="-Dvapi=disabled -Dgtk_doc=disabled">
-    <branch module="libsecret/0.21/libsecret-0.21.7.tar.xz"
-            version="0.21.7"
-            hash="sha256:6b452e4750590a2b5617adc40026f28d2f4903de15f1250e1d1c40bfd68ed55e" />
+    <branch module="libsecret/0.21/libsecret-0.21.8.tar.xz"
+            version="0.21.8"
+            hash="sha256:70e7279ccc7e8cce1bb0e1c57a3785e2c79aea6d1dd9a538abda3886f11cdf72" />
     <dependencies>
       <dep package="glib" />
       <dep package="libgcrypt" />
