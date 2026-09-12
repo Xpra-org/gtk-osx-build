@@ -170,9 +170,9 @@
 	</meson>
 
 	<cmake id="libde265" cmakeargs="-DCMAKE_MACOSX_RPATH=ON -DCMAKE_INSTALL_NAME_DIR=@rpath -DENABLE_DECODER=OFF -DENABLE_ENCODER=OFF">
-		<branch module="strukturag/libde265/archive/refs/tags/v1.1.1.tar.gz" repo="github.com"
-			checkoutdir="libde265-1.1.1" version="1.1.1"
-			hash="sha256:5b4fac677018e6074196e8f9889f3e4a5310e46afbf22a893f620d4e24d3510e"/>
+		<branch module="strukturag/libde265/archive/refs/tags/v1.1.2.tar.gz" repo="github.com"
+			checkoutdir="libde265-1.1.2" version="1.1.2"
+			hash="sha256:982f7838cc25aa6bda7fd33b9b3a05621d0f9b8456dc495d5fb4977fed6dcdbc"/>
 	</cmake>
 
 	<cmake id="libopenjph">
