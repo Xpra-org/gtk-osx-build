@@ -75,7 +75,7 @@
             repo="github-tarball"  hash="sha256:ebcc25aadf2a51fa1fefa9b8bc9e7a79b3dae86870a0f1152a22e42befd46888"/>
   </autotools>
   <meson id="glib-no-introspection"
-         mesonargs="-Dlibmount=disabled -Dintrospection=disabled">
+         mesonargs="-Dlibmount=disabled -Dintrospection=disabled -Dtests=false">
     <branch module="glib/2.88/glib-2.88.3.tar.xz"
             version="2.88.3"
             hash="sha256:ab24d24e698dfa1e408b7bcdb508f4aafc906185a8b8ce72fdf79bbbdc9b383b" >
@@ -85,7 +85,7 @@
     </dependencies>
   </meson>
   <meson id="glib"
-         mesonargs="-Dlibmount=disabled">
+         mesonargs="-Dlibmount=disabled -Dtests=false">
     <branch module="glib/2.88/glib-2.88.3.tar.xz"
             version="2.88.3"
             hash="sha256:ab24d24e698dfa1e408b7bcdb508f4aafc906185a8b8ce72fdf79bbbdc9b383b" >
