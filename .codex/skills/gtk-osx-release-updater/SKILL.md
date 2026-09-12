@@ -98,6 +98,33 @@ python3 .codex/skills/gtk-osx-release-updater/scripts/moduleset_pin.py \
 Each update may include a `files` array to restrict matching to named tracked
 modulesets. Without it, update every tracked occurrence of the ID.
 
+## Reusable Audit Helpers
+
+For PyPI-backed modulesets, use `scripts/pypi_moduleset_audit.py` to compare
+the pinned stable versions with PyPI. It reports newer releases and labels
+major-version changes without editing the moduleset:
+
+```bash
+python3 scripts/pypi_moduleset_audit.py xpra-python3.modules
+```
+
+Use `scripts/pypi_release_manifests.py` to download selected PyPI sdists,
+verify each archive against the PyPI JSON digest, and write a manifest for the
+pin helper. Repeat `--update ID=VERSION` to synchronize a package family in
+one manifest:
+
+```bash
+python3 scripts/pypi_release_manifests.py xpra-python3.modules \
+  --subject 'pyobjc 12.2.2' \
+  --update python3-pyobjc-core=12.2.2 \
+  --update python3-pyobjc-framework-cocoa=12.2.2 \
+  --output /tmp/pyobjc-12.2.2.json
+```
+
+`scripts/xpra_tools_release_audit.py` records the official release endpoints
+used by `xpra-tools.modules`; run it when auditing that moduleset. Review its
+reported archive versions before selecting any updates.
+
 ## Commit Rules
 
 - Create one commit per project or explicitly coordinated family.
