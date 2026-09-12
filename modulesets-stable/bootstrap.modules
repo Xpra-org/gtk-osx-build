@@ -145,9 +145,9 @@
   </autotools>
   <meson id="pkgconf"
          mesonargs="-Dwith-system-libdir=/usr/lib -Dwith-system-includedir=/usr/include">
-    <branch module="pkgconf-3.0.5.tar.xz"
-            version="3.0.5"
-            hash="sha256:3acd3a8a3cce65a8d620321855d92fb602e026cbe8e13ee36bdec58483b59ace"
+    <branch module="pkgconf-3.0.7.tar.xz"
+            version="3.0.7"
+            hash="sha256:c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a"
             repo="pkgconf">
       <patch file="pkgconf-o-directory.patch"
              strip="0"/>
