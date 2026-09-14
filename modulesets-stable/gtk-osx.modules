@@ -84,8 +84,14 @@
       <dep package="libpcre2" />
     </dependencies>
   </meson>
+  <!-- `-Werror=unguarded-availability-new` makes meson's `has_function()` checks
+       fail for symbols that are newer than the deployment target (ie: `pipe2`,
+       which is macOS 27 only): without it, the check succeeds against the SDK,
+       glib defines HAVE_PIPE2 and calls the weakly-linked symbol unconditionally,
+       which is NULL at runtime on older systems - and crashes on the first
+       `g_main_context_new()` call. -->
   <meson id="glib"
-         mesonargs="-Dlibmount=disabled -Dtests=false">
+         mesonargs="-Dlibmount=disabled -Dtests=false -Dc_args=-Werror=unguarded-availability-new">
     <branch module="glib/2.88/glib-2.88.3.tar.xz"
             version="2.88.3"
             hash="sha256:ab24d24e698dfa1e408b7bcdb508f4aafc906185a8b8ce72fdf79bbbdc9b383b" >
