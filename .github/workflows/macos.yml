@@ -24,9 +24,17 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - runner: macos-12
+          # Both images are macOS 15, matching the deployment target set in
+          # jhbuildrc-custom, so the two jobs build against the same SDK and
+          # that SDK sits as close to the target as the available images allow
+          # -- which is what keeps weakly-linked system symbols from creeping
+          # in (see scripts/check-weak-symbols.sh).  Keep the images at or
+          # above the target: jhbuild builds tools and then runs them during
+          # the build (glib-compile-schemas, g-ir-scanner, ...), and those
+          # will not launch on an older host.
+          - runner: macos-15-intel
             arch: x86_64
-          - runner: macos-14
+          - runner: macos-15
             arch: arm64
     steps:
       - uses: actions/checkout@v3
