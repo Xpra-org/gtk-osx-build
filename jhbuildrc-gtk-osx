@@ -598,6 +598,14 @@ else:
     os.environ['PYTHON'] = sys.executable
     environ_append('PKG_CONFIG_PATH', os.path.join(_python_library_path, 'pkgconfig'), ":")
 
+# cargo's release profile defaults to strip="debuginfo", which runs the macOS 27
+# `strip` over every dylib it produces. On macOS 27 that leaves a mis-aligned
+# LINKEDIT string pool and dyld refuses to load the result ("mis-aligned LINKEDIT
+# string pool"). rustc then can't dlopen proc-macro crates (librsvg fails with
+# "can't find crate for `futures_macro`"), and Rust python extensions such as
+# cryptography's _rust.abi3.so fail to import at runtime. Keep the symbols.
+os.environ['CARGO_PROFILE_RELEASE_STRIP'] = 'none'
+
 module_extra_env["python3"] = {'LIBS':'-lintl'}
 module_extra_env["spidermonkey"] = {'AUTOCONF':'autoconf'}
 module_extra_env["harfbuzz-no-cairo"] = {"CXXFLAGS":"-std=c++17"}
