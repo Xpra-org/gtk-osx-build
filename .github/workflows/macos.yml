@@ -61,6 +61,11 @@ jobs:
       - name: jhbuild build
         run: jhbuild build
 
+      # Catch functions that the build SDK declares above our deployment
+      # target: clang links those weakly and they are NULL on older macOS.
+      - name: Check for weakly-linked system symbols
+        run: ./scripts/check-weak-symbols.sh "$HOME/gtk/inst"
+
       - name: Upload config.log files
         if: always()
         uses: actions/upload-artifact@v4
