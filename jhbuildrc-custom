@@ -1,6 +1,6 @@
 _gtk_osx_use_jhbuild_python = True
 
-setup_sdk(target="12", sdk_version="12")
+setup_sdk(target="15", sdk_version="15")
 build_policy = "updated-deps"
 
 modules = ["python3", "meta-osx-xpra-deps"]
@@ -14,4 +14,4 @@ modulesets_dir = "."
 module_cmakeargs["freetype"] = "-DFT_DISABLE_BROTLI=ON"
 
 # maturin needs this:
-os.environ["MACOSX_DEPLOYMENT_TARGET"] = "12.0"
+os.environ["MACOSX_DEPLOYMENT_TARGET"] = "15.0"
