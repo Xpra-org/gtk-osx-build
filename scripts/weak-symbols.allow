@@ -1,0 +1,28 @@
+# Weakly-linked undefined system symbols that are known to be present in the
+# install prefix, and known to be understood.  Anything not listed here fails
+# scripts/check-weak-symbols.sh -- see the comment at the top of that script.
+#
+# A weak reference means the symbol is NULL at runtime on macOS older than the
+# version that introduced it.  That is only safe if the caller checks for NULL,
+# so every entry below needs a note saying why it is safe (or why we tolerate
+# it).  Do not add an entry just to make the build green.
+#
+# Regenerate the raw list -- as a starting point for triage, not as a fix --
+# with:
+#
+#     scripts/check-weak-symbols.sh "$HOME/gtk/inst" --update
+#
+# Format: <symbol> <TAB> <system library>
+
+# CPython declares this with `#pragma weak inet_aton` (Modules/socketmodule.c)
+# and guards the call with `if (inet_aton != NULL)`, precisely so that a NULL
+# resolution is handled.  Safe.
+_inet_aton	libSystem
+
+# __OSX_AVAILABLE(15.4), so weak at our deployment target.  gnulib's configure
+# finds it declared, links it weakly, and then calls it unguarded -- the same
+# bug shape as the glib pipe2 crash.  Tolerated only because the affected
+# binaries (bin/bison, bin/cpio) are build-host tools that are not shipped in
+# the application bundle.  If either ever ends up in a bundle, patch gnulib
+# instead of leaving this entry here.
+_strchrnul	libSystem
