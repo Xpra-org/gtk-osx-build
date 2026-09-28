@@ -177,11 +177,11 @@
   </autotools>
   <autotools id="hunspell"
              autogen-sh="autoreconf">
-    <branch module="hunspell/hunspell/archive/v1.7.3.tar.gz"
-            version="1.7.3"
-            hash="sha256:933be3dac6fd55f6e752331a170efb7e33800e40fae1156d8434cc8c85379a1b"
-            checkoutdir="hunspell-1.7.3"
-            rename-tarball="hunspell-1.7.3.tar.gz"
+    <branch module="hunspell/hunspell/archive/v1.7.4.tar.gz"
+            version="1.7.4"
+            hash="sha256:57bd9927cd1ee691cb96b244b7532dd941edeab126482e23b970a6335e95f287"
+            checkoutdir="hunspell-1.7.4"
+            rename-tarball="hunspell-1.7.4.tar.gz"
             repo="github-tarball" />
   </autotools>
   <autotools id="enchant"
