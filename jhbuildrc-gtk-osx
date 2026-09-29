@@ -230,6 +230,42 @@ def setup_release():
 # Set up the environment for building against particular SDK.
 #
 
+# Refuse to run if a third-party package manager's prefix is present:
+# configure scripts, cmake, pkg-config and the default compiler/linker
+# search paths (/usr/local/include, /usr/local/lib) can silently pick up
+# headers and libraries from these, and we must only ever link against
+# what we build ourselves into the prefix.
+def check_foreign_prefixes():
+    import os
+    _foreign_paths = (
+        "/opt/homebrew",            # Homebrew (arm64)
+        "/usr/local/Homebrew",      # Homebrew (x86_64)
+        "/usr/local/Cellar",
+        "/usr/local/opt",
+        "/usr/local/include",       # default compiler search path
+        "/usr/local/lib",           # default linker search path
+        "/opt/local",               # MacPorts
+        "/sw",                      # Fink
+        "/opt/pkg",                 # pkgsrc
+        "/nix",                     # Nix
+    )
+    found = []
+    for path in _foreign_paths:
+        if not os.path.lexists(path):
+            continue
+        # an empty directory cannot leak anything into the build:
+        if os.path.isdir(path) and not os.path.islink(path) and not os.listdir(path):
+            continue
+        found.append(path)
+    if found:
+        print("Error: found non-standard prefixes which may be picked up by the build:")
+        for path in found:
+            print("  %s" % path)
+        print("Remove or rename them before running jhbuild, exiting.")
+        raise SystemExit(1)
+
+check_foreign_prefixes()
+
 #We call osx_ver() here so that we can set up _default_arch for setup_sdk
 osx_ver()
 
