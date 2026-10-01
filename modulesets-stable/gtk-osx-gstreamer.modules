@@ -26,10 +26,10 @@
             hash="sha256:4aeb97aea2b58224029dc2b23d7d064cfa990cb4fb8c4da440bcbe9c95bc5d2d" />
   </meson>
   <cmake id="faad2">
-    <branch module="knik0/faad2/archive/refs/tags/2.11.3.tar.gz"
-            version="2.11.3"
-            checkoutdir="faad-2.11.3"
-            hash="sha256:860ab62087e336c1844a70e33196c1790b525fb9a9e7b6ac4fab1a1a4e4d5ce8"
+    <branch module="knik0/faad2/archive/refs/tags/2.11.4.tar.gz"
+            version="2.11.4"
+            checkoutdir="faad-2.11.4"
+            hash="sha256:ee479ccbae4a8387ab696e6f21a481bd83fe3881471cafa81b4ae59d7d3aed43"
             repo="github.com" />
   </cmake>
   <autotools id="ffmpeg"
