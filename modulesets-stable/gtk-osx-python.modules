@@ -33,9 +33,9 @@
   <autotools id="python3"
              autogen-sh="configure"
              autogenargs="--enable-shared --with-ensurepip=install">
-    <branch module="3.14.7/Python-3.14.7.tar.xz"
-            version="3.14.7"
-            hash="sha256:3b48dac8fb59f62eaa67ac83c1eb12bda1b7a08406dd286e252c11a66be27f81"
+    <branch module="3.14.8/Python-3.14.8.tar.xz"
+            version="3.14.8"
+            hash="sha256:c2215904f02b175596dc49351585104f4bc20341e1c47378b26a2c274360ce73"
             repo="python" />
     <dependencies>
       <dep package="readline" />
