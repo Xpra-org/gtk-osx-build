@@ -85,9 +85,9 @@
 
 	<distutils id="python3-cparser" python3="1">
 		<branch
-			module="p/pycparser/pycparser-3.1.tar.gz"
-			hash="sha256:b3fc6dec06a8b2fefa0ed4ff92285306a5e3be9987bc5603c9edbdc4e492418f"
-			version="3.1"/>
+			module="p/pycparser/pycparser-3.11.tar.gz"
+			hash="sha256:d875f09c3507d00e1aba0eecc6dcadc1352f30fff09dc6bff2f1c2935e97c2bc"
+			version="3.11"/>
 		<dependencies>
 			<dep package="python3"/>
 		</dependencies>
