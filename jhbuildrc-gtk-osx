@@ -634,6 +634,55 @@ else:
     os.environ['PYTHON'] = sys.executable
     environ_append('PKG_CONFIG_PATH', os.path.join(_python_library_path, 'pkgconfig'), ":")
 
+# jhbuild's <pip> module type runs `sys.executable -m pip`: the pyenv python
+# running jhbuild itself, not the one in the prefix, and it ignores the `python3`
+# attribute. The extensions then get built against the wrong headers, sysconfig
+# and deployment target, and Pillow even records pyenv's LIBDIR as an rpath.
+# Use $PYTHON, just like the <distutils> module type does:
+import glob
+from jhbuild.modtypes import pip as _pip_modtype
+_pip_module_init = _pip_modtype.PipModule.__init__
+def _pip_module_init_with_python(self, *args, **kwargs):
+    _pip_module_init(self, *args, **kwargs)
+    self.pip_exe = [os.environ['PYTHON'], '-m', 'pip']
+_pip_modtype.PipModule.__init__ = _pip_module_init_with_python
+# The build directory is reused, and `do_install` asserts that it contains
+# exactly one wheel: remove the ones left by previous builds
+# (ie: built with a different platform tag)
+_pip_module_do_build = _pip_modtype.PipModule.do_build
+def _pip_module_do_build_clean(self, buildscript):
+    for whl in glob.glob(os.path.join(self.get_builddir(buildscript), '*.whl')):
+        os.unlink(whl)
+    _pip_module_do_build(self, buildscript)
+_pip_module_do_build_clean.depends = _pip_module_do_build.depends
+_pip_module_do_build_clean.error_phase = _pip_module_do_build.error_phase
+_pip_modtype.PipModule.do_build = _pip_module_do_build_clean
+
+# When a module is rebuilt or uninstalled, jhbuild deletes the files from its
+# previous manifest but never their parent directories, since manifests only
+# record files. Every upgrade of a python module leaves behind an empty
+# `foo-1.2.dist-info/licenses/` tree, which pip then chokes on ("invalid metadata
+# entry `version`"), and an empty package directory imports as a namespace package.
+# Prune the directories this leaves empty, but only in site-packages:
+# elsewhere some modules install empty directories on purpose (ie: lib/gio/modules).
+from jhbuild.utils import fileutils as _fileutils
+_remove_files_and_dirs = _fileutils.remove_files_and_dirs
+def _remove_files_and_empty_site_packages_dirs(file_paths, allow_nonempty_dirs=False):
+    results = _remove_files_and_dirs(file_paths, allow_nonempty_dirs)
+    for path, was_deleted, _error in results:
+        if not was_deleted:
+            continue
+        dirname = os.path.dirname(path.rstrip(os.sep))
+        # stop at site-packages itself:
+        while '/site-packages/' in os.path.dirname(dirname) + '/':
+            try:
+                os.rmdir(dirname)
+            except OSError:
+                break
+            dirname = os.path.dirname(dirname)
+    return results
+_fileutils.remove_files_and_dirs = _remove_files_and_empty_site_packages_dirs
+
 # cargo's release profile defaults to strip="debuginfo", which runs the macOS 27
 # `strip` over every dylib it produces. On macOS 27 that leaves a mis-aligned
 # LINKEDIT string pool and dyld refuses to load the result ("mis-aligned LINKEDIT
@@ -642,7 +691,12 @@ else:
 # cryptography's _rust.abi3.so fail to import at runtime. Keep the symbols.
 os.environ['CARGO_PROFILE_RELEASE_STRIP'] = 'none'
 
-module_extra_env["python3"] = {'LIBS':'-lintl'}
+# `make install` runs ensurepip with `--root=$DESTDIR`, which sees the pip already
+# installed in the prefix and installs nothing into the DESTDIR. jhbuild then
+# finds the pip files missing from the new manifest and deletes them,
+# so every rebuild of python3 after the first one leaves pip gutted.
+# Make it install pip into the DESTDIR regardless:
+module_extra_env["python3"] = {'LIBS':'-lintl', 'PIP_IGNORE_INSTALLED': '1'}
 module_extra_env["spidermonkey"] = {'AUTOCONF':'autoconf'}
 module_extra_env["harfbuzz-no-cairo"] = {"CXXFLAGS":"-std=c++17"}
 module_extra_env["harfbuzz"] = {"CXXFLAGS":"-std=c++17"}
