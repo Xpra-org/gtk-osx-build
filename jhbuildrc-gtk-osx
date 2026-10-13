@@ -621,6 +621,13 @@ _python3_path = os.path.join(prefix, 'bin', 'python3')
 if ('python3' in modules or 'pygments' in modules or
     'meta-gtk-osx-python3' in modules or os.path.exists(_python3_path)):
     os.environ['PYTHON'] = _python3_path
+    # The jhbuild wrapper sets PYTHONUSERBASE=$DEVPREFIX for pipenv, and when the
+    # pyenv python has the same minor version as ours, the prefix python also
+    # loads that user site: modules missing from the prefix get silently picked up
+    # from the jhbuild tooling instead (ie: `packaging`, `setuptools`), and so do
+    # its .pth files. jhbuild and meson run from a virtualenv, which ignores the
+    # user site anyway, so only the prefix python is affected by this:
+    os.environ['PYTHONNOUSERSITE'] = '1'
 else:
     _python_ver = str(sys.version_info.major) + '.' + str(sys.version_info.minor)
     _python_install_path = os.path.join(prefix, 'lib', 'python' + _python_ver,
