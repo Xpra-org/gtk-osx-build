@@ -419,11 +419,45 @@
 			<dep package="python3-pylsqpack"/>
 			<dep package="python3-certifi"/>
 			<dep package="python3-wheel"/>
+                       <dep package="python3-service-identity"/>
 		</dependencies>
 		<after>
 			<dep package="python3"/>
 		</after>
 	</distutils>
+
+       <pip id="python3-attrs" python3="1">
+               <branch
+                       module="a/attrs/attrs-26.1.0.tar.gz"
+                       hash="sha256:d03ceb89cb322a8fd706d4fb91940737b6642aa36998fe130a9bc96c985eff32"
+                       version="26.1.0">
+               </branch>
+               <dependencies>
+                       <dep package="python3"/>
+               </dependencies>
+               <after>
+                       <dep package="python3"/>
+               </after>
+       </pip>
+
+       <!-- aioquic uses it for verifying the server certificate's hostname / ip address -->
+       <pip id="python3-service-identity" python3="1">
+               <branch
+                       module="s/service_identity/service_identity-26.1.0.tar.gz"
+                       hash="sha256:6358c52882c96e66ac4a55eb3a72c7dd4a70763f8cc6fa4e70abde2656f4bf3b"
+                       version="26.1.0">
+               </branch>
+               <dependencies>
+                       <dep package="python3"/>
+                       <dep package="python3-attrs"/>
+                       <dep package="python3-cryptography"/>
+               </dependencies>
+               <after>
+                       <dep package="python3"/>
+                       <dep package="python3-attrs"/>
+                       <dep package="python3-cryptography"/>
+               </after>
+       </pip>
 
 	<distutils id="python3-dns" python3="1">
 		<branch
