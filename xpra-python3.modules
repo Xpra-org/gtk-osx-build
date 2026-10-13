@@ -326,6 +326,22 @@
 			<dep package="python3"/>
 			<dep package="python3-bcrypt"/>
 			<dep package="python3-nacl"/>
+                       <dep package="python3-invoke"/>
+               </dependencies>
+               <after>
+                       <dep package="python3"/>
+               </after>
+       </pip>
+
+       <!-- paramiko uses it for running the commands from `Match exec` lines in the ssh config -->
+       <pip id="python3-invoke" python3="1">
+               <branch
+                       module="i/invoke/invoke-3.0.3.tar.gz"
+                       hash="sha256:437b6a622223824380bfb4e64f612711a6b648c795f565efc8625af66fb57f0c"
+                       version="3.0.3">
+               </branch>
+               <dependencies>
+                       <dep package="python3"/>
 		</dependencies>
 		<after>
 			<dep package="python3"/>
