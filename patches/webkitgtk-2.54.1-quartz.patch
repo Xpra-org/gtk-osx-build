@@ -1,0 +1,163 @@
+Preserve the GTK/Quartz bundle integration on WebKitGTK 2.54.1.
+
+Use dyld for the executable path, find relocated helpers and the injected
+bundle, and keep the WebProcess out of the Dock. The old ICU, socket,
+audit-token and C++ fixes are already implemented upstream or their old
+code paths have been replaced. This recipe disables GStreamer, so its old
+GStreamer-specific fixes are no longer needed.
+
+--- a/Source/WTF/wtf/glib/FileSystemGlib.cpp
++++ b/Source/WTF/wtf/glib/FileSystemGlib.cpp
+@@ -27,6 +27,10 @@
+ #include <wtf/text/CString.h>
+ #include <wtf/text/MakeString.h>
+ #include <wtf/text/WTFString.h>
++
++#if OS(DARWIN)
++#include <mach-o/dyld.h>
++#endif
+
+ #if !OS(WINDOWS)
+ #include <limits.h>
+@@ -68,6 +72,16 @@
+     if (result <= 0)
+         return { };
+     return CString(unsafeMakeSpan(readLinkBuffer.data(), static_cast<size_t>(result)));
++}
++#elif OS(DARWIN)
++CString currentExecutablePath()
++{
++    uint32_t size = 0;
++    _NSGetExecutablePath(nullptr, &size);
++    GUniquePtr<char> path(g_new(char, size));
++    if (_NSGetExecutablePath(path.get(), &size))
++        return { };
++    return path.get();
+ }
+ #elif OS(HURD)
+ CString currentExecutablePath()
+--- a/Source/WebKit/Shared/glib/ProcessExecutablePathGLib.cpp
++++ b/Source/WebKit/Shared/glib/ProcessExecutablePathGLib.cpp
+@@ -32,7 +32,7 @@
+
+ namespace WebKit {
+
+-#if ENABLE(DEVELOPER_MODE)
++#if ENABLE(DEVELOPER_MODE) || OS(DARWIN)
+ static String getExecutablePath()
+ {
+     CString executablePath = FileSystem::currentExecutablePath();
+@@ -58,6 +58,13 @@
+         if (FileSystem::fileExists(processPath))
+             return processPath;
+     }
++#endif
++
++#if OS(DARWIN)
++    // Bundled helpers live beside the executable, outside the build prefix.
++    String processPath = FileSystem::pathByAppendingComponent(getExecutablePath(), processName);
++    if (FileSystem::fileExists(processPath))
++        return processPath;
+ #endif
+
+     return FileSystem::pathByAppendingComponent(FileSystem::stringFromFileSystemRepresentation(PKGLIBEXECDIR), processName);
+--- a/Source/WebKit/UIProcess/API/glib/WebKitWebContext.cpp
++++ b/Source/WebKit/UIProcess/API/glib/WebKitWebContext.cpp
+@@ -73,11 +73,16 @@
+ #include <wtf/TZoneMallocInlines.h>
+ #include <wtf/URLParser.h>
+ #include <wtf/glib/GSpanExtras.h>
++#include <wtf/glib/GUniquePtr.h>
+ #include <wtf/glib/WTFGType.h>
+ #include <wtf/text/CString.h>
+
+ #if PLATFORM(GTK)
+ #include "WebKitRemoteInspectorProtocolHandler.h"
++#endif
++
++#if PLATFORM(GTK) && OS(DARWIN)
++#include <dlfcn.h>
+ #endif
+
+ #if ENABLE(2022_GLIB_API)
+@@ -345,6 +350,19 @@
+     const char* bundleDirectory = g_getenv("WEBKIT_INJECTED_BUNDLE_PATH");
+     if (bundleDirectory && g_file_test(bundleDirectory, G_FILE_TEST_IS_DIR))
+         return bundleDirectory;
++
++#if PLATFORM(GTK) && OS(DARWIN)
++    // Find the injected bundle beside the loaded library after relocation.
++    static GUniquePtr<char> relocatedBundlePath([]() -> char* {
++        Dl_info libraryInfo;
++        if (!dladdr(reinterpret_cast<const void*>(injectedBundleDirectory), &libraryInfo) || !libraryInfo.dli_fname)
++            return nullptr;
++        GUniquePtr<char> libraryDirectory(g_path_get_dirname(libraryInfo.dli_fname));
++        return g_build_filename(libraryDirectory.get(), "webkit" WEBKITGTK_API_INFIX "gtk-" WEBKITGTK_API_VERSION, "injected-bundle", nullptr);
++    }());
++    if (relocatedBundlePath && g_file_test(relocatedBundlePath.get(), G_FILE_TEST_IS_DIR))
++        return relocatedBundlePath.get();
++#endif
+
+     static const char* injectedBundlePath = PKGLIBDIR G_DIR_SEPARATOR_S "injected-bundle" G_DIR_SEPARATOR_S;
+     return injectedBundlePath;
+--- a/Source/WebKit/PlatformGTK.cmake
++++ b/Source/WebKit/PlatformGTK.cmake
+@@ -2,6 +2,15 @@
+ include(InspectorGResources.cmake)
+ include(ModernMediaControlsGResources.cmake)
+ include(Platform/Skia.cmake)
++
++if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
++    enable_language(OBJCXX)
++    set(CMAKE_OBJCXX_STANDARD ${CMAKE_CXX_STANDARD})
++    set(CMAKE_OBJCXX_STANDARD_REQUIRED ON)
++    find_library(APPKIT_FRAMEWORK AppKit REQUIRED)
++    list(APPEND WebKit_LIBRARIES ${APPKIT_FRAMEWORK})
++    list(APPEND WebKit_SOURCES WebProcess/gtk/NSApplicationActivationPolicy.mm)
++endif ()
+
+ if (ENABLE_PDFJS)
+     include(PdfJSGResources.cmake)
+--- a/Source/WebKit/WebProcess/gtk/WebProcessMainGtk.cpp
++++ b/Source/WebKit/WebProcess/gtk/WebProcessMainGtk.cpp
+@@ -29,6 +29,9 @@
+
+ #include "AuxiliaryProcessMain.h"
+ #include "WebProcess.h"
++#if OS(DARWIN)
++#include "NSApplicationActivationPolicy.h"
++#endif
+ #include <libintl.h>
+ #include <locale.h>
+
+@@ -81,6 +84,9 @@
+
+         bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
+         bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
++#if OS(DARWIN)
++        setActivationPolicyProhibited();
++#endif
+
+         return true;
+     }
+--- /dev/null
++++ b/Source/WebKit/WebProcess/gtk/NSApplicationActivationPolicy.h
+@@ -0,0 +1,5 @@
++#pragma once
++
++namespace WebKit {
++void setActivationPolicyProhibited();
++}
+--- /dev/null
++++ b/Source/WebKit/WebProcess/gtk/NSApplicationActivationPolicy.mm
+@@ -0,0 +1,10 @@
++#include "config.h"
++#include "NSApplicationActivationPolicy.h"
++#import <AppKit/AppKit.h>
++
++namespace WebKit {
++void setActivationPolicyProhibited()
++{
++    [NSApplication.sharedApplication setActivationPolicy:NSApplicationActivationPolicyProhibited];
++}
++}
