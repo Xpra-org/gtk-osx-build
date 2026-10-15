@@ -317,6 +317,8 @@
 		</after>
 	</distutils>
 
+	<!-- Keep Paramiko on 4.x for now; allow updates within that branch.
+	     Branch hold recorded 2026-10-15; see README.md. -->
 	<pip id="python3-paramiko" python3="1">
 		<branch
 			module="p/paramiko/paramiko-4.0.0.tar.gz"

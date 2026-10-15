@@ -36,6 +36,8 @@
   </metamodule>
   <!-- of the many arguments such as prefix and libdir that jhbuild might pass
        to configure, openssl only understands prefix, and only with =. -->
+  <!-- Keep OpenSSL on 3.5.x for now; allow updates within that branch.
+       Branch hold recorded 2026-10-15; see README.md. -->
   <autotools id="openssl"
              autogen-sh="Configure"
              autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s %(autogenargs)s"
