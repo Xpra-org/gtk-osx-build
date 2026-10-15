@@ -28,9 +28,9 @@
 
 	<distutils id="python3-xpra" python3="1">
 		<branch
-			module="src/xpra-6.5.2.tar.xz"
-			hash="sha256:789e81c82ce1397459966d11b9ee19725028d190238c4851fff0961547f48133"
-			version="6.5.2"/>
+			module="https://github.com/Xpra-org/xpra/archive/refs/tags/v6.5.5.tar.gz"
+			hash="sha256:a36f482ec8f68501d915c2b406d6dac015a20e0789fe691be5f0b24ba7b343fa"
+			version="6.5.5" checkoutdir="xpra-6.5.5" rename-tarball="xpra-6.5.5.tar.gz"/>
 		<dependencies>
 			<dep package="meta-osx-xpra-deps"/>
 		</dependencies>
