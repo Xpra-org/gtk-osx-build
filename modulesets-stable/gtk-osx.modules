@@ -74,27 +74,25 @@
 
             repo="github-tarball"  hash="sha256:929f0b20e62879252a15886b06c89f1edef61a363cbd5826fb041080a5e557ae"/>
   </autotools>
+  <!-- Check pipe2 with its SDK declaration so the availability warning rejects
+       symbols newer than the deployment target and selects the pipe fallback. -->
   <meson id="glib-no-introspection"
          mesonargs="-Dlibmount=disabled -Dintrospection=disabled -Dtests=false -Dc_args=-Werror=unguarded-availability-new">
     <branch module="glib/2.90/glib-2.90.1.tar.xz"
             version="2.90.1"
             hash="sha256:93c941aa17d5eb1d53fe838365f29a8b4e539c222a256d974ec8f30fc413e396" >
+      <patch file="glib-pipe2-sdk-availability.patch" strip="1" />
     </branch>
     <dependencies>
       <dep package="libpcre2" />
     </dependencies>
   </meson>
-  <!-- `-Werror=unguarded-availability-new` makes meson's `has_function()` checks
-       fail for symbols that are newer than the deployment target (ie: `pipe2`,
-       which is macOS 27 only): without it, the check succeeds against the SDK,
-       glib defines HAVE_PIPE2 and calls the weakly-linked symbol unconditionally,
-       which is NULL at runtime on older systems - and crashes on the first
-       `g_main_context_new()` call. -->
   <meson id="glib"
          mesonargs="-Dlibmount=disabled -Dtests=false -Dc_args=-Werror=unguarded-availability-new">
     <branch module="glib/2.90/glib-2.90.1.tar.xz"
             version="2.90.1"
             hash="sha256:93c941aa17d5eb1d53fe838365f29a8b4e539c222a256d974ec8f30fc413e396" >
+      <patch file="glib-pipe2-sdk-availability.patch" strip="1" />
     </branch>
     <dependencies>
       <dep package="gobject-introspection" />

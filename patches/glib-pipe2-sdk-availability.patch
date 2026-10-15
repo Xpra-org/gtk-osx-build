@@ -1,0 +1,17 @@
+Check pipe2 with its real declaration so the compiler can enforce the SDK's
+deployment-target availability annotation. A headerless has_function() probe
+uses its own declaration and can incorrectly enable HAVE_PIPE2 for macOS 15
+when building against a macOS 27 SDK. Keep _GNU_SOURCE for Linux detection.
+
+--- a/meson.build
++++ b/meson.build
+@@ -834,5 +834,8 @@
+ foreach f : functions
+-  if cc.has_function(f)
++  # The SDK declaration carries pipe2's deployment-target availability.
++  # A headerless probe can link a symbol which is unavailable at runtime.
++  prefix = f == 'pipe2' ? '#define _GNU_SOURCE\n#include <unistd.h>' : ''
++  if cc.has_function(f, prefix: prefix)
+     define = 'HAVE_' + f.underscorify().to_upper()
+     glib_conf.set(define, 1)
+     glib_conf_prefix = glib_conf_prefix + '#define @0@ 1\n'.format(define)
