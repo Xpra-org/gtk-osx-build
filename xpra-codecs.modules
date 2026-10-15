@@ -150,10 +150,10 @@
 	</meson>
 
 	<autotools id="x264" autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s %(autogenargs)s" autogenargs="--enable-pic --enable-shared --enable-static" autogen-sh="configure">
-		<branch module="mirror/x264/archive/31e19f92f00c7003fa115047ce50978bc98c3a0d.zip"
-			checkoutdir="x264-31e19f92f00c7003fa115047ce50978bc98c3a0d"
-			version="20231001-stable"
-			hash="sha256:c6b0de578e440f040b9972e087d017f846e5dd86f60e087f2eb8b0b6ed8c0382"
+		<branch module="https://code.videolan.org/videolan/x264/-/archive/b35605ace3ddf7c1a5d67a2eb553f034aef41d55/x264-b35605ace3ddf7c1a5d67a2eb553f034aef41d55.tar.bz2"
+			checkoutdir="x264-b35605ace3ddf7c1a5d67a2eb553f034aef41d55"
+			version="20250608-stable"
+			hash="sha256:6eeb82934e69fd51e043bd8c5b0d152839638d1ce7aa4eea65a3fedcf83ff224"
 			repo="github.com"/>
 		<dependencies>
 			<dep package="nasm"/>
