@@ -75,10 +75,10 @@
             repo="github-tarball"  hash="sha256:929f0b20e62879252a15886b06c89f1edef61a363cbd5826fb041080a5e557ae"/>
   </autotools>
   <meson id="glib-no-introspection"
-         mesonargs="-Dlibmount=disabled -Dintrospection=disabled -Dtests=false">
-    <branch module="glib/2.88/glib-2.88.3.tar.xz"
-            version="2.88.3"
-            hash="sha256:ab24d24e698dfa1e408b7bcdb508f4aafc906185a8b8ce72fdf79bbbdc9b383b" >
+         mesonargs="-Dlibmount=disabled -Dintrospection=disabled -Dtests=false -Dc_args=-Werror=unguarded-availability-new">
+    <branch module="glib/2.90/glib-2.90.1.tar.xz"
+            version="2.90.1"
+            hash="sha256:93c941aa17d5eb1d53fe838365f29a8b4e539c222a256d974ec8f30fc413e396" >
     </branch>
     <dependencies>
       <dep package="libpcre2" />
@@ -92,9 +92,9 @@
        `g_main_context_new()` call. -->
   <meson id="glib"
          mesonargs="-Dlibmount=disabled -Dtests=false -Dc_args=-Werror=unguarded-availability-new">
-    <branch module="glib/2.88/glib-2.88.3.tar.xz"
-            version="2.88.3"
-            hash="sha256:ab24d24e698dfa1e408b7bcdb508f4aafc906185a8b8ce72fdf79bbbdc9b383b" >
+    <branch module="glib/2.90/glib-2.90.1.tar.xz"
+            version="2.90.1"
+            hash="sha256:93c941aa17d5eb1d53fe838365f29a8b4e539c222a256d974ec8f30fc413e396" >
     </branch>
     <dependencies>
       <dep package="gobject-introspection" />
