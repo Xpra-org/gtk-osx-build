@@ -69,10 +69,10 @@
   <autotools id="libpcre2"
              autogen-sh="configure"
              autogenargs="--enable-pcre2-16 --enable-pcre2-32 --enable-jit">
-    <branch module="PCRE2Project/pcre2/releases/download/pcre2-10.48/pcre2-10.48.tar.gz"
-            version="10.48"
+    <branch module="PCRE2Project/pcre2/releases/download/pcre2-10.49/pcre2-10.49.tar.gz"
+            version="10.49"
 
-            repo="github-tarball"  hash="sha256:ebcc25aadf2a51fa1fefa9b8bc9e7a79b3dae86870a0f1152a22e42befd46888"/>
+            repo="github-tarball"  hash="sha256:929f0b20e62879252a15886b06c89f1edef61a363cbd5826fb041080a5e557ae"/>
   </autotools>
   <meson id="glib-no-introspection"
          mesonargs="-Dlibmount=disabled -Dintrospection=disabled -Dtests=false">
