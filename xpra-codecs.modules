@@ -229,9 +229,10 @@
 	</autotools>
 
 	<cmake id="libyuv" cmakeargs="-DCMAKE_MACOSX_RPATH=ON -DCMAKE_INSTALL_NAME_DIR=@rpath -DCMAKE_POLICY_VERSION_MINIMUM=3.5">
-		<branch module="src/libyuv-0.1899.r2785.tar.xz"
-			version="0.1899.r2785" checkoutdir="libyuv-0.1899.r2785"
-			hash="sha256:9c357dd2fa7ab21ad9dfd0e430d47941964dda4a2b6c766991380e6d4b7c3630"
+		<!-- Match Xpra's RPM spec: upstream commit 5d03bf9bab5693ccf692f18b538d8d9c00387c73. -->
+		<branch module="https://snapshot.debian.org/archive/debian/20260707T202226Z/pool/main/liby/libyuv/libyuv_0.0.1949.20260706.orig.tar.xz"
+			version="0.0.1949.20260706" checkoutdir="libyuv-0.0.1949.20260706"
+			hash="sha256:28c3cd7d109c93202ce3e7fd5a5534db7c137929b06c6792d6a904fe2ac130d1"
 			repo="xpra.org">
 			<patch file="https://raw.githubusercontent.com/Xpra-org/gtk-osx-build/master/patches/libyuv-nojpeg.patch" strip="1" />
 			<patch file="https://raw.githubusercontent.com/Xpra-org/gtk-osx-build/master/patches/libyuv-add-pkgconfig.patch" strip="1" />
