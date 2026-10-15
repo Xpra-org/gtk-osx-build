@@ -19,6 +19,10 @@
               href="https://files.pythonhosted.org/packages/source/"
               type="tarball" />
 
+  <!-- Shared definitions for the bundled codec and support libraries below. -->
+  <include href="../xpra-codecs.modules" />
+  <include href="../xpra-tools.modules" />
+
   <meson id="liborc"
          mesonargs="-Dbenchmarks=disabled -Dexamples=disabled -Dtests=disabled">
     <branch module="orc/orc-0.4.44.tar.xz"
@@ -61,6 +65,14 @@
     <dependencies>
       <dep package="gstreamer" />
       <dep package="liborc" />
+      <dep package="libogg" />
+      <dep package="libvorbis" />
+      <dep package="opus" />
+      <dep package="pango" />
+      <dep package="graphene" />
+      <dep package="libpng" />
+      <dep package="libjpeg" />
+      <dep package="zlib" />
     </dependencies>
   </meson>
   <meson id="gst-plugins-good">
@@ -72,16 +84,32 @@
       <dep package="gstreamer" />
       <dep package="gst-plugins-base" />
       <dep package="libxml2" />
+      <dep package="flac" />
+      <dep package="speex" />
+      <dep package="twolame" />
+      <dep package="libvpx" />
+      <dep package="libpng" />
+      <dep package="libjpeg" />
+      <dep package="cairo" />
+      <dep package="gdk-pixbuf" />
+      <dep package="gtk+-3.0" />
+      <dep package="zlib" />
+      <dep package="libsoup" />
+      <dep package="libsoup3" />
+      <dep package="libnettle" />
+      <dep package="libgcrypt" />
+      <dep package="openssl" />
     </dependencies>
   </meson>
   <meson id="gst-plugins-ugly"
-         mesonargs="-Dgpl=enabled">
+         mesonargs="-Dgpl=enabled -Dx264=enabled">
     <branch module="gst-plugins-ugly/gst-plugins-ugly-1.28.8.tar.xz"
             version="1.28.8"
             hash="sha256:51ae53002e3bbe9ed0f2215020c5a248bf0ed41b9d9a2a4e102b8583fedab61c" />
     <dependencies>
       <dep package="gstreamer" />
       <dep package="gst-plugins-base" />
+      <dep package="x264" />
     </dependencies>
   </meson>
   <meson id="gst-plugins-bad">
@@ -97,6 +125,19 @@
       <dep package="faad2" />
       <dep package="openssl" />
       <dep package="libxml2" />
+      <dep package="faac" />
+      <dep package="libaom" />
+      <dep package="libde265" />
+      <dep package="openh264" />
+      <dep package="opus" />
+      <dep package="libwebp" />
+      <dep package="librsvg" />
+      <dep package="libqrencode" />
+      <dep package="cairo" />
+      <dep package="pango" />
+      <dep package="curl" />
+      <dep package="libnettle" />
+      <dep package="libgcrypt" />
     </dependencies>
   </meson>
   <meson id="gst-libav">

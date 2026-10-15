@@ -50,6 +50,9 @@
 			repo="downloads.xiph.org">
 			<patch file="libvorbis-drop-force_cpusubtype_ALL.patch"/>
 		</branch>
+		<dependencies>
+			<dep package="libogg"/>
+		</dependencies>
 	</autotools>
 
 	<autotools id="speex" autogen-sh="autoreconf">
