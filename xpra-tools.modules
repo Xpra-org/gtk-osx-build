@@ -84,7 +84,7 @@
 			repo="github.com"/>
 	</cmake>
 
-	<cmake id="xxhash" cmakeargs="-DCMAKE_MACOSX_RPATH=FALSE -DCMAKE_POLICY_VERSION_MINIMUM=3.5" autogen-sh="configure" cmakedir="cmake_unofficial">
+	<cmake id="xxhash" cmakeargs="-DCMAKE_MACOSX_RPATH=FALSE -DCMAKE_POLICY_VERSION_MINIMUM=3.5" autogen-sh="configure" cmakedir="build/cmake">
 
 		<branch module="/Cyan4973/xxHash/archive/refs/tags/v0.8.4.tar.gz"
 			version="0.8.4" checkoutdir="xxHash-0.8.4"
