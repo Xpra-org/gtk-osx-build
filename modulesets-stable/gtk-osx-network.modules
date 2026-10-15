@@ -158,16 +158,27 @@
       <dep package="glib" />
     </dependencies>
   </meson>
-  <autotools id="gnome-keyring"
-             autogenargs="--disable-pam --without-root-certs">
-    <branch module="gnome-keyring/50/gnome-keyring-50.0.tar.xz"
-            version="50.0"
-            hash="sha256:cbd72062c53c9702bc2c4733991ad5f051ca682882b30905a2829bcf1a8ecc7c" />
+  <!-- GNOME Keyring still requires the GCK 1 / GCR 3 APIs. -->
+  <meson id="gcr3"
+         mesonargs="-Dgtk=false -Dgtk_doc=false -Dintrospection=false -Dssh_agent=false -Dsystemd=disabled">
+    <branch module="gcr/3.41/gcr-3.41.2.tar.xz" version="3.41.2"
+            hash="sha256:bad10f3c553a0e1854649ab59c5b2434da22ca1a54ae6138f1f53961567e1ab7" />
+    <dependencies>
+      <dep package="p11-kit" />
+      <dep package="libgcrypt" />
+      <dep package="glib" />
+    </dependencies>
+  </meson>
+  <meson id="gnome-keyring" mesonargs="-Dpam=false -Dsystemd=disabled">
+    <branch module="gnome-keyring/51/gnome-keyring-51.1.tar.xz"
+            version="51.1"
+            hash="sha256:dfe7adc5876ef0670e7eba2907799bdbb8875ce58bb4208e1a52169bd16a47ca" />
     <dependencies>
       <dep package="libgcrypt" />
-      <dep package="gcr" />
+      <dep package="gcr3" />
+      <dep package="libxslt" />
     </dependencies>
-  </autotools>
+  </meson>
   <meson id="gsettings-desktop-schemas">
     <branch module="gsettings-desktop-schemas/51/gsettings-desktop-schemas-51.0.tar.xz"
             version="51.0"
