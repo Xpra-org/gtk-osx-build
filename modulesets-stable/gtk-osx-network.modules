@@ -130,7 +130,8 @@
             repo="gnupg.org" />
   </autotools>
   <autotools id="libgcrypt"
-             autogen-sh="configure">
+             autogen-sh="configure"
+             autogenargs="gcry_cv_gcc_asm_cfi_directives=no">
     <branch module="gcrypt/libgcrypt/libgcrypt-1.12.4.tar.bz2"
             version="1.12.4"
             hash="sha256:d77f68f48879510e79a2f65977ccc68981781ea0923e5bdffac2a193ea3d660e"
