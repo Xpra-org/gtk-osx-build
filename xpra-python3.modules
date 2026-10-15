@@ -351,9 +351,9 @@
 
 	<distutils id="python3-uvloop" python3="1">
 		<branch
-			module="u/uvloop/uvloop-0.22.1.tar.gz"
-			hash="sha256:6c84bae345b9147082b17371e3dd5d42775bddce91f885499017f4607fdaf39f"
-			version="0.22.1">
+			module="u/uvloop/uvloop-0.23.0.tar.gz"
+			hash="sha256:28d160f51ab4da3b187063652e643dea6831072add4adc1e6d62afbe73b6be27"
+			version="0.23.0">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
