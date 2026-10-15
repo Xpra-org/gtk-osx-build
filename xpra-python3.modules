@@ -381,9 +381,9 @@
 
 	<distutils id="python3-pylsqpack" python3="1">
 		<branch
-			module="p/pylsqpack/pylsqpack-0.3.24.tar.gz"
-			hash="sha256:8ec455f44614228f89e38d40c1b1e37895620e20ec6b21e3b562fa8b79a23890"
-			version="0.3.24">
+			module="p/pylsqpack/pylsqpack-1.0.0.tar.gz"
+			hash="sha256:4674adc2c833c1c70a36454f5774e9def94fc3109e4a8464d804af2a2030957a"
+			version="1.0.0">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
@@ -439,9 +439,9 @@
 
 	<distutils id="python3-aioquic" python3="1">
 		<branch
-			module="a/aioquic/aioquic-1.3.0.tar.gz"
-			hash="sha256:28d070b2183e3e79afa9d4e7bd558960d0d53aeb98bc0cf0a358b279ba797c92"
-			version="1.3.0">
+			module="a/aioquic/aioquic-1.6.1.tar.gz"
+			hash="sha256:9a10d20e69b5914d6fa034becb30ab75ef6a777a3f1b16623ca599e9291c0a5c"
+			version="1.6.1">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
