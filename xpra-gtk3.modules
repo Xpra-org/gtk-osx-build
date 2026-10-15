@@ -5,6 +5,8 @@
 
 	<repository type="tarball" name="xpra.org" default="yes" href="https://xpra.org"/>
 
+	<!-- Load themes first so core definitions take precedence. -->
+	<include href="modulesets-stable/gtk-osx-themes.modules"/>
 	<include href="modulesets-stable/gtk-osx.modules"/>
 	<include href="xpra-tools.modules"/>
 	<include href="xpra-codecs.modules"/>
