@@ -1,25 +1,28 @@
---- a/gdk-pixbuf-loader/meson_install.py	2024-10-29 16:44:51
-+++ b/gdk-pixbuf-loader/meson_install.py	2025-04-03 15:10:45
-@@ -15,6 +16,22 @@
+--- a/gdk-pixbuf-loader/meson_install.py
++++ b/gdk-pixbuf-loader/meson_install.py
+@@ -18,6 +18,25 @@
+         argparse.print_help()
+         sys.exit(1)
  
- if __name__ == '__main__':
-     args = argparse.parse_args()
-+    if sys.platform in ['darwin', 'ios']:
-+        modulepath = Path(args.gdk_pixbuf_moduledir).resolve()
-+        prefix = modulepath.parent.parent.parent
++    if sys.platform in ['darwin', 'ios'] and not args.show_cross_message:
++        modulepath = args.moduledir.resolve()
++        libdir = modulepath.parent.parent.parent
 +        location = modulepath
-+        if 'DESTDIR' in os.environ:
++        if os.environ.get('DESTDIR'):
 +            location = Path(os.environ['DESTDIR']) / modulepath.relative_to('/')
 +        oldfilepath = location / 'libpixbufloader_svg.dylib'
-+        newfilename = 'libpixbufloader-svg.so'
-+        newfilepath = location / newfilename
++        newfilepath = location / 'libpixbufloader-svg.so'
 +        installfilepath = modulepath / 'libpixbufloader-svg.so'
-+        librsvgpath = prefix / 'librsvg-2.2.dylib'
-+        os.rename(oldfilepath.as_posix(), newfilepath.as_posix())
++        librsvgpath = libdir / 'librsvg-2.2.dylib'
++        os.rename(oldfilepath, newfilepath)
 +        subprocess.run(
-+            ['install_name_tool', '-id', installfilepath.as_posix(), newfilepath.as_posix()])
++            ['install_name_tool', '-id', str(installfilepath), str(newfilepath)],
++            check=True)
 +        subprocess.run(
-+            ['install_name_tool', '-change', '@rpath/librsvg-2.2.dylib', librsvgpath.as_posix(), newfilepath.as_posix()])
- 
-     cache_file: Path = args.gdk_pixbuf_cache_file
- 
++            ['install_name_tool', '-change', '@rpath/librsvg-2.2.dylib',
++             str(librsvgpath), str(newfilepath)],
++            check=True)
++
+     if args.show_cross_message or os.environ.get("DESTDIR"):
+         print('*** Note: Please run gdk-pixbuf-queryloaders manually ' +
+               'against the newly-built gdkpixbuf-svg loader', file=sys.stderr)
