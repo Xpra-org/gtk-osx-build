@@ -86,9 +86,9 @@
 
 	<cmake id="xxhash" cmakeargs="-DCMAKE_MACOSX_RPATH=FALSE -DCMAKE_POLICY_VERSION_MINIMUM=3.5" autogen-sh="configure" cmakedir="cmake_unofficial">
 
-		<branch module="/Cyan4973/xxHash/archive/refs/tags/v0.8.3.tar.gz"
-			version="0.8.3" checkoutdir="xxHash-0.8.3"
-			hash="sha256:aae608dfe8213dfd05d909a57718ef82f30722c392344583d3f39050c7f29a80"
+		<branch module="/Cyan4973/xxHash/archive/refs/tags/v0.8.4.tar.gz"
+			version="0.8.4" checkoutdir="xxHash-0.8.4"
+			hash="sha256:5738270935e7c3d38a79b3adf7c9692566ce7895a25f67de43ad52ab504acd32"
 			repo="github.com"/>
 	</cmake>
 
