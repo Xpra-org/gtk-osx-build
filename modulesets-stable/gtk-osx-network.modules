@@ -208,12 +208,18 @@
       <dep package="glib" />
     </dependencies>
   </meson>
+  <!-- Use JHBuild's ICU headers and libraries together instead of mixing the
+       versioned headers with Apple's unversioned libicucore symbols. -->
   <autotools id="libpsl"
-             autogen-sh="configure">
+             autogen-sh="configure"
+             autogenargs="--enable-runtime=libicu">
     <branch module="rockdaboot/libpsl/releases/download/0.23.3/libpsl-0.23.3.tar.gz"
             version="0.23.3"
             hash="sha256:93941f85a1e7bd593fa94f299233cb5dfc91cd144fd9a78a6ceb75001c5b03be"
             repo="github-tarball" />
+    <dependencies>
+      <dep package="icu" />
+    </dependencies>
   </autotools>
   <meson id="libsoup"
          mesonargs="-Dvapi=disabled">
