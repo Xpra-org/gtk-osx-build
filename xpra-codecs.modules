@@ -167,9 +167,9 @@
 	</autotools>
 
 	<meson id="openh264">
-		<branch module="cisco/openh264/archive/refs/tags/v2.6.0.tar.gz" repo="github.com"
-			checkoutdir="openh264-2.6.0" version="2.6.0"
-		hash="sha256:558544ad358283a7ab2930d69a9ceddf913f4a51ee9bf1bfb9e377322af81a69"/>
+		<branch module="cisco/openh264/archive/refs/tags/v2.7.0.tar.gz" repo="github.com"
+			checkoutdir="openh264-2.7.0" version="2.7.0"
+		hash="sha256:5178775c8b440073e70920e97d195efff721c0e56d0a78cc82c919e95d54924d"/>
 	</meson>
 
 	<cmake id="libde265" cmakeargs="-DCMAKE_MACOSX_RPATH=ON -DCMAKE_INSTALL_NAME_DIR=@rpath -DENABLE_DECODER=OFF -DENABLE_ENCODER=OFF">
