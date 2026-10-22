@@ -11,6 +11,7 @@
 	<include href="xpra-tools.modules"/>
 	<include href="xpra-codecs.modules"/>
 	<include href="xpra-python3.modules"/>
+	<include href="xpra-sbom.modules"/>
 
 
 	<metamodule id="meta-osx-xpra-deps">
@@ -35,6 +36,7 @@
 			version="6.5.5" checkoutdir="xpra-6.5.5" rename-tarball="xpra-6.5.5.tar.gz"/>
 		<dependencies>
 			<dep package="meta-osx-xpra-deps"/>
+			<dep package="meta-osx-xpra-sbom"/>
 		</dependencies>
 	</distutils>
 

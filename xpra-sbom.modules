@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE moduleset SYSTEM "moduleset.dtd">
+<?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
+<moduleset>
+
+	<repository type="tarball" name="pypi" default="yes" href="https://files.pythonhosted.org/packages/source/"/>
+
+	<pip id="python3-boolean.py" python3="1">
+		<branch
+			module="b/boolean_py/boolean_py-5.0.tar.gz"
+			hash="sha256:60cbc4bad079753721d32649545505362c754e121570ada4658b852a3a318d95"
+			version="5.0"/>
+		<dependencies>
+			<dep package="python3"/>
+		</dependencies>
+		<after>
+			<dep package="python3"/>
+		</after>
+	</pip>
+
+	<pip id="python3-defusedxml" python3="1">
+		<branch
+			module="d/defusedxml/defusedxml-0.7.1.tar.gz"
+			hash="sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69"
+			version="0.7.1"/>
+		<dependencies>
+			<dep package="python3"/>
+		</dependencies>
+		<after>
+			<dep package="python3"/>
+		</after>
+	</pip>
+
+	<pip id="python3-sortedcontainers" python3="1">
+		<branch
+			module="s/sortedcontainers/sortedcontainers-2.4.0.tar.gz"
+			hash="sha256:25caa5a06cc30b6b83d11423433f65d1f9d76c4c6a0c90e3379eaa43b9bfdb88"
+			version="2.4.0"/>
+		<dependencies>
+			<dep package="python3"/>
+		</dependencies>
+		<after>
+			<dep package="python3"/>
+		</after>
+	</pip>
+
+	<pip id="python3-license-expression" python3="1">
+		<branch
+			module="l/license_expression/license_expression-30.4.4.tar.gz"
+			hash="sha256:73448f0aacd8d0808895bdc4b2c8e01a8d67646e4188f887375398c761f340fd"
+			version="30.4.4"/>
+		<dependencies>
+			<dep package="python3"/>
+			<dep package="python3-boolean.py"/>
+		</dependencies>
+		<after>
+			<dep package="python3"/>
+		</after>
+	</pip>
+
+	<pip id="python3-py-serializable" python3="1">
+		<branch
+			module="p/py_serializable/py_serializable-2.1.0.tar.gz"
+			hash="sha256:9d5db56154a867a9b897c0163b33a793c804c80cee984116d02d49e4578fc103"
+			version="2.1.0"/>
+		<dependencies>
+			<dep package="python3"/>
+			<dep package="python3-defusedxml"/>
+		</dependencies>
+		<after>
+			<dep package="python3"/>
+		</after>
+	</pip>
+
+	<pip id="python3-packageurl-python" python3="1">
+		<branch
+			module="p/packageurl_python/packageurl_python-0.17.6.tar.gz"
+			hash="sha256:1252ce3a102372ca6f86eb968e16f9014c4ba511c5c37d95a7f023e2ca6e5c25"
+			version="0.17.6"/>
+		<dependencies>
+			<dep package="python3"/>
+		</dependencies>
+		<after>
+			<dep package="python3"/>
+		</after>
+	</pip>
+
+	<pip id="python3-cyclonedx-python-lib" python3="1">
+		<branch
+			module="c/cyclonedx_python_lib/cyclonedx_python_lib-11.12.0.tar.gz"
+			hash="sha256:16767c4039de90c04e9f03348f8f0ed4b8ff842eaa7eefcad3a95685f970dacf"
+			version="11.12.0"/>
+		<dependencies>
+			<dep package="python3"/>
+			<dep package="python3-license-expression"/>
+			<dep package="python3-packageurl-python"/>
+			<dep package="python3-py-serializable"/>
+			<dep package="python3-sortedcontainers"/>
+		</dependencies>
+		<after>
+			<dep package="python3"/>
+		</after>
+	</pip>
+
+	<metamodule id="meta-osx-xpra-sbom">
+		<dependencies>
+			<dep package="python3-cyclonedx-python-lib"/>
+			<dep package="python3-packageurl-python"/>
+		</dependencies>
+	</metamodule>
+
+</moduleset>
