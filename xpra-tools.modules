@@ -136,7 +136,7 @@
                autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s">
 		<branch module="/2026/sqlite-autoconf-3540000.tar.gz"
 			hash="sha256:134ec0802dda5795816e25d25872d20b312cb3973438c49b30bc40b7705ea9ed"
-			version="3540000"
+			version="3.54.0"
 			repo="sqlite.org"/>
 	</autotools>
 
