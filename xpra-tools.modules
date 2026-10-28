@@ -12,7 +12,6 @@
 	<repository type="tarball" name="github.com" default="yes" href="https://github.com/"/>
 	<repository type="tarball" name="curl.haxx.se" href="https://curl.haxx.se"/>
 	<repository type="git" name="github" href="https://github.com/"/>
-	<repository type="tarball" name="sqlite.org" href="http://sqlite.org"/>
 
 	<autotools id="perl"
 		autogen-sh="Configure"
@@ -129,15 +128,6 @@
 		<dependencies>
 			<dep package="openssl"/>
 		</dependencies>
-	</autotools>
-
-
-       <autotools id="sqlite" autogenargs="" autogen-sh="configure"
-               autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s">
-		<branch module="/2026/sqlite-autoconf-3540000.tar.gz"
-			hash="sha256:134ec0802dda5795816e25d25872d20b312cb3973438c49b30bc40b7705ea9ed"
-			version="3.54.0"
-			repo="sqlite.org"/>
 	</autotools>
 
 	<metamodule id="meta-osx-xpra-pkgtools">

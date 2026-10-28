@@ -233,7 +233,6 @@
       <dep package="python3" />
       <dep package="glib" />
       <dep package="glib-networking" />
-      <dep package="sqlite" />
     </dependencies>
   </meson>
   <cmake id="libnghttp2"
@@ -258,7 +257,6 @@
       <dep package="glib" />
       <dep package="glib-networking" />
       <dep package="libnghttp2" />
-      <dep package="sqlite" />
     </dependencies>
   </meson>
   <autotools id="libwebp"
@@ -292,7 +290,6 @@
       <dep package="libxml2" />
       <dep package="libxslt" />
       <dep package="expat" />
-      <dep package="sqlite" />
       <dep package="harfbuzz" />
       <dep package="fontconfig" />
       <dep package="meta-gtk-osx-gtk3" />

@@ -27,9 +27,6 @@
   <repository name="graphviz"
               href="https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releases/"
               type="tarball" />
-  <repository name="sqlite"
-              href="http://www.sqlite.org/"
-              type="tarball" />
   <repository name="itstool"
               href="http://files.itstool.org/"
               type="tarball" />
@@ -141,20 +138,6 @@
       <dep package="gobject-introspection" />
     </dependencies>
   </meson>
-  <!-- SQLite3 is also available from the macOS SDK -->
-  <autotools id="sqlite"
-             autogen-sh="configure"
-             autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s">
-    <branch module="2026/sqlite-autoconf-3540000.tar.gz"
-            version="3.54.0"
-            hash="sha256:134ec0802dda5795816e25d25872d20b312cb3973438c49b30bc40b7705ea9ed"
-            repo="sqlite" />
-    <dependencies>
-      <dep package="readline" />
-      <dep package="openssl" />
-      <dep package="zlib" />
-    </dependencies>
-  </autotools>
   <!-- Goocanvas2 is for gtk+-3. -->
   <autotools id="goocanvas2"
              supports-non-srcdir-builds="no">
