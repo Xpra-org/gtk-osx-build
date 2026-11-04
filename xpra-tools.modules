@@ -24,10 +24,10 @@
 	</autotools>
 
 	<autotools id="lz4" skip-autogen="true" supports-non-srcdir-builds="no">
-		<branch module="/lz4/lz4/archive/refs/tags/v1.10.0.tar.gz"
-			version="1.10.0"
-			checkoutdir="lz4-1.10.0"
-			hash="sha256:537512904744b35e232912055ccf8ec66d768639ff3abe5788d90d792ec5f48b"
+		<branch module="/lz4/lz4/archive/refs/tags/v1.11.0.tar.gz"
+			version="1.11.0"
+			checkoutdir="lz4-1.11.0"
+			hash="sha256:247e5fa64da5f7b75ee3dd3bed484076396c9ebe8254d9ccf693eb62800c5e26"
 			/>
 	</autotools>
 
