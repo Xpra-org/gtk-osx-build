@@ -495,9 +495,9 @@
 
 	<distutils id="python3-dns" python3="1">
 		<branch
-			module="d/dnspython/dnspython-2.9.0.tar.gz"
-			hash="sha256:b44dc6b18f07a8b1c56676a19fbfdb5209415b046a9cece286baafa87ff3f7f1"
-			version="2.9.0">
+			module="d/dnspython/dnspython-2.9.2.tar.gz"
+			hash="sha256:8d4d39a513e649d634004ce4d39ade2352efcea472a0247535a5c2d18a9d7ba9"
+			version="2.9.2">
 			<patch file="dnspython-setup-py.patch" strip="1"/>
 		</branch>
 		<dependencies>
