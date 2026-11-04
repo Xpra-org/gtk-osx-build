@@ -22,9 +22,9 @@
 
 	<distutils id="python3-coverage" python3="1">
 		<branch
-			module="c/coverage/coverage-7.16.2.tar.gz"
-			hash="sha256:ca64d9f1f384f151b9511bec01126072acd2f313439f8ed015a22d8790aab6fa"
-			version="7.16.2"/>
+			module="c/coverage/coverage-7.17.1.tar.gz"
+			hash="sha256:5c5c77f95a0e83e6b79eff948d251c9911cfd61d67f5059159fc25b7bc4aec27"
+			version="7.17.1"/>
 		<dependencies>
 			<dep package="python3"/>
 		</dependencies>
