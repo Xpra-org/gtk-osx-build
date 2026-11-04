@@ -117,7 +117,7 @@
              autogen-sh="configure"
              bootstrap="true">
     <branch module="autoconf-archive/autoconf-archive-2024.10.16.tar.xz"
-            version="202410-162-20"
+            version="2024.10.16"
             hash="sha256:7bcd5d001916f3a50ed7436f4f700e3d2b1bade3ed803219c592d62502a57363"
             repo="ftp.gnu.org" />
   </autotools>
