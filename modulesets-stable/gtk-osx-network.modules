@@ -273,9 +273,9 @@
        MiniBrowser provides a manual smoke test: jhbuild run MiniBrowser. -->
   <cmake id="webkit2gtk3"
          cmakeargs='-DPORT=GTK -DUSE_GTK4=OFF -DENABLE_X11_TARGET=OFF -DENABLE_WAYLAND_TARGET=OFF -DENABLE_QUARTZ_TARGET=ON -DENABLE_MINIBROWSER=ON -DENABLE_INTROSPECTION=ON -DENABLE_DOCUMENTATION=OFF -DENABLE_JOURNALD_LOG=OFF -DUSE_LIBDRM=OFF -DUSE_GBM=OFF -DUSE_LIBBACKTRACE=OFF -DUSE_SYSPROF_CAPTURE=OFF -DUSE_GSTREAMER=OFF -DENABLE_VIDEO=OFF -DENABLE_WEB_AUDIO=OFF -DENABLE_WEBGL=OFF -DENABLE_SPEECH_SYNTHESIS=OFF -DUSE_LIBHYPHEN=OFF -DUSE_LIBSECRET=OFF -DENABLE_TOUCH_EVENTS=OFF -DUSE_WOFF2=OFF -DUSE_AVIF=OFF -DUSE_JPEGXL=OFF -DUSE_LCMS=OFF -DENABLE_GAMEPAD=OFF -DCMAKE_CXX_FLAGS="-stdlib=libc++  -Wno-deprecated-declarations -Wno-unused-but-set-variable -Wno-deprecated-copy -Wno-missing-template-arg-list-after-template-kw" -DCMAKE_MACOSX_RPATH=OFF -DCMAKE_INSTALL_NAME_DIR="${JHBUILD_PREFIX}/lib"'>
-    <branch module="webkitgtk-2.54.1.tar.xz"
-            version="2.54.1"
-            hash="sha256:ea0bbb02dbdbc596874a4e7ad35b66645b3e0a232bd0e4081de5ed92eb0a397d"
+    <branch module="webkitgtk-2.54.3.tar.xz"
+            version="2.54.3"
+            hash="sha256:2779c1b46f88762e8400650271ba14452dc4e30b37059981552d8b562b7d0862"
             repo="webkit.org">
       <patch file="webkitgtk-2.54.1-quartz.patch" strip="1" />
     </branch>
