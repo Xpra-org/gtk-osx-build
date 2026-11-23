@@ -237,9 +237,9 @@
   </meson>
   <cmake id="libnghttp2"
          cmakeargs='-DENABLE_LIB_ONLY=ON -DENABLE_DOC=OFF -DWITH_LIBXML2=OFF -DWITH_JEMALLOC=OFF -DWITH_MRUBY=OFF -DWITH_NEVERBLEED=OFF -DWITH_LIBBPF=OFF -DCMAKE_INSTALL_NAME_DIR="${JHBUILD_PREFIX}/lib"'>
-    <branch module="nghttp2/nghttp2/releases/download/v1.70.0/nghttp2-1.70.0.tar.xz"
-            version="1.70.0"
-            hash="sha256:e05cb1388eaca3830aded4ccf20044b6e1ac1a61411dcca11b0437c4285c8bc2"
+    <branch module="nghttp2/nghttp2/releases/download/v1.71.0/nghttp2-1.71.0.tar.xz"
+            version="1.71.0"
+            hash="sha256:c0f55121d88650e4b9227aec28cebaf664d2417ca60fe70be0f8d38829f52116"
             repo="github-tarball" />
     <dependencies>
       <dep package="openssl" />
