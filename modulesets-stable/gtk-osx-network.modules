@@ -248,9 +248,9 @@
   </cmake>
   <meson id="libsoup3"
          mesonargs="-Dvapi=disabled">
-    <branch module="libsoup/3.8/libsoup-3.8.0.tar.xz"
-            version="3.8.0"
-            hash="sha256:bbf08fa3e03a88c31a3d27a0d87cb422e9490f2d08e149211103df6d638a2238" />
+    <branch module="libsoup/3.8/libsoup-3.8.1.tar.xz"
+            version="3.8.1"
+            hash="sha256:5013dcef9136f6f861e6529fca578af50c1f52a39219027fb5aff652d1371a04" />
     <dependencies>
       <dep package="libpsl" />
       <dep package="python3" />
