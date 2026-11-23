@@ -93,9 +93,9 @@
   <autotools id="p11-kit"
              autogen-sh="configure"
              autogenargs="--without-trust-paths">
-    <branch module="p11-glue/p11-kit/releases/download/0.26.5/p11-kit-0.26.5.tar.xz"
-            version="0.26.5"
-            hash="sha256:f2cc09111e44bf3fea58f023180b33acea90aa82d042d6fbb623fbc5ba033bb7"
+    <branch module="p11-glue/p11-kit/releases/download/0.26.6/p11-kit-0.26.6.tar.xz"
+            version="0.26.6"
+            hash="sha256:5fda95dc89964af32dbd8e01b139c166717cf96c4fee3d601bcd60bdb23d23c6"
             repo="github-tarball">
       <patch file="p11-kit-libintl.patch"
              strip="1" />
