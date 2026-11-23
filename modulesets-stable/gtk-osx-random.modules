@@ -201,9 +201,9 @@
   </autotools>
   <meson id="gspell"
         mesonargs="-Dvapi=false -Dgtk_doc=false -Dtests=false -Dinstall_tests=false" >
-    <branch module="gspell/1.14/gspell-1.14.5.tar.xz"
-            version="1.14.5"
-            hash="sha256:788783b56fc3d03283b3aa29302d0b958aeca88835e10b1ec61f19e0efc7e8a4" >
+    <branch module="gspell/1.14/gspell-1.14.6.tar.xz"
+            version="1.14.6"
+            hash="sha256:d02a6f1ff3cf324798f184062a6777302ef4b325deab277d8469d3816c69282d" >
       <patch file="gspell-1.14-enchant-resource-path.patch" strip="1" />
     </branch>
     <dependencies>
