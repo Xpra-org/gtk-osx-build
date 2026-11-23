@@ -40,9 +40,9 @@
              autogen-sh="configure"
              autogen-template="%(srcdir)s/%(autogen-sh)s --prefix=%(prefix)s %(autogenargs)s"
              autogenargs="--enable-gpl --enable-version3 --enable-shared --disable-static --disable-runtime-cpudetect --disable-programs --disable-ffplay --disable-ffprobe --disable-doc">
-    <branch module="ffmpeg-9.0.2.tar.xz"
-            version="9.0.2"
-            hash="sha256:8c3850283eb25fa026482078a04051e0be17347b09ef81a0849bec15a96e002e"
+    <branch module="ffmpeg-9.1.tar.xz"
+            version="9.1"
+            hash="sha256:1a4d394ae63d190a526cd052eb4415c156b5c5e2df37efab41a7de0b8fde2433"
             repo="ffmpeg" />
     <dependencies>
       <dep package="nasm" />
