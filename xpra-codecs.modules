@@ -143,9 +143,9 @@
 	</cmake>
 
 	<meson id="dav1d" mesonargs="-Denable_tools=false -Denable_tests=false">
-		<branch module="dav1d/1.5.4/dav1d-1.5.4.tar.xz"
-			version="1.5.4"
-			hash="sha256:686616b7c69eb88d44459391ab25cac13b6647a3b288835c5784e71c1514a5c5"
+		<branch module="dav1d/1.5.5/dav1d-1.5.5.tar.xz"
+			version="1.5.5"
+			hash="sha256:ca96b1d0ba3f01f55de7231d775892b64994ba061aaeeaaa4f662a390b3abf9e"
 			repo="downloads.videolan.org"/>
 		<dependencies>
 			<dep package="nasm"/>
