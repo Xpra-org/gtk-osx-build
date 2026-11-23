@@ -31,9 +31,9 @@
 
 	<distutils id="python3-xpra" python3="1">
 		<branch
-			module="https://github.com/Xpra-org/xpra/archive/refs/tags/v6.5.5.tar.gz"
-			hash="sha256:a36f482ec8f68501d915c2b406d6dac015a20e0789fe691be5f0b24ba7b343fa"
-			version="6.5.5" checkoutdir="xpra-6.5.5" rename-tarball="xpra-6.5.5.tar.gz"/>
+			module="https://github.com/Xpra-org/xpra/archive/refs/tags/v6.5.6.tar.gz"
+			hash="sha256:c4725813327797488bc512b2006a2cb2d10a65d69e0f7efdc71342056e41b2bf"
+			version="6.5.6" checkoutdir="xpra-6.5.6" rename-tarball="xpra-6.5.6.tar.gz"/>
 		<dependencies>
 			<dep package="meta-osx-xpra-deps"/>
 			<dep package="meta-osx-xpra-sbom"/>
