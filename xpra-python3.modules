@@ -609,9 +609,9 @@
 
 	<pip id="python3-decorator" python3="1">
 		<branch
-			module="d/decorator/decorator-5.3.1.tar.gz"
-			hash="sha256:4cbcdd55a6efadb9dbea26b858f4fb3264567b52d69ca0d25b721b553f60ea82"
-			version="5.3.1">
+			module="d/decorator/decorator-5.3.2.tar.gz"
+			hash="sha256:d9883f1b8259e3bfc42565d0bc6fdc760012008552aa449f75efd2d48319b82b"
+			version="5.3.2">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
