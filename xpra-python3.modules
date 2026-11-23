@@ -383,9 +383,9 @@
 
 	<distutils id="python3-pylsqpack" python3="1">
 		<branch
-			module="p/pylsqpack/pylsqpack-1.1.1.tar.gz"
-			hash="sha256:d20d920ccac8aac5ffa2c65fa2816b76f6d11c47b9b01145ad786fc2399c1b3b"
-			version="1.1.1">
+			module="p/pylsqpack/pylsqpack-1.1.2.tar.gz"
+			hash="sha256:8642270b955f5390dbcb9ee19317351d33ca23e9917e15ab9d177be4a03f370e"
+			version="1.1.2">
 		</branch>
 		<dependencies>
 			<dep package="python3"/>
