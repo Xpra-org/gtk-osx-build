@@ -151,9 +151,9 @@
   </cmake>
   <meson id="fontconfig"
          mesonargs="-Ddoc=disabled -Ddefault-fonts-dirs=/System/Library/Fonts -Dadditional-fonts-dirs=/Library/Fonts">
-    <branch module="fontconfig/2.18.3/fontconfig-2.18.3.tar.xz"
-            version="2.18.3"
-            hash="sha256:4f7b554a38cdf78c033f666c8871f3749e14a094f65a07f630c91ed0b43d35e3"
+    <branch module="fontconfig/2.18.4/fontconfig-2.18.4.tar.xz"
+            version="2.18.4"
+            hash="sha256:95013637eff5f81d4871dd16cd098c273264c16d0f9f0b27cc43b81b2794bee3"
             repo="fontconfig" />
     <dependencies>
       <dep package="freetype" />
