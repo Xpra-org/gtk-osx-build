@@ -652,9 +652,9 @@
 
 	<pip id="python3-mac_alias" python3="1">
 		<branch
-			module="m/mac_alias/mac_alias-2.2.3.tar.gz"
-			hash="sha256:1c7fa367687d66979f2ce4d1a8b2716cf1c9fb811741cab3cf3ca356555c2beb"
-			version="2.2.3"/>
+			module="m/mac_alias/mac_alias-2.2.4.tar.gz"
+			hash="sha256:a505a1d3f5b7c0919db7b9a49bcc0d0bad2575189034206ac2ec722b9acd3999"
+			version="2.2.4"/>
 		<dependencies>
 			<dep package="python3"/>
 			<dep package="python3-six"/>
