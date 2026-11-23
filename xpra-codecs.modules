@@ -233,9 +233,9 @@
 
 	<cmake id="libyuv" cmakeargs="-DCMAKE_MACOSX_RPATH=ON -DCMAKE_INSTALL_NAME_DIR=@rpath -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DLIBYUV_DISABLE_JPEG=ON">
 		<!-- Debian source snapshot from 2026-10-08. -->
-		<branch module="https://deb.debian.org/debian/pool/main/liby/libyuv/libyuv_0.0.1974.20261008.orig.tar.xz"
-			version="0.0.1974.20261008" checkoutdir="libyuv-0.0.1974.20261008"
-			hash="sha256:9a2e5c3e450ee5fec02276c38bf2190a93b09d3cf977e2913e1430c84ad66ad8"
+		<branch module="https://deb.debian.org/debian/pool/main/liby/libyuv/libyuv_0.0.1984.20261118.orig.tar.xz"
+			version="0.0.1984.20261118" checkoutdir="libyuv-0.0.1984.20261118"
+			hash="sha256:f788296f7049c14b11bae672ebc896b03efa58b4c621747046c05860802e8062"
 			repo="xpra.org">
 			<patch file="https://raw.githubusercontent.com/Xpra-org/gtk-osx-build/master/patches/libyuv-add-pkgconfig.patch" strip="1" />
 		</branch>
